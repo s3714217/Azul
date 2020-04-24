@@ -51,8 +51,21 @@ void startGame()
     
     bool p1turn = true;
     bool nextp1turn = false;
-    while(mosaic_1->winCheck() != true || mosaic_2->winCheck() != true)
+    
+    while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
+        mosaic_1->placeTile(1, RED, 1);
+        mosaic_1->turnCheck();
+        mosaic_1->placeTile(1, LIGHT_BLUE, 1);
+        mosaic_1->turnCheck();
+        mosaic_1->placeTile(1, DARK_BLUE, 1);
+        mosaic_1->turnCheck();
+        mosaic_1->placeTile(1, YELLOW, 1);
+        mosaic_1->turnCheck();
+        mosaic_1->placeTile(1, BLACK, 1);
+        mosaic_1->turnCheck();
+        
+     
         factories->isEmpty();
         std::cout<<std::endl;
         std::cout<<"=== Start Round ===";
@@ -61,7 +74,7 @@ void startGame()
         
         while(factories->isEmpty() != true)
         {
-            
+            factories->isEmpty();
             if(p1turn == true)
             {
                 std::cout<<"TURN FOR PLAYER:" <<mosaic_1->getPlayer()->getName()<<std::endl;
@@ -80,8 +93,8 @@ void startGame()
                 std::cout<<std::endl;
             }
             
-            int fac, row, n;
-            char c;
+            int fac = 0 , row =0 , n = 0;
+            char c = ' ';
             bool takefirst = false;
             
            bool validInput = false;
@@ -107,7 +120,7 @@ void startGame()
                
                if(command =="Turn")
                {
-                   if(fac > 5 || row > 5)
+                   if(fac > 5 || row > 5 || c == FIRST_PLAYER)
                    {
                        std::cout<<"Invalid Input"<<std::endl;
                        std::cout << "> ";
@@ -195,13 +208,13 @@ void startGame()
            
         }
        
-        factories->reset();
+        factories->setUp();
         
-    }
+    
     std::cout<<std::endl;
     std::cout<<"===GAME OVER===";
     std::cout<<std::endl;
-    
+    }
 }
 
 
@@ -285,6 +298,15 @@ int main() {
    
      Menu();
     
+//    Mosaic* mos = new Mosaic(new Player("a"));
+//   // Factories fac = new Factories(2);
+//    std::cout<<mos->placeTile(1, RED, 1);
+//    mos->PrintMosaic();
+//
+//    mos->turnCheck();
+//    mos->placeTile(1, RED, 1);
+//
+//    mos->PrintMosaic();
 }
 
 

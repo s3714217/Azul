@@ -28,6 +28,12 @@ Factories::Factories(int numberOfPlayer)
         this->factories[x] = new Tile[4];
     }
     
+    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(RED));
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(BLACK));
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(YELLOW));
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(DARK_BLUE));
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(LIGHT_BLUE));
+    
     this->setUp();
 }
 
@@ -118,6 +124,7 @@ void Factories::addRemain(Tile *tile)
    {
     this->BoxLid->addBack(tile);
    }
+    this->BoxLid->printAll();
 }
 
 void Factories::PrintFactories()
@@ -146,53 +153,61 @@ void Factories::PrintFactories()
 
 void Factories::setUp()
 {
-    this->factories[0][0] = FIRST_PLAYER;
     
-    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(RED));
-    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(BLACK));
-    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(YELLOW));
-    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(DARK_BLUE));
-    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(LIGHT_BLUE));
+    this->leftover = 1;
     
-    this->BoxLid->shuffle();
-    for(int x =0; x != 4*(this->numberOfFactory -1); x++)this->TileBag->addFront(this->BoxLid->getFirst());
-    
-    size = (5 * 4) +1;
-    
-    for(int x = 1; x < this->numberOfFactory; x++)
+    for(int x = 1; x < this->numberOfFactory * MAX_REMAIN; x++)
     {
-        for(int y = 0; y<4; y++)
+        this->factories[0][x] = ' ';
+    }
+    this->factories[0][0] = FIRST_PLAYER;
+    this->BoxLid->shuffle();
+    for(int x =0; x != 4*(this->numberOfFactory -1); x++)
+    {
+        Tile* temp = this->BoxLid->getFirst();
+        if(temp != nullptr)
         {
-            this->factories[x][y] = TileBag->getFirst()->getColour();
+            this->TileBag->addFront(temp);
         }
     }
-    
-}
-
-void Factories::reset()
-{
-    this->factories[0][0] = FIRST_PLAYER;
-    this->BoxLid->shuffle();
-    for(int x =0; x != 4*(this->numberOfFactory -1); x++)this->TileBag->addFront(this->BoxLid->getFirst());
-    
-    size = (5 * 4) +1;
+    size = 1;
     
     for(int x = 1; x < this->numberOfFactory; x++)
     {
         for(int y = 0; y<4; y++)
         {
+            size++;
             this->factories[x][y] = TileBag->getFirst()->getColour();
         }
     }
     this->first = true;
+    
 }
+
+//void Factories::reset()
+//{
+//    this->factories[0][0] = FIRST_PLAYER;
+//    this->BoxLid->shuffle();
+//    for(int x =0; x != 4*(this->numberOfFactory -1); x++)this->TileBag->addFront(this->BoxLid->getFirst());
+//    
+//    size = 1;
+//    
+//    for(int x = 1; x < this->numberOfFactory; x++)
+//    {
+//        for(int y = 0; y<4; y++)
+//        {
+//            this->factories[x][y] = TileBag->getFirst()->getColour();
+//            size++;
+//        }
+//    }
+//    this->first = true;
+//}
 
 bool Factories::isEmpty()
 {
    if(size > 0)
    {
-       std::cout<<std::endl;
-       std::cout<<size<<std::endl;
+       std::cout<<size;
        return false;
    }
     return true;
@@ -203,7 +218,6 @@ void Factories::removeFirst()
     factories[0][0] = ' ';
     this->first = false;
     this->size -=1;
-    std::cout << "test";
 }
 
 bool Factories::isFirst()

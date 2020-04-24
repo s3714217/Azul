@@ -26,17 +26,18 @@ public:
     bool isEmpty();
     void removeFirst();
     bool isFirst();
-    void reset();
+ //   void reset();
+    void setUp();
     
 private:
     
-    void setUp();
+    
     LinkedList* TileBag;
     LinkedList* BoxLid;
     int numberOfFactory;
     Tile** factories;
     int leftover = 1;
-    bool first = true;
+    bool first;
     int size = 0;
 };
 #endif /* Factories_hpp */

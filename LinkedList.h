@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <vector>
 #include <random>
+#include <iostream>
+
 class LinkedList {
 public:
    LinkedList();
@@ -19,7 +21,7 @@ public:
    void addFront(Tile* tile);
    void addBack(Tile* tile);
     void shuffle();
-
+    void printAll();
 private:
        int len;
      Node* head;

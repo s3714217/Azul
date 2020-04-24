@@ -139,3 +139,16 @@ void LinkedList::shuffle()
     }
 }
 
+void LinkedList::printAll()
+{
+    std::string text = " ";
+    Node* node = this->head;
+    while (node != nullptr) {
+        text.push_back(node->tile->getColour());
+        text.push_back(' ');
+        node = node->next;
+    }
+    
+    std::cout<< text<<std::endl;
+}
+
