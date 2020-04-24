@@ -114,7 +114,7 @@ bool Factories::ContainColour(Colour c, int factory)
 
 void Factories::addRemain(Tile *tile)
 {
-   if(tile->getColour() != FIRST_PLAYER)
+   if(tile != nullptr && tile->getColour() != FIRST_PLAYER)
    {
     this->BoxLid->addBack(tile);
    }
@@ -174,6 +174,7 @@ void Factories::reset()
     this->factories[0][0] = FIRST_PLAYER;
     this->BoxLid->shuffle();
     for(int x =0; x != 4*(this->numberOfFactory -1); x++)this->TileBag->addFront(this->BoxLid->getFirst());
+    
     size = (5 * 4) +1;
     
     for(int x = 1; x < this->numberOfFactory; x++)
@@ -188,8 +189,10 @@ void Factories::reset()
 
 bool Factories::isEmpty()
 {
-   if(size != 0)
+   if(size > 0)
    {
+       std::cout<<std::endl;
+       std::cout<<size<<std::endl;
        return false;
    }
     return true;

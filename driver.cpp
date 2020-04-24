@@ -53,7 +53,7 @@ void startGame()
     bool nextp1turn = false;
     while(mosaic_1->winCheck() != true || mosaic_2->winCheck() != true)
     {
-       
+        factories->isEmpty();
         std::cout<<std::endl;
         std::cout<<"=== Start Round ===";
         std::cout<<std::endl;
@@ -80,14 +80,16 @@ void startGame()
                 std::cout<<std::endl;
             }
             
-            int fac =99, row = 99, n = 0;
-            char c = ' ';
+            int fac, row, n;
+            char c;
             bool takefirst = false;
             
            bool validInput = false;
            std::cout << "> ";
            while(validInput != true)
            {
+               fac = 99; row = 99; n=0;
+               c = ' ';
             
             std::string command;
             std::string input;
@@ -116,7 +118,6 @@ void startGame()
                        if(fac ==0 && factories->isFirst() == true)
                        {
                            takefirst = true;
-                           
                        }
                        n = factories->takeTile(c, fac);
                     
@@ -283,7 +284,7 @@ void Menu()
 int main() {
    
      Menu();
-
+    
 }
 
 

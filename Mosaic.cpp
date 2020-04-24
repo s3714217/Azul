@@ -256,10 +256,9 @@ LinkedList* Mosaic::returnTile()
     for(int x = 0; x < brokenPts; x++)
     {
         this->remainder->addBack(broken[x]);
-        broken[x] = new Tile(' ');
-       
+        this->broken[x] = new Tile(' ');
     }
-    
+    this->brokenPts = 0;
     return this->remainder;
 }
 
