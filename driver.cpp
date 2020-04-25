@@ -13,14 +13,33 @@
 #include "ColorCode.h"
 #include "Mosaic.h"
 
-void loadGame()
+void loadGame(std::string filename)
 {
     
+    if(filename.size() > 0)
+    {
+      filename += ".save";
+      filename = "save/"+filename;
+      std::cout<<"Function unavailable"<<std::endl;
+    }
+    else
+    {
+      std::cout<<"Please enter a valid filename"<<std::endl;
+    }
 }
 
-void saveGame(Mosaic* mos1, Mosaic* mos2, std::string name)
+void saveGame(Mosaic* mos1, Mosaic* mos2, std::string filename)
 {
-    
+    if(filename.size() > 0)
+    {
+        filename += ".save";
+        filename = "save/"+filename;
+        std::cout<<"Function unavailable"<<std::endl;
+    }
+    else
+    {
+         std::cout<<"Please enter a valid filename"<<std::endl;
+    }
 }
 
 
@@ -92,6 +111,7 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
             
             int fac = 0 , row =0 , n = 0;
             char c = ' ';
+            std::string filename;
             bool takefirst = false;
             
            bool validInput = false;
@@ -109,11 +129,18 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
              
             for(int x = 0; x<input.size(); x++)
             {
+                if(command =="save")
+                {
+                    if(input[x] != ' ')
+                    {
+                        filename.push_back(input[x]);
+                    }
+                }
                if(x < 4)command.push_back(tolower(input[x]));
                else if(x == 5)fac = input[x]-48;
                else if(x == 7)c = toupper(input[x]);
                else if(x == 9)row = input[x]-48;
-                
+              
             }
                if(command =="turn")
                {
@@ -148,8 +175,8 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                }
                else if(command == "save")
                {
-                   std::cout<<"Unvailable"<<std::endl;
-                  // saveGame(mosaic_1, mosaic_2, name);
+                   saveGame(mosaic_1, mosaic_2, filename);
+                   std::cout << "> ";
                }
                else if(command.size() != 0)
                {
@@ -251,7 +278,12 @@ void Menu()
    }
    else if(command == "2")
    {
-       std::cout<<"Unavailable"<<std::endl;
+       std::string filename = " ";
+       std::cout<<"Enter loading filename: ";
+       std::cin>>filename;
+       std::cout<<std::endl;
+       loadGame(filename);
+      
    }
    else if(command == "3")
    {
