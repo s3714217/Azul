@@ -18,14 +18,17 @@ void loadGame()
     
 }
 
-void saveGame()
+void saveGame(Mosaic* mos1, Mosaic* mos2, std::string name)
 {
     
 }
 
 
-void startGame()
+void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
 {
+
+    if(newgame == true)
+    {
      std::cout<<"START A NEW GAME"<<std::endl;
      std::cout<<std::endl;
      
@@ -42,12 +45,19 @@ void startGame()
     
     std::cout<<"Let's Play!"<<std::endl;
     std::cout<<std::endl;
-    
+        
+        mosaic_1=new Mosaic(player1);
+        mosaic_2= new Mosaic(player2);
+    }
+    else
+    {
+        std::cout<<"CONTINUE THE GAME"<<std::endl;
+        std::cout<<std::endl;
+    }
     
     
     Factories* factories = new Factories(2);
-    Mosaic* mosaic_1 = new Mosaic(player1);
-    Mosaic* mosaic_2 = new Mosaic(player2);
+    
     
     bool p1turn = true;
     bool nextp1turn = false;
@@ -112,15 +122,15 @@ void startGame()
              
             for(int x = 0; x<input.size(); x++)
             {
-               if(x < 4)command.push_back(input[x]);
+               if(x < 4)command.push_back(tolower(input[x]));
                else if(x == 5)fac = input[x]-48;
-               else if(x == 7)c = input[x];
+               else if(x == 7)c = toupper(input[x]);
                else if(x == 9)row = input[x]-48;
+                
             }
-               
-               if(command =="Turn")
+               if(command =="turn")
                {
-                   if(fac > 5 || row > 5 || c == FIRST_PLAYER)
+                   if(fac > 5|| 0 < fac ||0 < row || row > 5 || c == FIRST_PLAYER)
                    {
                        std::cout<<"Invalid Input"<<std::endl;
                        std::cout << "> ";
@@ -148,6 +158,11 @@ void startGame()
                        
                    }
 
+               }
+               else if(command == "save")
+               {
+                   std::cout<<"Unvailable"<<std::endl;
+                  // saveGame(mosaic_1, mosaic_2, name);
                }
                else if(command.size() != 0)
                {
@@ -229,7 +244,7 @@ void Menu()
    
     std::cout<<std::endl;
     std::cout<<"Menu"<<std::endl;
-    std::cout<<"--------"<<std::endl;
+    std::cout<<"----------"<<std::endl;
     std::cout<<"1. New Game"<<std::endl;
     std::cout<<"2. Load Game"<<std::endl;
     std::cout<<"3. Credits "<<std::endl;
@@ -239,11 +254,13 @@ void Menu()
     std::string command;
     std::cin>>command;
     
-    
+    Mosaic* mosaic_1 = nullptr;
+    Mosaic* mosaic_2 = nullptr;
+        
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame();
+       startGame(mosaic_1, mosaic_2, true);
    }
    else if(command == "2")
    {
@@ -296,6 +313,7 @@ void Menu()
 
 int main() {
    
+    
      Menu();
     
 //    Mosaic* mos = new Mosaic(new Player("a"));
