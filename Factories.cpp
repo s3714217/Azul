@@ -39,8 +39,8 @@ Factories::Factories(int numberOfPlayer)
 
 Factories::~Factories()
 {
-    this->TileBag->~LinkedList();
-    this->BoxLid->~LinkedList();
+    delete TileBag;
+    delete BoxLid;
     this->numberOfFactory = 0;
     
     for(int x = 0; x != this->numberOfFactory; x++)
@@ -124,7 +124,6 @@ void Factories::addRemain(Tile *tile)
    {
     this->BoxLid->addBack(tile);
    }
-    this->BoxLid->printAll();
 }
 
 void Factories::PrintFactories()
@@ -184,30 +183,12 @@ void Factories::setUp()
     
 }
 
-//void Factories::reset()
-//{
-//    this->factories[0][0] = FIRST_PLAYER;
-//    this->BoxLid->shuffle();
-//    for(int x =0; x != 4*(this->numberOfFactory -1); x++)this->TileBag->addFront(this->BoxLid->getFirst());
-//    
-//    size = 1;
-//    
-//    for(int x = 1; x < this->numberOfFactory; x++)
-//    {
-//        for(int y = 0; y<4; y++)
-//        {
-//            this->factories[x][y] = TileBag->getFirst()->getColour();
-//            size++;
-//        }
-//    }
-//    this->first = true;
-//}
+
 
 bool Factories::isEmpty()
 {
    if(size > 0)
    {
-       std::cout<<size;
        return false;
    }
     return true;

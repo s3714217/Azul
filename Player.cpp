@@ -17,7 +17,7 @@ Player::Player(std::string name)
 
 Player::~Player()
 {
-    this->name = nullptr;
+    this->name = "";
     this->point = 0;
     
 }

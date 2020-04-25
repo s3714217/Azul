@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include "LinkedList.h"
 #include "Player.h"
 #include "Factories.h"
 #include "ColorCode.h"
@@ -24,11 +23,12 @@ void loadGame(std::string filename)
     }
     else
     {
-      std::cout<<"Please enter a valid filename"<<std::endl;
+      std::cout<<"Error: Please enter a valid filename!"<<std::endl;
     }
 }
 
-void saveGame(Mosaic* mos1, Mosaic* mos2, std::string filename)
+
+void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename)
 {
     if(filename.size() > 0)
     {
@@ -38,12 +38,12 @@ void saveGame(Mosaic* mos1, Mosaic* mos2, std::string filename)
     }
     else
     {
-         std::cout<<"Please enter a valid filename"<<std::endl;
+         std::cout<<"ERROR: Please enter a valid filename"<<std::endl;
     }
 }
 
 
-void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
+void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame)
 {
 
     if(newgame == true)
@@ -65,35 +65,40 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
     std::cout<<"Let's Play!"<<std::endl;
     std::cout<<std::endl;
         
-        mosaic_1=new Mosaic(player1);
-        mosaic_2= new Mosaic(player2);
+        mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
+        mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
+        factories = std::shared_ptr<Factories>(new Factories(2));
     }
     else
     {
         std::cout<<"CONTINUE THE GAME"<<std::endl;
         std::cout<<std::endl;
+        
     }
     
-    
-    Factories* factories = new Factories(2);
     
     
     bool p1turn = true;
     bool nextp1turn = false;
+     int round = 1;
     
     while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
+        
         std::cout<<std::endl;
-        std::cout<<"=== Start Round ===";
+        std::cout<<"=== Start Round " <<round<<" ===";
         std::cout<<std::endl;
         p1turn = nextp1turn;
+        std::string log = "";
         
         while(factories->isEmpty() != true)
         {
+            
             factories->isEmpty();
             if(p1turn == true)
             {
-                std::cout<<"TURN FOR PLAYER:" <<mosaic_1->getPlayer()->getName()<<std::endl;
+                std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
+                std::cout<<"POINTS: "<<mosaic_1->getPlayer()->getPoint()<<std::endl;
                 factories->PrintFactories();
                 std::cout<<std::endl;
                 mosaic_1->PrintMosaic();
@@ -102,7 +107,8 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
     
             else
             {
-                std::cout<<"TURN FOR PLAYER : "<<mosaic_2->getPlayer()->getName()<<std::endl;
+                std::cout<<"TURN FOR PLAYER: "<<mosaic_2->getPlayer()->getName()<<"   ";
+                std::cout<<"POINTS: "<<mosaic_2->getPlayer()->getPoint()<<std::endl;
                 factories->PrintFactories();
                 std::cout<<std::endl;
                 mosaic_2->PrintMosaic();
@@ -111,6 +117,7 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
             
             int fac = 0 , row =0 , n = 0;
             char c = ' ';
+            std::string command;
             std::string filename;
             bool takefirst = false;
             
@@ -118,10 +125,11 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
            std::cout << "> ";
            while(validInput != true)
            {
+               command = "";
                fac = 99; row = 99; n=0;
                c = ' ';
             
-            std::string command;
+            
             std::string input;
             
             std::cin.ignore(0);
@@ -144,9 +152,9 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
             }
                if(command =="turn")
                {
-                   if(fac > 5|| 0 > fac ||0 > row || row > 5 || c == FIRST_PLAYER)
+                   if(fac > 5|| 0 > fac ||0 >= row || row > 5 || c == FIRST_PLAYER)
                    {
-                       std::cout<<"Invalid Input"<<std::endl;
+                       std::cout<<"ERROR: Invalid Turn"<<std::endl;
                        std::cout << "> ";
                    }
                    else
@@ -161,12 +169,12 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                        if(n != 0)
                        {
                            validInput = true;
-                           std::cout<<"Turn Successful"<<std::endl;
+                           std::cout<<"INFO: Turn Successful"<<std::endl;
                           
                        }
                        else
                        {
-                           std::cout<<"This Factory does not contain this Colour"<<std::endl;
+                           std::cout<<"ERROR: This Factory does not contain this Colour"<<std::endl;
                            std::cout << "> ";
                        }
                        
@@ -175,12 +183,20 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                }
                else if(command == "save")
                {
-                   saveGame(mosaic_1, mosaic_2, filename);
+                   saveGame(mosaic_1, mosaic_2, factories,filename);
                    std::cout << "> ";
+               }
+               else if(command == "quit")
+               {
+                   std::cout<<std::endl;
+                   std::cout<<"=== GAME ENDED ===";
+                   std::cout<<std::endl;
+                   return;
+                   
                }
                else if(command.size() != 0)
                {
-                   std::cout<<"Invalid Command"<<std::endl;
+                   std::cout<<"ERROR: Invalid Command"<<std::endl;
                    std::cout << "> ";
                }
              
@@ -198,11 +214,11 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                {
                  mosaic_1->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 takefirst = false;
                  nextp1turn = true;
                }
                mosaic_1->placeTile(row, c, n);
                p1turn = false;
+               log += mosaic_1->getPlayer()->getName() + " > " +command+ " ";
                
            }
            else
@@ -211,14 +227,21 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
               {
                  mosaic_2->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 takefirst = false;
                  nextp1turn = false;
                }
                mosaic_2->placeTile(row, c, n);
                p1turn = true;
+               log += mosaic_2->getPlayer()->getName() + " > " +command+ " ";
            }
+            
+            log += std::to_string(fac) + " ";
+            log.push_back(c);
+            log +=" " + std::to_string(row);
+            log.push_back('\n');
         }
-        std::cout<<std::endl;
+        
+        std::cout<<"LOG: All turns happened "<<std::endl;
+        std::cout<<log;
         std::cout<<"=== End of Round ===";
         std::cout<<std::endl;
         
@@ -238,12 +261,12 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
         }
        
         factories->setUp();
-        
-    
-    std::cout<<std::endl;
-    std::cout<<"===GAME OVER===";
-    std::cout<<std::endl;
+        round++;
     }
+    std::cout<<std::endl;
+    std::cout<<"=== GAME OVER ===";
+    std::cout<<std::endl;
+    
 }
 
 
@@ -268,13 +291,14 @@ void Menu()
     std::string command;
     std::cin>>command;
     
-    Mosaic* mosaic_1 = nullptr;
-    Mosaic* mosaic_2 = nullptr;
-        
+    std::shared_ptr<Mosaic> mosaic_1;
+    std::shared_ptr<Mosaic> mosaic_2;
+    std::shared_ptr<Factories> factories;
+           
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame(mosaic_1, mosaic_2, true);
+       startGame(mosaic_1, mosaic_2,factories,true);
    }
    else if(command == "2")
    {
@@ -335,8 +359,8 @@ int main() {
     
      Menu();
     
-//    Mosaic* mos = new Mosaic(new Player("a"));
-//   // Factories fac = new Factories(2);
+   
+    
 //    std::cout<<mos->placeTile(1, RED, 1);
 //    mos->PrintMosaic();
 //

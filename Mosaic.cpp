@@ -74,11 +74,16 @@ Mosaic::Mosaic(Player* player)
 
 Mosaic::~Mosaic()
 {
-    delete this->player;
+    player->~Player();
     for(int x =0; x < 5; x++)
     {
         delete this->pointBoard[x];
         delete this->turnBoard[x];
+        delete this->counted[x];
+    }
+    for(int x =0; x < 7;x++)
+    {
+        delete broken[x];
     }
     delete this->remainder;
 }
