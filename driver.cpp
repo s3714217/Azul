@@ -64,19 +64,6 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
     
     while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
-        mosaic_1->placeTile(1, RED, 1);
-        mosaic_1->turnCheck();
-        mosaic_1->placeTile(1, LIGHT_BLUE, 1);
-        mosaic_1->turnCheck();
-        mosaic_1->placeTile(1, DARK_BLUE, 1);
-        mosaic_1->turnCheck();
-        mosaic_1->placeTile(1, YELLOW, 1);
-        mosaic_1->turnCheck();
-        mosaic_1->placeTile(1, BLACK, 1);
-        mosaic_1->turnCheck();
-        
-     
-        factories->isEmpty();
         std::cout<<std::endl;
         std::cout<<"=== Start Round ===";
         std::cout<<std::endl;
@@ -130,7 +117,7 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
             }
                if(command =="turn")
                {
-                   if(fac > 5|| 0 < fac ||0 < row || row > 5 || c == FIRST_PLAYER)
+                   if(fac > 5|| 0 > fac ||0 > row || row > 5 || c == FIRST_PLAYER)
                    {
                        std::cout<<"Invalid Input"<<std::endl;
                        std::cout << "> ";
