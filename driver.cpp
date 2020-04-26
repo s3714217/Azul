@@ -7,24 +7,43 @@
 //
 
 #include <iostream>
-#include "LinkedList.h"
 #include "Player.h"
 #include "Factories.h"
 #include "ColorCode.h"
 #include "Mosaic.h"
 
-void loadGame()
+void loadGame(std::string filename)
 {
     
+    if(filename.size() > 0)
+    {
+      filename += ".save";
+      filename = "save/"+filename;
+      std::cout<<"Function unavailable"<<std::endl;
+    }
+    else
+    {
+      std::cout<<"Error: Please enter a valid filename!"<<std::endl;
+    }
 }
 
-void saveGame(Mosaic* mos1, Mosaic* mos2, std::string name)
+
+void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename)
 {
-    
+    if(filename.size() > 0)
+    {
+        filename += ".save";
+        filename = "save/"+filename;
+        std::cout<<"Function unavailable"<<std::endl;
+    }
+    else
+    {
+         std::cout<<"ERROR: Please enter a valid filename"<<std::endl;
+    }
 }
 
 
-void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
+void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame)
 {
 
     if(newgame == true)
@@ -46,35 +65,40 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
     std::cout<<"Let's Play!"<<std::endl;
     std::cout<<std::endl;
         
-        mosaic_1=new Mosaic(player1);
-        mosaic_2= new Mosaic(player2);
+        mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
+        mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
+        factories = std::shared_ptr<Factories>(new Factories(2));
     }
     else
     {
         std::cout<<"CONTINUE THE GAME"<<std::endl;
         std::cout<<std::endl;
+        
     }
     
-    
-    Factories* factories = new Factories(2);
     
     
     bool p1turn = true;
     bool nextp1turn = false;
+     int round = 1;
     
     while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
+        
         std::cout<<std::endl;
-        std::cout<<"=== Start Round ===";
+        std::cout<<"=== Start Round " <<round<<" ===";
         std::cout<<std::endl;
         p1turn = nextp1turn;
+        std::string log = "";
         
         while(factories->isEmpty() != true)
         {
+            
             factories->isEmpty();
             if(p1turn == true)
             {
-                std::cout<<"TURN FOR PLAYER:" <<mosaic_1->getPlayer()->getName()<<std::endl;
+                std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
+                std::cout<<"POINTS: "<<mosaic_1->getPlayer()->getPoint()<<std::endl;
                 factories->PrintFactories();
                 std::cout<<std::endl;
                 mosaic_1->PrintMosaic();
@@ -83,7 +107,8 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
     
             else
             {
-                std::cout<<"TURN FOR PLAYER : "<<mosaic_2->getPlayer()->getName()<<std::endl;
+                std::cout<<"TURN FOR PLAYER: "<<mosaic_2->getPlayer()->getName()<<"   ";
+                std::cout<<"POINTS: "<<mosaic_2->getPlayer()->getPoint()<<std::endl;
                 factories->PrintFactories();
                 std::cout<<std::endl;
                 mosaic_2->PrintMosaic();
@@ -92,16 +117,19 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
             
             int fac = 0 , row =0 , n = 0;
             char c = ' ';
+            std::string command;
+            std::string filename;
             bool takefirst = false;
             
            bool validInput = false;
            std::cout << "> ";
            while(validInput != true)
            {
+               command = "";
                fac = 99; row = 99; n=0;
                c = ' ';
             
-            std::string command;
+            
             std::string input;
             
             std::cin.ignore(0);
@@ -109,17 +137,24 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
              
             for(int x = 0; x<input.size(); x++)
             {
+                if(command =="save")
+                {
+                    if(input[x] != ' ')
+                    {
+                        filename.push_back(input[x]);
+                    }
+                }
                if(x < 4)command.push_back(tolower(input[x]));
                else if(x == 5)fac = input[x]-48;
                else if(x == 7)c = toupper(input[x]);
                else if(x == 9)row = input[x]-48;
-                
+              
             }
                if(command =="turn")
                {
-                   if(fac > 5|| 0 > fac ||0 > row || row > 5 || c == FIRST_PLAYER)
+                   if(fac > 5|| 0 > fac ||0 >= row || row > 5 || c == FIRST_PLAYER)
                    {
-                       std::cout<<"Invalid Input"<<std::endl;
+                       std::cout<<"ERROR: Invalid Turn"<<std::endl;
                        std::cout << "> ";
                    }
                    else
@@ -134,12 +169,12 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                        if(n != 0)
                        {
                            validInput = true;
-                           std::cout<<"Turn Successful"<<std::endl;
+                           std::cout<<"INFO: Turn Successful"<<std::endl;
                           
                        }
                        else
                        {
-                           std::cout<<"This Factory does not contain this Colour"<<std::endl;
+                           std::cout<<"ERROR: This Factory does not contain this Colour"<<std::endl;
                            std::cout << "> ";
                        }
                        
@@ -148,12 +183,20 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                }
                else if(command == "save")
                {
-                   std::cout<<"Unvailable"<<std::endl;
-                  // saveGame(mosaic_1, mosaic_2, name);
+                   saveGame(mosaic_1, mosaic_2, factories,filename);
+                   std::cout << "> ";
+               }
+               else if(command == "quit")
+               {
+                   std::cout<<std::endl;
+                   std::cout<<"=== GAME ENDED ===";
+                   std::cout<<std::endl;
+                   return;
+                   
                }
                else if(command.size() != 0)
                {
-                   std::cout<<"Invalid Command"<<std::endl;
+                   std::cout<<"ERROR: Invalid Command"<<std::endl;
                    std::cout << "> ";
                }
              
@@ -171,11 +214,11 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
                {
                  mosaic_1->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 takefirst = false;
                  nextp1turn = true;
                }
                mosaic_1->placeTile(row, c, n);
                p1turn = false;
+               log += mosaic_1->getPlayer()->getName() + " > " +command+ " ";
                
            }
            else
@@ -184,14 +227,21 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
               {
                  mosaic_2->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 takefirst = false;
                  nextp1turn = false;
                }
                mosaic_2->placeTile(row, c, n);
                p1turn = true;
+               log += mosaic_2->getPlayer()->getName() + " > " +command+ " ";
            }
+            
+            log += std::to_string(fac) + " ";
+            log.push_back(c);
+            log +=" " + std::to_string(row);
+            log.push_back('\n');
         }
-        std::cout<<std::endl;
+        
+        std::cout<<"LOG: All turns happened "<<std::endl;
+        std::cout<<log;
         std::cout<<"=== End of Round ===";
         std::cout<<std::endl;
         
@@ -211,12 +261,26 @@ void startGame(Mosaic* mosaic_1, Mosaic* mosaic_2, bool newgame)
         }
        
         factories->setUp();
-        
+        round++;
+    }
+    std::cout<<std::endl;
+    if(mosaic_1->getPlayer()->getPoint() > mosaic_2->getPlayer()->getPoint())
+    {
+        std::cout<<"Player "<<mosaic_1->getPlayer()<<" win the game!"<<std::endl;
+    }
+    else if(mosaic_1->getPlayer()->getPoint() < mosaic_2->getPlayer()->getPoint())
+    {
+        std::cout<<"Player "<<mosaic_2->getPlayer()<<" win the game!"<<std::endl;
+    }
+    else
+    {
+        std::cout<<"Draw!"<<std::endl;
+    }
     
     std::cout<<std::endl;
-    std::cout<<"===GAME OVER===";
+    std::cout<<"=== GAME OVER ===";
     std::cout<<std::endl;
-    }
+    
 }
 
 
@@ -241,17 +305,23 @@ void Menu()
     std::string command;
     std::cin>>command;
     
-    Mosaic* mosaic_1 = nullptr;
-    Mosaic* mosaic_2 = nullptr;
-        
+    std::shared_ptr<Mosaic> mosaic_1;
+    std::shared_ptr<Mosaic> mosaic_2;
+    std::shared_ptr<Factories> factories;
+           
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame(mosaic_1, mosaic_2, true);
+       startGame(mosaic_1, mosaic_2,factories,true);
    }
    else if(command == "2")
    {
-       std::cout<<"Unavailable"<<std::endl;
+       std::string filename = " ";
+       std::cout<<"Enter loading filename: ";
+       std::cin>>filename;
+       std::cout<<std::endl;
+       loadGame(filename);
+      
    }
    else if(command == "3")
    {
@@ -289,9 +359,6 @@ void Menu()
    {
        std::cout << "Invalid input";
    }
-        
-
-    
     
     std::cout<<std::endl;
     }
@@ -300,18 +367,7 @@ void Menu()
 
 int main() {
    
-    
-     Menu();
-    
-//    Mosaic* mos = new Mosaic(new Player("a"));
-//   // Factories fac = new Factories(2);
-//    std::cout<<mos->placeTile(1, RED, 1);
-//    mos->PrintMosaic();
-//
-//    mos->turnCheck();
-//    mos->placeTile(1, RED, 1);
-//
-//    mos->PrintMosaic();
+    Menu();
 }
 
 

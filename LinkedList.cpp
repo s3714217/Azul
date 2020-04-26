@@ -29,7 +29,6 @@ Tile* LinkedList::getFirst()
    if(this->head != nullptr)
    {
     Node* temp = this->head;
-    delete this->head;
     this->head = temp->next;
     this->len--;
     return temp->tile;
@@ -58,9 +57,9 @@ bool LinkedList::remove(Tile *tile)
        
         if(temp->next->tile->getColour() == tile->getColour())
         {
-            delete temp->next;
             temp->next = temp->next->next;
             this->len--;
+            delete temp;
             return true;
         }
         temp = temp->next;
@@ -73,7 +72,7 @@ void LinkedList::clear()
 {
     if(head != nullptr)
     {
-        Node* checkingNode = head->next;
+        Node* checkingNode = head;
         
         while(checkingNode != nullptr)
         {
@@ -82,7 +81,7 @@ void LinkedList::clear()
             delete checkingNode;
             checkingNode = next;
         }
-        head = nullptr;
+        delete checkingNode;
     }
     this->len = 0;
 }
@@ -123,7 +122,7 @@ void LinkedList::shuffle()
         node = node->next;
     }
     
-   unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+   int seed = (int)std::chrono::system_clock::now().time_since_epoch().count();
    std::default_random_engine e(seed);
    std::shuffle (shuffling.begin(), shuffling.end(), e);
   
@@ -133,7 +132,8 @@ void LinkedList::shuffle()
     {
         if(shuffling[x] != nullptr)
         {
-            node->tile = new Tile(shuffling[x]->getColour());
+            
+            node->tile = shuffling[x];
             node = node->next;
         }
     }

@@ -13,20 +13,20 @@ Mosaic::Mosaic(Player* player)
     this->player = player;
     this->pointBoard = new Tile*[5];
     this->turnBoard = new Tile*[5];
-    this->counted = new bool*[5];
+    this->pointCalculator = new char*[5];
 
     for(int x =0; x < 5; x++)
     {
         this->turnBoard[x] = new Tile[x+1];
         this->pointBoard[x] = new Tile[5];
-        this->counted[x] = new bool[5];
+        this->pointCalculator[x] = new char[5];
     }
     
     for(int x=0; x< 5; x++)
     {
         for(int y = 0; y <5; y++)
         {
-            this->counted[x][y] = false;
+            this->pointCalculator[x][y] = EMPTY;
         }
     }
     
@@ -74,11 +74,16 @@ Mosaic::Mosaic(Player* player)
 
 Mosaic::~Mosaic()
 {
-    delete this->player;
+    player->~Player();
     for(int x =0; x < 5; x++)
     {
         delete this->pointBoard[x];
         delete this->turnBoard[x];
+        delete this->pointCalculator[x];
+    }
+    for(int x =0; x < 7;x++)
+    {
+        delete broken[x];
     }
     delete this->remainder;
 }
@@ -190,26 +195,22 @@ void Mosaic::turnCheck()
         if(fullrow == true)
         {
             
-            for (int y = 3; y >= 0; y--)
+            for (int y = 4; y >= 0; y--)
             {
-                if(this->turnBoard[x][y].getColour() != ' ')
+                if(this->turnBoard[x][y].getColour() != ' ' && y < 4)
                 {
                     this->turnBoard[x][y].setColour(EMPTY);
                     remainder->addBack(new Tile(c));
-                  
                 }
+                
                 if(this->pointBoard[x][y].getColour() == tolower(c))
                 {
                     this->pointBoard[x][y].setColour(c);
+                    this->pointCalculator[x][y] = OCCUPIED;
                 }
             }
-            for (int y = 4; y >= 0; y--)
-            {
-                if(this->pointBoard[x][y].getColour() == tolower(c))
-                {
-                    this->pointBoard[x][y].setColour(c);
-                }
-            }
+            
+            
             
             
             this->turnBoard[x][4].setColour(EMPTY);
@@ -223,10 +224,6 @@ void Mosaic::turnCheck()
    
 }
 
-void Mosaic::pointCalculation()
-{
-   
-}
 
 bool Mosaic::winCheck()
 {
@@ -301,4 +298,145 @@ void Mosaic::PrintMosaic()
         }
     }
     std::cout <<std::endl;
+}
+
+void Mosaic::pointCalculation()
+{
+    int point = this->player->getPoint();
+    std::vector<int> checkX;
+    std::vector<int> checkY;
+    bool horizontal = true;
+    bool vertical = true;
+    
+    for(int x = 0; x < 5; x++)
+    {
+        for(int y = 0; y < 5; y++)
+        {
+            if(pointCalculator[x][y] == OCCUPIED)
+            {
+                checkX.push_back(x);
+                checkY.push_back(y);
+            }
+        }
+    }
+    
+    for(int n = 0; n < checkX.size(); n++)
+    {
+        pointCalculator[checkX[n]][checkY[n]] = COUNTED;
+        bool horizontaladded = false;
+        bool verticaladded = false;
+        
+        for(int m = checkY[n]+1; m < 5; m++)
+        {
+            if(pointCalculator[checkX[n]][m] == COUNTED)
+            {
+                point++;
+                
+                if(m == checkY[n]+1)
+                {
+                    horizontaladded = true;
+                    point++;
+                }
+            }
+            else
+            {
+                m = 5;
+                horizontal = false;
+            }
+        }
+        
+        for(int m = checkY[n]-1; m >= 0; m--)
+        {
+            if(pointCalculator[checkX[n]][m] == COUNTED)
+           {
+              
+               point++;
+               
+               if(horizontaladded == false)
+               {
+                   horizontaladded = true;
+                   point++;
+               }
+           }
+           else
+           {
+               m = 0;
+               horizontal = false;
+           }
+           
+        }
+        
+       
+
+        for(int m = checkX[n]+1; m < 5; m++)
+        {
+           if(pointCalculator[m][checkY[n]] == COUNTED)
+           {
+               point++;
+               if(m == checkX[n]+1)
+               {
+                   verticaladded = true;
+                   point++;
+               }
+           }
+           else
+           {
+               m = 5;
+               vertical = false;
+           }
+        }
+        for(int m = checkX[n]-1; m >= 0; m--)
+        {
+           if(pointCalculator[m][checkY[n]] == COUNTED)
+           {
+               
+               point++;
+               if(verticaladded == false)
+               {
+                   verticaladded = true;
+                   point++;
+               }
+           }
+           else
+           {
+               m = 0;
+               vertical = false;
+           }
+        }
+        
+        if(verticaladded == false && horizontaladded == false)
+        {
+            verticaladded = true;
+            point++;
+        }
+        
+        
+        if(vertical == true)
+        {
+            point += 7;
+        }
+        if(horizontal == true)
+        {
+            point +=2;
+        }
+    
+    }
+    
+    
+    for (int x = 0; x <= brokenPts; x++)
+    {
+       if(broken[x] != nullptr)
+       {
+         if(x < 2) point--;
+         else if(x < 5) point-=2;
+         else point -=3;
+       }
+       else
+       {
+           x = brokenPts+1;
+       }
+        
+    }
+    
+    this->player->setPoint(point);
 }

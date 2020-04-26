@@ -17,14 +17,16 @@ Player::Player(std::string name)
 
 Player::~Player()
 {
-    this->name = nullptr;
+    this->name = "";
     this->point = 0;
     
 }
 
 void Player::setPoint(int pts)
 {
-    this->point = pts;
+   if(pts >= 0)this->point = pts;
+    
+   else this->point = 0;
 }
 
 int Player::getPoint()

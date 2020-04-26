@@ -26,7 +26,6 @@ public:
     bool isEmpty();
     void removeFirst();
     bool isFirst();
- //   void reset();
     void setUp();
     
 private:

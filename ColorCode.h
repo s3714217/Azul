@@ -16,6 +16,8 @@
 
 #define FIRST_PLAYER  'F'
 #define EMPTY  '.'
+#define OCCUPIED 'o'
+#define COUNTED 'c'
 #define TOTAL_TILE 100
 typedef char Colour;
 
