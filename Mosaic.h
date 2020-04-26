@@ -38,7 +38,7 @@ private:
     Tile** turnBoard;
     LinkedList* remainder;
     Tile* broken[7];
-    bool** counted;
+    char** pointCalculator;
     bool containedFirst = false;
     int brokenPts = 0;
     bool won = false;

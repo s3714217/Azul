@@ -24,7 +24,9 @@ Player::~Player()
 
 void Player::setPoint(int pts)
 {
-    this->point = pts;
+   if(pts >= 0)this->point = pts;
+    
+   else this->point = 0;
 }
 
 int Player::getPoint()

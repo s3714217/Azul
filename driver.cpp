@@ -264,6 +264,20 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
         round++;
     }
     std::cout<<std::endl;
+    if(mosaic_1->getPlayer()->getPoint() > mosaic_2->getPlayer()->getPoint())
+    {
+        std::cout<<"Player "<<mosaic_1->getPlayer()<<" win the game!"<<std::endl;
+    }
+    else if(mosaic_1->getPlayer()->getPoint() < mosaic_2->getPlayer()->getPoint())
+    {
+        std::cout<<"Player "<<mosaic_2->getPlayer()<<" win the game!"<<std::endl;
+    }
+    else
+    {
+        std::cout<<"Draw!"<<std::endl;
+    }
+    
+    std::cout<<std::endl;
     std::cout<<"=== GAME OVER ===";
     std::cout<<std::endl;
     
@@ -345,9 +359,6 @@ void Menu()
    {
        std::cout << "Invalid input";
    }
-        
-
-    
     
     std::cout<<std::endl;
     }
@@ -356,18 +367,7 @@ void Menu()
 
 int main() {
    
-    
-     Menu();
-    
-   
-    
-//    std::cout<<mos->placeTile(1, RED, 1);
-//    mos->PrintMosaic();
-//
-//    mos->turnCheck();
-//    mos->placeTile(1, RED, 1);
-//
-//    mos->PrintMosaic();
+    Menu();
 }
 
 
