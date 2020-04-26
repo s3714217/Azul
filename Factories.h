@@ -28,6 +28,16 @@ public:
     bool isFirst();
     void setUp();
     
+    void setTileBag(LinkedList* TileBag);
+    void setBoxLid(LinkedList* BoxLid);
+    void setNumberOfFactory(int numberOfFactory);
+    void setFactories(Tile** factories);
+    
+    LinkedList* getTileBag();
+    LinkedList* getBoxLid();
+    int getNumberOfFactory();
+    Tile** getFactories();
+    
 private:
     
     

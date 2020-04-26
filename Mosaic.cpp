@@ -440,3 +440,64 @@ void Mosaic::pointCalculation()
     
     this->player->setPoint(point);
 }
+
+void Mosaic::setPlayer(Player *player)
+{
+    this->player = player;
+}
+void Mosaic::setPointBoard(Tile **pointBoard)
+{
+    this->pointBoard = pointBoard;
+}
+void Mosaic::setTurnBoard(Tile **turnBoard)
+{
+    this->turnBoard = turnBoard;
+}
+void Mosaic::setRemainder(LinkedList *remainder)
+{
+    this->remainder = remainder;
+}
+void Mosaic::setBroken(Tile* broken[])
+{
+    for(int x =0; x < 7; x++)
+    {
+        this->broken[x] = broken[x];
+        if(broken[x] != nullptr)
+        {
+            brokenPts++;
+            if(broken[x]->getColour() == FIRST_PLAYER)
+            {
+                this->containedFirst = true;
+            }
+        }
+        
+    }
+}
+void Mosaic::setPointCalculator(char **pointCalculator)
+{
+    this->pointCalculator = pointCalculator;
+}
+
+
+Tile** Mosaic::getPointBoard()
+{
+    return this->pointBoard;
+}
+Tile** Mosaic::getTurnBoard()
+{
+   return this->turnBoard;
+}
+LinkedList* Mosaic::getRemainder()
+{
+    return this->remainder;
+}
+Tile* Mosaic::getBroken(int index)
+{
+    return this->broken[index];
+}
+char** Mosaic::getPointCalculator()
+{
+    return this->pointCalculator;
+}
+
+

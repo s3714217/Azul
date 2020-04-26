@@ -205,3 +205,61 @@ bool Factories::isFirst()
 {
     return this->first;
 }
+
+
+void Factories::setTileBag(LinkedList* TileBag)
+{
+    this->TileBag = TileBag;
+}
+void Factories::setBoxLid(LinkedList *BoxLid)
+{
+    this->BoxLid = BoxLid;
+}
+void Factories::setNumberOfFactory(int numberOfFactory)
+{
+    this->numberOfFactory = numberOfFactory;
+}
+void Factories::setFactories(Tile **factories)
+{
+    this->factories = factories;
+    int size = 0;
+    int left = 0;
+    for(int x =0; x < 5; x++)
+    {
+        for(int y =0; y < 5; y++)
+        {
+            if(this->factories[x][y].getColour() != ' ')
+            {
+                size++;
+            }
+            if(this->factories[0][y].getColour() == FIRST_PLAYER)
+            {
+                this->first = true;
+            }
+            else  if(this->factories[0][y].getColour() != ' ')
+            {
+                left++;
+            }
+        }
+    }
+    this->size = size;
+    this->leftover = left;
+}
+
+LinkedList* Factories::getTileBag()
+{
+    return this->TileBag;
+}
+
+LinkedList* Factories::getBoxLid()
+{
+    return this->BoxLid;
+}
+int Factories::getNumberOfFactory()
+{
+    return this->numberOfFactory;
+}
+Tile** Factories::getFactories()
+{
+    return this->factories;
+}
