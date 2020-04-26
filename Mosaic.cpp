@@ -79,7 +79,7 @@ Mosaic::~Mosaic()
     {
         delete this->pointBoard[x];
         delete this->turnBoard[x];
-        delete this->pointCalculator[x];
+        delete this->counted[x];
     }
     for(int x =0; x < 7;x++)
     {

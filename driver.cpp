@@ -276,7 +276,6 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
     {
         std::cout<<"Draw!"<<std::endl;
     }
-    
     std::cout<<std::endl;
     std::cout<<"=== GAME OVER ===";
     std::cout<<std::endl;
@@ -366,7 +365,6 @@ void Menu()
 
 
 int main() {
-   
     Menu();
 }
 
