@@ -20,7 +20,7 @@ public:
 
    void addFront(Tile* tile);
    void addBack(Tile* tile);
-    void shuffle();
+    void shuffle(int seed);
     void printAll();
 private:
        int len;

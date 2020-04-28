@@ -43,7 +43,7 @@ void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::sha
 }
 
 
-void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame)
+void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed)
 {
 
     if(newgame == true)
@@ -67,7 +67,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
         
         mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
         mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
-        factories = std::shared_ptr<Factories>(new Factories(2));
+        factories = std::shared_ptr<Factories>(new Factories(2, seed));
     }
     else
     {
@@ -260,7 +260,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
            
         }
        
-        factories->setUp();
+        factories->setUp(seed);
         round++;
     }
     std::cout<<std::endl;
@@ -285,7 +285,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
 
 
 
-void Menu()
+void Menu(int seed)
 {
     std::cout<<" WELCOME TO AZUL!"<<std::endl;
     std::cout<<"------------------------"<<std::endl;
@@ -312,7 +312,7 @@ void Menu()
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame(mosaic_1, mosaic_2,factories,true);
+       startGame(mosaic_1, mosaic_2,factories,true,seed);
    }
    else if(command == "2")
    {
@@ -367,7 +367,8 @@ void Menu()
 
 int main() {
    
-    Menu();
+    int seed = (int)std::chrono::system_clock::now().time_since_epoch().count();
+    Menu(seed);
 }
 
 

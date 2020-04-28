@@ -8,7 +8,7 @@
 
 #include "Factories.h"
 
-Factories::Factories(int numberOfPlayer)
+Factories::Factories(int numberOfPlayer, int seed)
 {
     if(numberOfPlayer == 2)
     {
@@ -34,7 +34,7 @@ Factories::Factories(int numberOfPlayer)
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(DARK_BLUE));
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(LIGHT_BLUE));
     
-    this->setUp();
+    this->setUp(seed);
 }
 
 Factories::~Factories()
@@ -150,7 +150,7 @@ void Factories::PrintFactories()
     std::cout <<std::endl;
 }
 
-void Factories::setUp()
+void Factories::setUp(int seed)
 {
     
     this->leftover = 1;
@@ -160,7 +160,13 @@ void Factories::setUp()
         this->factories[0][x] = ' ';
     }
     this->factories[0][0] = FIRST_PLAYER;
-    this->BoxLid->shuffle();
+   
+    if(shuffled == false)
+    {
+        this->BoxLid->shuffle(seed);
+        shuffled =true;
+    }
+    
     for(int x =0; x != 4*(this->numberOfFactory -1); x++)
     {
         Tile* temp = this->BoxLid->getFirst();

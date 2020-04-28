@@ -17,7 +17,7 @@
 class Factories{
     
 public:
-    Factories(int numberOfPlayer);
+    Factories(int numberOfPlayer, int seed);
     ~Factories();
     int takeTile(Colour c, int factory);
     void addRemain(Tile* tile);
@@ -26,7 +26,7 @@ public:
     bool isEmpty();
     void removeFirst();
     bool isFirst();
-    void setUp();
+    void setUp(int seed);
     
     void setTileBag(LinkedList* TileBag);
     void setBoxLid(LinkedList* BoxLid);
@@ -48,5 +48,6 @@ private:
     int leftover = 1;
     bool first;
     int size = 0;
+    bool shuffled = false;
 };
 #endif /* Factories_hpp */

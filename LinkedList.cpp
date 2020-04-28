@@ -113,7 +113,7 @@ void LinkedList::addBack(Tile* tile)
    }
 }
 
-void LinkedList::shuffle()
+void LinkedList::shuffle(int seed)
 {
     std::vector<Tile*> shuffling ;
     Node* node = this->head;
@@ -122,8 +122,10 @@ void LinkedList::shuffle()
         node = node->next;
     }
     
-   int seed = (int)std::chrono::system_clock::now().time_since_epoch().count();
+   
+    //feed in at the driver
    std::default_random_engine e(seed);
+    
    std::shuffle (shuffling.begin(), shuffling.end(), e);
   
     
