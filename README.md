@@ -4,5 +4,5 @@
 - driver.cpp contain the main() to run the game
 
 How to compile
-g++ -Wall -Werror -std=c++14 -O -o azul *.cpp
-./azul
+ $ g++ -Wall -Werror -std=c++14 -O -o azul *.cpp
+ $ ./azul
