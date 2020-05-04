@@ -19,6 +19,8 @@
 #define OCCUPIED 'o'
 #define COUNTED 'c'
 #define TOTAL_TILE 100
+
+#define BROKEN_LEN 7
 typedef char Colour;
 
 #endif

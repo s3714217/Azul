@@ -131,7 +131,6 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
             
             
             std::string input;
-            
             std::cin.ignore(0);
             std::getline(std::cin, input);
              

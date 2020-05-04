@@ -181,7 +181,6 @@ void Mosaic::turnCheck()
         {
             if(this->turnBoard[x][y].getColour() == EMPTY)
             {
-                
                 fullrow = false;
             }
             else if(this->turnBoard[x][y].getColour() != ' ')
@@ -190,11 +189,8 @@ void Mosaic::turnCheck()
             }
         }
         
-      
-        
         if(fullrow == true)
         {
-            
             for (int y = 4; y >= 0; y--)
             {
                 if(this->turnBoard[x][y].getColour() != ' ' && y < 4)
@@ -209,17 +205,9 @@ void Mosaic::turnCheck()
                     this->pointCalculator[x][y] = OCCUPIED;
                 }
             }
-            
-            
-            
-            
             this->turnBoard[x][4].setColour(EMPTY);
-            
         }
-        
     }
-    
-    
     this->pointCalculation();
    
 }
@@ -230,6 +218,7 @@ bool Mosaic::winCheck()
     for(int x =0; x < 5; x++)
     {
         bool fullrow = true;
+        
         for(int y =0; y < 5; y++)
         {
             if(this->pointBoard[x][y].getColour() == tolower(this->pointBoard[x][y].getColour()))
@@ -238,14 +227,14 @@ bool Mosaic::winCheck()
             }
            
         }
-        if(fullrow != false)
+        
+        if(fullrow)
         {
-            this->won = true;
-            return this->won;
+            return true;
         }
     }
     
-    return this->won;
+    return false;
 }
 
 LinkedList* Mosaic::returnTile()

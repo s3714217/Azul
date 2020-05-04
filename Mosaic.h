@@ -49,12 +49,11 @@ private:
     Tile** pointBoard;
     Tile** turnBoard;
     LinkedList* remainder;
-    Tile* broken[7];
+    Tile* broken[BROKEN_LEN];
     char** pointCalculator;
     
     bool containedFirst = false;
     int brokenPts = 0;
-    bool won = false;
 
 };
 

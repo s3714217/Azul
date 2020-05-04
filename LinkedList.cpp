@@ -125,7 +125,6 @@ void LinkedList::shuffle(int seed)
    
     //feed in at the driver
    std::default_random_engine e(seed);
-    
    std::shuffle (shuffling.begin(), shuffling.end(), e);
   
     
