@@ -129,7 +129,7 @@ void LinkedList::shuffle(int seed)
   
     
     node = this->head;
-    for (int x=0; x < shuffling.size(); x++)
+    for (int x=0; x < (signed)shuffling.size(); x++)
     {
         if(shuffling[x] != nullptr)
         {

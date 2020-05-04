@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <memory>
+#include <chrono>
 #include "Player.h"
 #include "Factories.h"
 #include "ColorCode.h"
@@ -134,7 +136,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
             std::cin.ignore(0);
             std::getline(std::cin, input);
              
-            for(int x = 0; x<input.size(); x++)
+            for(int x = 0; x < (signed)input.size(); x++)
             {
                 if(command =="save")
                 {

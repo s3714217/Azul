@@ -309,7 +309,7 @@ void Mosaic::pointCalculation()
         }
     }
     
-    for(int n = 0; n < checkX.size(); n++)
+    for(int n = 0; n < (signed)checkX.size(); n++)
     {
         pointCalculator[checkX[n]][checkY[n]] = COUNTED;
         bool horizontaladded = false;
