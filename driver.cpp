@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include <memory>
 #include <chrono>
 #include "headers/Player.h"
@@ -19,9 +20,9 @@ void loadGame(std::string filename)
     
     if(filename.size() > 0)
     {
+        
       filename += ".save";
       filename = "save/"+filename;
-      std::cout<<"Function unavailable"<<std::endl;
     }
     else
     {
@@ -350,7 +351,7 @@ void Menu(int seed)
    }
    else if(command == "4")
    {
-        std::cout << "Goodbye";
+        std::cout << "Goodbye"<<std::endl;;
         std::exit(EXIT_SUCCESS);
    }
         
@@ -374,5 +375,5 @@ int main(int argc, char *argv[]) {
     //int seed = 1;
     Menu(seed);
    
-        
+  
 }

@@ -1,0 +1,62 @@
+ WELCOME TO AZUL!
+------------------------
+
+Menu
+----------
+1. New Game
+2. Load Game
+3. Credits 
+4. Quit
+
+>
+START A NEW GAME
+
+ENTER NAME FOR PLAYER 1:
+>
+ENTER NAME FOR PLAYER 2:
+>
+Let's Play!
+
+
+=== Start Round 1 ===
+TURN FOR PLAYER: P2   POINTS: 0
+Factories: 
+0: F 
+1: R B B R 
+2: R U B Y 
+3: R R L Y 
+4: Y B L L 
+5: U B L R 
+
+
+Mosaic for P2
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: P1   POINTS: 0
+Factories: 
+0: F R R 
+1:         
+2: R U B Y 
+3: R R L Y 
+4: Y B L L 
+5: U B L R 
+
+
+Mosaic for P1
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+Goodbye.
