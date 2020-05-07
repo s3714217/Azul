@@ -12,5 +12,5 @@ How to compile
  
 How to clean up
  
- $ make -f Makefile rm
+ $ make -f Makefile clean
  
