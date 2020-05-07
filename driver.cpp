@@ -9,10 +9,10 @@
 #include <iostream>
 #include <memory>
 #include <chrono>
-#include "Player.h"
-#include "Factories.h"
-#include "ColorCode.h"
-#include "Mosaic.h"
+#include "headers/Player.h"
+#include "headers/Factories.h"
+#include "headers/ColorCode.h"
+#include "headers/Mosaic.h"
 
 void loadGame(std::string filename)
 {
@@ -70,6 +70,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
         mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
         mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
         factories = std::shared_ptr<Factories>(new Factories(2, seed));
+       
     }
     else
     {
@@ -125,6 +126,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
             
            bool validInput = false;
            std::cout << "> ";
+            
            while(validInput != true)
            {
                command = "";
@@ -171,6 +173,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
                        {
                            validInput = true;
                            std::cout<<"INFO: Turn Successful"<<std::endl;
+                           std::cout<<std::endl;
                           
                        }
                        else
@@ -248,17 +251,16 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
         
         mosaic_1->turnCheck();
         mosaic_2->turnCheck();
+        
         int len = mosaic_1->returnTile()->size();
         for(int x =0; x <= len; x++)
         {
-          factories->addRemain(mosaic_1->returnTile()->getFirst());
-            
+        factories->addRemain(mosaic_1->returnTile()->getFirst());
         }
         len = mosaic_2->returnTile()->size();
         for(int x =0; x <= len; x++)
         {
-          factories->addRemain(mosaic_2->returnTile()->getFirst());
-           
+        factories->addRemain(mosaic_2->returnTile()->getFirst());
         }
        
         factories->setUp(seed);
@@ -267,11 +269,11 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
     std::cout<<std::endl;
     if(mosaic_1->getPlayer()->getPoint() > mosaic_2->getPlayer()->getPoint())
     {
-        std::cout<<"Player "<<mosaic_1->getPlayer()<<" win the game!"<<std::endl;
+        std::cout<<"Player "<<mosaic_1->getPlayer()->getName()<<" win the game!"<<std::endl;
     }
     else if(mosaic_1->getPlayer()->getPoint() < mosaic_2->getPlayer()->getPoint())
     {
-        std::cout<<"Player "<<mosaic_2->getPlayer()<<" win the game!"<<std::endl;
+        std::cout<<"Player "<<mosaic_2->getPlayer()->getName()<<" win the game!"<<std::endl;
     }
     else
     {
@@ -366,10 +368,11 @@ void Menu(int seed)
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
    
-    int seed = (int)std::chrono::system_clock::now().time_since_epoch().count();
+    int seed =  *argv[1] - 48;
+    //int seed = 1;
     Menu(seed);
+   
+        
 }
-
-

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Thien Nguyen. All rights reserved.
 //
 
-#include "Tile.h"
+#include "headers/Tile.h"
 
 Tile::Tile()
 {
@@ -25,9 +25,7 @@ void Tile::setColour(Colour c)
 
 Colour Tile::getColour()
 {
-   
     return this->colour;
-   
 }
 
 bool Tile::isSameColour(Tile* tile)

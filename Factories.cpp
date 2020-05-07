@@ -6,13 +6,13 @@
 //  Copyright © 2020 Thien Nguyen. All rights reserved.
 //
 
-#include "Factories.h"
+#include "headers/Factories.h"
 
 Factories::Factories(int numberOfPlayer, int seed)
 {
     if(numberOfPlayer == 2)
     {
-        this->numberOfFactory = 6;
+        this->numberOfFactory = NOFACTORY;
         
     }
     
@@ -23,7 +23,7 @@ Factories::Factories(int numberOfPlayer, int seed)
     
     this->factories[0] = new Tile[this->numberOfFactory * MAX_REMAIN];
     
-    for(int x = 1; x != this->numberOfFactory; x++)
+    for(int x = 1; x < this->numberOfFactory; x++)
     {
         this->factories[x] = new Tile[4];
     }
@@ -167,7 +167,7 @@ void Factories::setUp(int seed)
         shuffled =true;
     }
     
-    for(int x =0; x != 4*(this->numberOfFactory -1); x++)
+    for(int x =0; x < 4*(this->numberOfFactory -1); x++)
     {
         Tile* temp = this->BoxLid->getFirst();
         if(temp != nullptr)

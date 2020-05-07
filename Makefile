@@ -3,10 +3,10 @@
 all: azul
 
 clean:
-	rm -rf azul *.o *.dSYM
+	rm -rf azul
 
-azul: Tile.o Node.o LinkedList.o Mosaic.o Factories.o driver.o Player.o 
-	g++ -Wall -Werror -std=c++14 -g -O -o $@ $^
+azul:  
+	g++ -Wall -Werror -std=c++14 -O -o azul *.cpp
 
-%.o: %.cpp
-	g++ -Wall -Werror -std=c++14 -g -O -c $^
+run:	
+	./azul 1

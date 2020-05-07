@@ -6,7 +6,7 @@
 //  Copyright © 2020 Thien Nguyen. All rights reserved.
 //
 
-#include "Mosaic.h"
+#include "headers/Mosaic.h"
 
 Mosaic::Mosaic(Player* player)
 {
@@ -42,6 +42,7 @@ Mosaic::Mosaic(Player* player)
             {
                 this->turnBoard[x][y].setColour(EMPTY);
             }
+            
         }
     }
      
@@ -60,10 +61,6 @@ Mosaic::Mosaic(Player* player)
         this->pointBoard[x][x-3] =  EMPTY_RED;
         this->pointBoard[x][x-4] =  EMPTY_YELLOW;
     }
-    
-    
-    
-    
     
     remainder = new LinkedList();
     for(int x =0; x < 7; x++)
@@ -241,8 +238,11 @@ LinkedList* Mosaic::returnTile()
 {
     for(int x = 0; x < brokenPts; x++)
     {
-        this->remainder->addBack(broken[x]);
-        this->broken[x] = new Tile(' ');
+        if(this->broken[x]->getColour() != FIRST_PLAYER)
+        {
+            this->remainder->addBack(broken[x]);
+            this->broken[x] = new Tile(' ');
+        }
     }
     this->brokenPts = 0;
     return this->remainder;
@@ -448,9 +448,10 @@ void Mosaic::setRemainder(LinkedList *remainder)
 }
 void Mosaic::setBroken(Tile* broken[])
 {
-    for(int x =0; x < 7; x++)
+    for(int x =0; x <  brokenPts; x++)
     {
         this->broken[x] = broken[x];
+        
         if(broken[x] != nullptr)
         {
             brokenPts++;

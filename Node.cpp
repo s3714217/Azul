@@ -6,7 +6,7 @@
 //  Copyright © 2020 Thien Nguyen. All rights reserved.
 //
 
-#include "Node.h"
+#include "headers/Node.h"
 
 Node::Node(Tile* tile, Node* next)
 {

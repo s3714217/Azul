@@ -6,7 +6,7 @@
 //  Copyright © 2020 Thien Nguyen. All rights reserved.
 //
 
-#include "Player.h"
+#include "headers/Player.h"
 
 
 Player::Player(std::string name)
