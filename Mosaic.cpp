@@ -438,17 +438,14 @@ void Mosaic::pointCalculation()
     {
         for(int y = 0; y <  BOARD_SIZE; y++)
         {
-            switch (pointBoard[x][y].getColour())
-            {
-                case RED: RCount++;
-                case BLACK: UCount++;
-                case LIGHT_BLUE: LCount++;
-                case DARK_BLUE: BCount++;
-                case YELLOW: YCount++;
-            }
+            if(this->pointBoard[x][y].getColour() == RED) RCount++;
+            else if(this->pointBoard[x][y].getColour() == LIGHT_BLUE) LCount++;
+            else if(this->pointBoard[x][y].getColour() == DARK_BLUE) BCount++;
+            else if(this->pointBoard[x][y].getColour() == YELLOW) YCount++;
+            else if(this->pointBoard[x][y].getColour() == BLACK) UCount++;
         }
     }
-    
+   // std::cout<<UCount;
     if(UCount == 5 && this->colourCounting[0] == false) point+=10; this->colourCounting[0] = true;
     if(LCount == 5 && this->colourCounting[1] == false) point+=10; this->colourCounting[1] = true;
     if(BCount == 5 && this->colourCounting[2] == false) point+=10; this->colourCounting[2] = true;
