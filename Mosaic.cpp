@@ -11,30 +11,30 @@
 Mosaic::Mosaic(Player* player)
 {
     this->player = player;
-    this->pointBoard = new Tile*[5];
-    this->turnBoard = new Tile*[5];
-    this->pointCalculator = new char*[5];
-
+    this->pointBoard = new Tile*[BOARD_SIZE];
+    this->turnBoard = new Tile*[BOARD_SIZE];
+    this->pointCalculator = new char*[BOARD_SIZE];
+    this->colourCounting = new bool[NUMBEROFCOLOUR];
     for(int x =0; x < 5; x++)
     {
         this->turnBoard[x] = new Tile[x+1];
-        this->pointBoard[x] = new Tile[5];
-        this->pointCalculator[x] = new char[5];
+        this->pointBoard[x] = new Tile[BOARD_SIZE];
+        this->pointCalculator[x] = new char[BOARD_SIZE];
     }
     
-    for(int x=0; x< 5; x++)
+    for(int x=0; x< BOARD_SIZE; x++)
     {
-        for(int y = 0; y <5; y++)
+        for(int y = 0; y <BOARD_SIZE; y++)
         {
             this->pointCalculator[x][y] = EMPTY;
         }
     }
     
-    for(int x = 0; x <= 4; x++)
+    for(int x = 0; x <= BOARD_SIZE-1; x++)
     {
-        for(int y = 4; y >= 0; y--)
+        for(int y = BOARD_SIZE-1; y >= 0; y--)
         {
-            if(x+y < 4)
+            if(x+y < BOARD_SIZE-1)
             {
                  this->turnBoard[x][y].setColour(' ');
             }
@@ -46,7 +46,7 @@ Mosaic::Mosaic(Player* player)
         }
     }
      
-    for(int x = 0; x <= 4; x++)
+    for(int x = 0; x <= BOARD_SIZE-1; x++)
     {
        
         
@@ -63,7 +63,7 @@ Mosaic::Mosaic(Player* player)
     }
     
     remainder = new LinkedList();
-    for(int x =0; x < 7; x++)
+    for(int x =0; x < BROKEN_LEN; x++)
     {
         this->broken[x] = nullptr;
     }
@@ -72,13 +72,13 @@ Mosaic::Mosaic(Player* player)
 Mosaic::~Mosaic()
 {
     player->~Player();
-    for(int x =0; x < 5; x++)
+    for(int x =0; x < BOARD_SIZE; x++)
     {
         delete this->pointBoard[x];
         delete this->turnBoard[x];
         delete this->pointCalculator[x];
     }
-    for(int x =0; x < 7;x++)
+    for(int x =0; x < BROKEN_LEN;x++)
     {
         delete broken[x];
     }
@@ -102,7 +102,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
     }
     
     bool valid = false;
-    for(int x = 0; x <5; x++)
+    for(int x = 0; x <BOARD_SIZE; x++)
     {
        if(this->pointBoard[row][x].getColour() == tolower(c))
        {
@@ -110,7 +110,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
        }
         
     }
-    for(int x = 0; x <5; x++)
+    for(int x = 0; x <BOARD_SIZE; x++)
     {
         if(this->turnBoard[row][x].getColour() != EMPTY
         && this->turnBoard[row][x].getColour() != c
@@ -122,7 +122,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
     
     if(valid == true)
     {
-        for (int x =0; x <= 5; x++)
+        for (int x =0; x <= BOARD_SIZE; x++)
         {
            
             if(this->turnBoard[row][5-x].getColour() == EMPTY && number != 0)
@@ -136,7 +136,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
             
             for(int x =0; x < number; x++)
             {
-                if(brokenPts < 7)
+                if(brokenPts < BROKEN_LEN)
                 {
                     
                     this->broken[this->brokenPts] = new Tile(c);
@@ -154,7 +154,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
     {
         for(int x =0; x < number; x++)
         {
-            if(brokenPts < 7)
+            if(brokenPts < BROKEN_LEN)
             {
                 this->broken[this->brokenPts] = new Tile(c);
                 this->brokenPts++;
@@ -170,11 +170,11 @@ bool Mosaic::placeTile(int row, Colour c, int number)
 void Mosaic::turnCheck()
 {
     
-    for (int x = 0; x < 5; x++)
+    for (int x = 0; x < BOARD_SIZE; x++)
     {
         bool fullrow = true;
         Colour c = EMPTY;
-        for (int y = 4; y >= 0; y--)
+        for (int y = BOARD_SIZE-1; y >= 0; y--)
         {
             if(this->turnBoard[x][y].getColour() == EMPTY)
             {
@@ -188,9 +188,9 @@ void Mosaic::turnCheck()
         
         if(fullrow == true)
         {
-            for (int y = 4; y >= 0; y--)
+            for (int y = BOARD_SIZE-1; y >= 0; y--)
             {
-                if(this->turnBoard[x][y].getColour() != ' ' && y < 4)
+                if(this->turnBoard[x][y].getColour() != ' ' && y < NUMBEROFTILE)
                 {
                     this->turnBoard[x][y].setColour(EMPTY);
                     remainder->addBack(new Tile(c));
@@ -202,7 +202,7 @@ void Mosaic::turnCheck()
                     this->pointCalculator[x][y] = OCCUPIED;
                 }
             }
-            this->turnBoard[x][4].setColour(EMPTY);
+            this->turnBoard[x][NUMBEROFTILE].setColour(EMPTY);
         }
     }
     this->pointCalculation();
@@ -212,11 +212,11 @@ void Mosaic::turnCheck()
 
 bool Mosaic::winCheck()
 {
-    for(int x =0; x < 5; x++)
+    for(int x =0; x < BOARD_SIZE; x++)
     {
         bool fullrow = true;
         
-        for(int y =0; y < 5; y++)
+        for(int y =0; y < BOARD_SIZE; y++)
         {
             if(this->pointBoard[x][y].getColour() == tolower(this->pointBoard[x][y].getColour()))
             {
@@ -257,17 +257,17 @@ void Mosaic::PrintMosaic()
 {
     std::cout <<"Mosaic for "<<this->player->getName()<<std::endl;
     
-    for(int x =0; x < 5; x++)
+    for(int x =0; x < BOARD_SIZE; x++)
     {
         std::cout <<x+1<<": ";
         
-        for (int y =0; y < 5 ;y++ )
+        for (int y =0; y < BOARD_SIZE ;y++ )
         {
             std::cout <<this->turnBoard[x][y].getColour();
             std::cout <<"  ";
         }
         std::cout <<"||";
-        for (int y =0; y < 5 ;y++ )
+        for (int y =0; y < BOARD_SIZE ;y++ )
         {
             std::cout <<"  ";
             std::cout <<this->pointBoard[x][y].getColour();
@@ -278,7 +278,7 @@ void Mosaic::PrintMosaic()
     }
     
     std::cout <<"broken: ";
-    for(int x = 0; x < 7; x++)
+    for(int x = 0; x < BROKEN_LEN; x++)
     {
         if(broken[x] != nullptr)
         {
@@ -297,9 +297,10 @@ void Mosaic::pointCalculation()
     bool horizontal = true;
     bool vertical = true;
     
-    for(int x = 0; x < 5; x++)
+   
+    for(int x = 0; x < BOARD_SIZE; x++)
     {
-        for(int y = 0; y < 5; y++)
+        for(int y = 0; y < BOARD_SIZE; y++)
         {
             if(pointCalculator[x][y] == OCCUPIED)
             {
@@ -315,7 +316,7 @@ void Mosaic::pointCalculation()
         bool horizontaladded = false;
         bool verticaladded = false;
         
-        for(int m = checkY[n]+1; m < 5; m++)
+        for(int m = checkY[n]+1; m < BOARD_SIZE; m++)
         {
             if(pointCalculator[checkX[n]][m] == COUNTED)
             {
@@ -357,7 +358,7 @@ void Mosaic::pointCalculation()
         
        
 
-        for(int m = checkX[n]+1; m < 5; m++)
+        for(int m = checkX[n]+1; m <  BOARD_SIZE; m++)
         {
            if(pointCalculator[m][checkY[n]] == COUNTED)
            {
@@ -408,7 +409,7 @@ void Mosaic::pointCalculation()
         {
             point +=2;
         }
-    
+       
     }
     
     
@@ -427,6 +428,33 @@ void Mosaic::pointCalculation()
         
     }
     
+    int UCount = 0;
+    int LCount = 0;
+    int BCount = 0;
+    int YCount = 0;
+    int RCount = 0;
+    
+    for(int x = 0; x <  BOARD_SIZE; x++)
+    {
+        for(int y = 0; y <  BOARD_SIZE; y++)
+        {
+            switch (pointBoard[x][y].getColour())
+            {
+                case RED: RCount++;
+                case BLACK: UCount++;
+                case LIGHT_BLUE: LCount++;
+                case DARK_BLUE: BCount++;
+                case YELLOW: YCount++;
+            }
+        }
+    }
+    
+    if(UCount == 5 && this->colourCounting[0] == false) point+=10; this->colourCounting[0] = true;
+    if(LCount == 5 && this->colourCounting[1] == false) point+=10; this->colourCounting[1] = true;
+    if(BCount == 5 && this->colourCounting[2] == false) point+=10; this->colourCounting[2] = true;
+    if(YCount == 5 && this->colourCounting[3] == false) point+=10; this->colourCounting[3] = true;
+    if(RCount == 5 && this->colourCounting[4] == false) point+=10; this->colourCounting[4] = true;
+    
     this->player->setPoint(point);
 }
 
@@ -437,6 +465,32 @@ void Mosaic::setPlayer(Player *player)
 void Mosaic::setPointBoard(Tile **pointBoard)
 {
     this->pointBoard = pointBoard;
+    int UCount = 0;
+    int LCount = 0;
+    int BCount = 0;
+    int YCount = 0;
+    int RCount = 0;
+    
+    for(int x = 0; x <  BOARD_SIZE; x++)
+    {
+        for(int y = 0; y <  BOARD_SIZE; y++)
+        {
+            switch (pointBoard[x][y].getColour())
+            {
+                case RED: RCount++;
+                case BLACK: UCount++;
+                case LIGHT_BLUE: LCount++;
+                case DARK_BLUE: BCount++;
+                case YELLOW: YCount++;
+            }
+        }
+    }
+    if(UCount == 5 && this->colourCounting[0] == false) this->colourCounting[0] = true;
+    if(LCount == 5 && this->colourCounting[1] == false) this->colourCounting[1] = true;
+    if(BCount == 5 && this->colourCounting[2] == false) this->colourCounting[2] = true;
+    if(YCount == 5 && this->colourCounting[3] == false) this->colourCounting[3] = true;
+    if(RCount == 5 && this->colourCounting[4] == false) this->colourCounting[4] = true;
+    
 }
 void Mosaic::setTurnBoard(Tile **turnBoard)
 {
@@ -466,6 +520,8 @@ void Mosaic::setBroken(Tile* broken[])
 void Mosaic::setPointCalculator(char **pointCalculator)
 {
     this->pointCalculator = pointCalculator;
+    
+    
 }
 
 

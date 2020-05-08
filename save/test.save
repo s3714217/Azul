@@ -12,6 +12,8 @@ U,B,L,R
 Y,U,Y,R,B,R,B,R,B,R,L,R,U,U,B,U,B,U,U,B,U,Y,U,Y,U,R,U,Y,B,B,L,U,L,Y,B,Y,U,L,R,U,R,U,U,R,Y,Y,B,L,R,Y,U,Y,L,U,L,Y,R,R,L,B,L,Y,U,L,B,B,Y,L,R,B,L,R,L,Y,L,L,Y,Y,L,B
 
 mosaic1
+//Current Turn
+Y
 //Player name
 A
 //Player point
@@ -23,25 +25,17 @@ E
 E
 E
 //Point board
-b,y,r,u,l
-l,b,y,r,u
-u,l,b,y,r
-r,u,l,b,y
-y,r,u,l,b
+b,y,r,u,l,l,b,y,r,u,u,l,b,y,r,r,u,l,b,y,y,r,u,l,b
 //Broken
 R
 //Remainder
 
-//Current Turn
-Y
 //Point map
-.,.,.,.,.
-.,.,.,.,.
-.,.,.,.,.
-.,.,.,.,.
-.,.,.,.,.
+.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,
 
 mosaic2
+//Current Turn
+N
 //Player name
 B
 //Player point
@@ -53,20 +47,13 @@ E
 E
 E
 //Point board
-b,y,r,u,l
-l,b,y,r,u
-u,l,b,y,r
-r,u,l,b,y
-y,r,u,l,b
+b,y,r,u,l,l,b,y,r,u,u,l,b,y,r,r,u,l,b,y,y,r,u,l,b
 //Broken
 
 //Remainder
 
-//Current Turn
-N
 //Point map
-.,.,.,.,.
-.,.,.,.,.
-.,.,.,.,.
-.,.,.,.,.
-.,.,.,.,.
+.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,
+
+
+

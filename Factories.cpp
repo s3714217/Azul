@@ -25,10 +25,10 @@ Factories::Factories(int numberOfPlayer, int seed)
     
     for(int x = 1; x < this->numberOfFactory; x++)
     {
-        this->factories[x] = new Tile[4];
+        this->factories[x] = new Tile[NUMBEROFTILE];
     }
     
-    for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(RED));
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(RED));
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(BLACK));
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(YELLOW));
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(DARK_BLUE));
@@ -97,7 +97,7 @@ bool Factories::ContainColour(Colour c, int factory)
 {
     if(factory != 0)
     {
-        for(int x =0; x < 4; x++)
+        for(int x =0; x < NUMBEROFTILE; x++)
         {
             if(this->factories[factory][x].getColour() == c)
             {
@@ -141,7 +141,7 @@ void Factories::PrintFactories()
     for(int x =1; x < this->numberOfFactory; x++)
     {
         std::cout << x <<": ";
-        for(int y =0; y < 4; y++)
+        for(int y =0; y < NUMBEROFTILE; y++)
         {
            std::cout <<this->factories[x][y].getColour()<<" ";
         }
@@ -167,7 +167,7 @@ void Factories::setUp(int seed)
         shuffled =true;
     }
     
-    for(int x =0; x < 4*(this->numberOfFactory -1); x++)
+    for(int x =0; x < NUMBEROFTILE*(this->numberOfFactory -1); x++)
     {
         Tile* temp = this->BoxLid->getFirst();
         if(temp != nullptr)
@@ -230,9 +230,9 @@ void Factories::setFactories(Tile **factories)
     this->factories = factories;
     int size = 0;
     int left = 0;
-    for(int x =0; x < 5; x++)
+    for(int x =1; x < this->numberOfFactory; x++)
     {
-        for(int y =0; y < 5; y++)
+        for(int y =0; y < NUMBEROFTILE; y++)
         {
             if(this->factories[x][y].getColour() != ' ')
             {
@@ -242,12 +242,14 @@ void Factories::setFactories(Tile **factories)
             {
                 this->first = true;
             }
-            else  if(this->factories[0][y].getColour() != ' ')
+            else if(this->factories[0][y].getColour() != ' ')
             {
                 left++;
             }
         }
     }
+    
+    
     this->size = size;
     this->leftover = left;
 }

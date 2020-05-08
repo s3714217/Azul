@@ -51,6 +51,7 @@ private:
     LinkedList* remainder;
     Tile* broken[BROKEN_LEN];
     char** pointCalculator;
+    bool* colourCounting;
     
     bool containedFirst = false;
     int brokenPts = 0;
