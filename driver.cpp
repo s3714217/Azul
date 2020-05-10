@@ -371,9 +371,15 @@ void Menu(int seed)
 
 int main(int argc, char *argv[]) {
    
-    int seed =  *argv[1] - 48;
-    //int seed = 1;
-    Menu(seed);
-   
+     if(argc > 1)
+    {
+        int seed = *argv[1] - 48;
+        //int seed = 10;
+        Menu(seed);
+    }
+    else
+    {
+        std::cout<<"Missing game seed"<<std::endl;
+    }
   
 }
