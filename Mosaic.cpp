@@ -446,11 +446,11 @@ void Mosaic::pointCalculation()
         }
     }
    // std::cout<<UCount;
-    if(UCount == 5 && this->colourCounting[0] == false) point+=10; this->colourCounting[0] = true;
-    if(LCount == 5 && this->colourCounting[1] == false) point+=10; this->colourCounting[1] = true;
-    if(BCount == 5 && this->colourCounting[2] == false) point+=10; this->colourCounting[2] = true;
-    if(YCount == 5 && this->colourCounting[3] == false) point+=10; this->colourCounting[3] = true;
-    if(RCount == 5 && this->colourCounting[4] == false) point+=10; this->colourCounting[4] = true;
+    if(UCount == 5 && this->colourCounting[0] == false) {point+=10; this->colourCounting[0] = true;}
+    if(LCount == 5 && this->colourCounting[1] == false) {point+=10; this->colourCounting[1] = true;}
+    if(BCount == 5 && this->colourCounting[2] == false) {point+=10; this->colourCounting[2] = true;}
+    if(YCount == 5 && this->colourCounting[3] == false) {point+=10; this->colourCounting[3] = true;}
+    if(RCount == 5 && this->colourCounting[4] == false) {point+=10; this->colourCounting[4] = true;}
     
     this->player->setPoint(point);
 }
