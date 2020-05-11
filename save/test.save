@@ -1,4 +1,9 @@
 $
+game
+active B //B is player name
+turn 3
+#
+$
 mosaic 1
 name A
 point 0
@@ -23,11 +28,6 @@ factories
 number 6 
 factories F,B,B,U,B,Y,L,Y|E|E|E|Y,B,L,L|U,B,L,R
 boxlid Y,U,Y,R,B,R,B,R,B,R,L,R,U,U,B,U,B,U,U,B,U,Y,U,Y,U,R,U,Y,B,B,L,U,L,Y,B,Y,U,L,R,U,R,U,U,R,Y,Y,B,L,R,Y,U,Y,L,U,L,Y,R,R,L,B,L,Y,U,L,B,B,Y,L,R,B,L,R,L,Y,L,L,Y,Y,L,B
-#
-$
-game
-active B //B is player name
-turn 3
 #
 
 
