@@ -6,23 +6,367 @@
 //  Copyright © 2020 Thien Nguyen. All rights reserved.
 //
 
-#include <iostream>
-#include <fstream>
-#include <memory>
-#include <chrono>
-#include "headers/Player.h"
-#include "headers/Factories.h"
-#include "headers/ColorCode.h"
-#include "headers/Mosaic.h"
 
-void loadGame(std::string filename)
+#include "headers/driver.h"
+
+void Azul::loadGame(std::string filename)
 {
     
     if(filename.size() > 0)
     {
         
-      filename += ".save";
-      filename = "save/"+filename;
+       filename += ".save";
+       filename = "save/"+filename;
+       std::string line;
+       std::ifstream stream (filename);
+        bool readingGame = false;
+        bool readingMosaic = false;
+        bool readingFactories = false;
+        Mosaic* temp = nullptr;
+        std::shared_ptr<Mosaic> mos1 = nullptr;
+        std::shared_ptr<Mosaic> mos2 = nullptr;
+        std::shared_ptr<Factories> fact = nullptr;
+      if(stream.is_open())
+      {
+          while(getline(stream,line))
+          {
+             
+              if(line == "game") readingGame = true;
+              else if(line == "mosaic") readingMosaic = true;
+              else if(line == "factories") readingFactories = true;
+              
+              if(readingGame == true)
+              {
+                  std::string type;
+                  std::string input;
+                  for(int x =0; x < line.length(); x++)
+                  {
+                      if(line[x] != ' ')
+                       {
+                           input.push_back(line[x]);
+                       }
+                      else if(line[x] == ' ')
+                      {
+                          type = input;
+                          input = "";
+                          
+                      }
+                      if(x == line.length()-1)
+                      {
+                          if(type == "active")
+                          {
+                              if(mos1->getPlayer()->getName() == input)
+                              {
+                                  mos1->setTurn(true);
+                                  mos2->setTurn(false);
+                              }
+                              else
+                              {
+                                  mos2->setTurn(true);
+                                  mos1->setTurn(false);
+                              }
+                          }
+                          else if(type == "turn")
+                          {
+                               int turn = std::stoi(input);
+                           
+                            this->startGame(mos1, mos2, fact, false, 0, turn);
+                          }
+                      }
+                  }
+                  
+                  
+                  if(line == "#")
+                  {
+                      readingGame = false;
+                  }
+              }
+              else if(readingMosaic == true)
+              {
+                 
+                  std::string type;
+                  std::string input;
+                  for(int x =0; x < line.length(); x++)
+                  {
+                      if(line[x] != ' ')
+                      {
+                          input.push_back(line[x]);
+                      }
+                     else if(line[x] == ' ')
+                     {
+                         type = input;
+                         input = "";
+                         
+                     }
+                     if(x == line.length()-1)
+                     {
+                        
+                         if(type == "name")
+                         {
+                             temp = new Mosaic(new Player(input));
+                         }
+                         else if(type == "point")
+                         {
+                             int point = std::stoi(input);
+                             temp->getPlayer()->setPoint(point);
+                         }
+                         else if(type == "turnboard")
+                         {
+                        
+                             int line = 0;
+                             int location =NUMBEROFTILE;
+                             Tile** tempboard = new Tile*[BOARD_SIZE];
+                             tempboard[0] = new Tile[BOARD_SIZE];
+                             for(int y = 0; y < input.length(); y++)
+                             {
+                                 if(input[y] != '|' && input[y] != ',')
+                                 {
+                                     if(input[y] == 'E')
+                                     {
+                                         tempboard[line][location] = ' ';
+                                     }
+                                     else
+                                     {
+                                         tempboard[line][location] = input[y];
+                                     }
+                                    
+                                     location--;
+                                 }
+                                 else if(input[y] == '|')
+                                 {
+                                     location = NUMBEROFTILE;
+                                     line++;
+                                     tempboard[line] = new Tile[BOARD_SIZE];
+                                  
+                                 }
+                                 if( y == input.length() -1)
+                                 {
+                                     for(int m = 0; m <= BOARD_SIZE-1; m++)
+                                     {
+                                         for(int n = BOARD_SIZE-1; n >= 0; n--)
+                                         {
+                                             if(m+n < BOARD_SIZE-1)
+                                             {
+                                                 
+                                                 tempboard[m][n].setColour(' ');
+                                             }
+                                             else
+                                             {
+                
+                                                 if(tempboard[m][n].getColour() == ' ')
+                                                 {
+                                                     tempboard[m][n].setColour(EMPTY);
+                                                 }
+                                             }
+                                         }
+                                     }
+                                     temp->setTurnBoard(tempboard);
+                                     
+                                 }
+                             }
+                         }
+                         else if(type == "pointboard")
+                         {
+                      
+                              Tile** tempboard = new Tile*[BOARD_SIZE];
+                              int nodecount = 0;
+                              int currentline = 0;
+                              tempboard[0] = new Tile[BOARD_SIZE];
+                             
+                             for(int y = 0; y < input.length(); y++)
+                             {
+                                 if(input[y] != ',')
+                                 {
+                                     tempboard[currentline][nodecount] = input[y];
+                                     nodecount++;
+                                 }
+                                 if(nodecount == 5)
+                                 {
+                                     nodecount = 0;
+                                     currentline++;
+                                     tempboard[currentline] = new Tile[BOARD_SIZE];
+                                 }
+                                 if( y == input.length() -1)
+                                 {
+                                    
+                                     temp->setPointBoard(tempboard);
+                                     
+                                 }
+                             }
+                            
+                         }
+                         else if(type == "broken")
+                         {
+                           
+                             int brokenPts = 0;
+                             if(input != "E")
+                             {
+                                 for(int y = 0; y < input.length(); y++)
+                                 {
+                                     if(input[y] != ',')
+                                     {
+                                        
+                                         temp->setBroken(new Tile(input[y]), brokenPts);
+                                         if(input[y] == 'F')
+                                         {
+                                             temp->setFirst(true);
+                                         }
+                                         brokenPts++;
+                                     }
+                                        
+                                      
+                                 }
+                                
+                             }
+                         }
+                         else if(type == "remainder")
+                         {
+                             LinkedList* list = new LinkedList();
+                             if(input != "E")
+                             {
+                                 for(int y = 0; y < input.length(); y++)
+                                 {
+                                     if(input[y] != ',')
+                                     {
+                                         list->addBack(new Tile(input[y]));
+                                     }
+                                 }
+                                 temp->setRemainder(list);
+                             }
+                         }
+                         else if(type == "pointmap")
+                         {
+                             char** tempboard = new char*[BOARD_SIZE];
+                             int nodecount = 0;
+                             int currentline = 0;
+                             tempboard[0] = new char[BOARD_SIZE];
+                            
+                            for(int y = 0; y < input.length(); y++)
+                            {
+                                if(input[y] != ',')
+                                {
+                                    tempboard[currentline][nodecount] = input[y];
+                                    nodecount++;
+                                }
+                                if(nodecount == 5)
+                                {
+                                    nodecount = 0;
+                                    currentline++;
+                                    tempboard[currentline] = new char[BOARD_SIZE];
+                                }
+                                if( y == input.length() -1)
+                                {
+                                    temp->setPointCalculator(tempboard);
+                                }
+                            }
+                         }
+                         
+                     }
+                      
+                      
+                  }
+                  if(line == "#")
+                  {
+                      if(mos1 == nullptr)
+                      {
+                          mos1 =  std::shared_ptr<Mosaic>(temp);
+                          
+                      }
+                      else
+                      {
+                          mos2 = std::shared_ptr<Mosaic>(temp);
+                          
+                      }
+                      readingMosaic = false;
+                  }
+              }
+              else if(readingFactories == true)
+              {
+                  std::string type;
+                  std::string input;
+                  
+                  for(int x =0; x < line.length(); x++)
+                  {
+                      if(line[x] != ' ')
+                      {
+                          input.push_back(line[x]);
+                      }
+                     else if(line[x] == ' ')
+                     {
+                         type = input;
+                         input = "";
+                     }
+                     if(x == line.length()-1)
+                     {
+                         
+                         if(type == "number")
+                         {
+                             fact = std::shared_ptr<Factories>(new Factories(std::stoi(input), -1));
+                         }
+                         else if(type == "factories")
+                         {
+                             Tile** tempboard = new Tile*[BOARD_SIZE];
+                             int currentLine = 0;
+                             int currentCol = 0;
+                             tempboard[0] = new Tile[MAX_REMAIN * fact->getNumberOfFactory()];
+                            
+                             for(int y = 0; y < input.length(); y++)
+                             {
+                                 if(input[y] != '|' && input[y] != ',' && input[y] != 'E')
+                                 {
+                                     tempboard[currentLine][currentCol] = input[y];
+                                     currentCol++;
+                                 }
+                                 else if(input[y] == '|')
+                                 {
+                                     currentCol = 0;
+                                     currentLine++;
+                                     tempboard[currentLine] = new Tile[NUMBEROFTILE];
+                                 }
+                                 if( y == input.length() -1)
+                                 {
+                                     fact->setFactories(tempboard);
+                                 }
+
+                             }
+                         }
+                         else if(type == "boxlid")
+                         {
+
+                             LinkedList* list = new LinkedList();
+                             for(int y = 0; y < input.length(); y++)
+                             {
+                                 if(input[y] != ',')
+                                {
+                                    list->addBack(new Tile(input[y]));
+                                }
+                                 if(y == input.length() -1)
+                                 {
+                                     if(list->size() > 1)
+                                     {
+                                         fact->setBoxLid(list);
+                                     }
+                                 }
+                             }
+                             
+                         }
+                     }
+                      
+                  }
+                  if(line == "#")
+                  {
+                      readingFactories = false;
+                  }
+              }
+              
+              
+          }
+          stream.close();
+      }
+      else
+      {
+          std::cout << "File can't be found"<<std::endl;
+      }
     }
     else
     {
@@ -31,7 +375,7 @@ void loadGame(std::string filename)
 }
 
 
-void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename)
+void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename)
 {
     if(filename.size() > 0)
     {
@@ -45,8 +389,7 @@ void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::sha
     }
 }
 
-
-void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed)
+void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round)
 {
 
     if(newgame == true)
@@ -69,7 +412,9 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
     std::cout<<std::endl;
         
         mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
+        mosaic_1->setTurn(true);
         mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
+        mosaic_2->setTurn(false);
         factories = std::shared_ptr<Factories>(new Factories(2, seed));
        
     }
@@ -80,26 +425,31 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
         
     }
     
-    
-    
-    bool p1turn = true;
-    bool nextp1turn = false;
-     int round = 1;
-    
     while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
         
         std::cout<<std::endl;
         std::cout<<"=== Start Round " <<round<<" ===";
         std::cout<<std::endl;
-        p1turn = nextp1turn;
+        
+       
+        if(mosaic_1->isFirst())
+        {
+            mosaic_1->setTurn(true);
+            mosaic_2->setTurn(false);
+        }
+        else if(mosaic_2->isFirst())
+        {
+            mosaic_2->setTurn(true);
+            mosaic_1->setTurn(false);
+        }
         std::string log = "";
         
         while(factories->isEmpty() != true)
         {
             
             factories->isEmpty();
-            if(p1turn == true)
+            if(mosaic_1->isTurn() == true)
             {
                 std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
                 std::cout<<"POINTS: "<<mosaic_1->getPlayer()->getPoint()<<std::endl;
@@ -118,6 +468,8 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
                 mosaic_2->PrintMosaic();
                 std::cout<<std::endl;
             }
+            
+            
             
             int fac = 0 , row =0 , n = 0;
             char c = ' ';
@@ -213,29 +565,29 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
                
           }
             
-           if(p1turn == true)
+           if(mosaic_1->isTurn() == true)
            {
                if(takefirst == true)
                {
                  mosaic_1->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 nextp1turn = true;
                }
                mosaic_1->placeTile(row, c, n);
-               p1turn = false;
+               mosaic_2->setTurn(true);
+               mosaic_1->setTurn(false);
                log += mosaic_1->getPlayer()->getName() + " > " +command+ " ";
                
            }
-           else
+           else if(mosaic_2->isTurn() == true)
            {
               if(takefirst == true)
               {
                  mosaic_2->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 nextp1turn = false;
                }
                mosaic_2->placeTile(row, c, n);
-               p1turn = true;
+               mosaic_2->setTurn(false);
+               mosaic_1->setTurn(true);
                log += mosaic_2->getPlayer()->getName() + " > " +command+ " ";
            }
             
@@ -289,7 +641,7 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
 
 
 
-void Menu(int seed)
+void Azul::Menu(int seed)
 {
     std::cout<<" WELCOME TO AZUL!"<<std::endl;
     std::cout<<"------------------------"<<std::endl;
@@ -316,7 +668,7 @@ void Menu(int seed)
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame(mosaic_1, mosaic_2,factories,true,seed);
+       startGame(mosaic_1, mosaic_2,factories,true,seed,1);
    }
    else if(command == "2")
    {
@@ -368,12 +720,26 @@ void Menu(int seed)
     }
 }
 
+Azul::Azul(){
+    
+}
+Azul::~Azul(){
+    
+}
+
 
 int main(int argc, char *argv[]) {
    
-    int seed =  *argv[1] - 48;
-    //int seed = 1;
-    Menu(seed);
+    if(argc > 1)
+       {
+           int seed = *argv[1] - 48;
+           Azul* azul = new Azul();
+           azul->Menu(seed);
+       }
+       else
+       {
+           std::cout<<"Missing game seed"<<std::endl;
+       }
    
-  
 }
+
