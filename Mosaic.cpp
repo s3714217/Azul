@@ -93,6 +93,7 @@ bool Mosaic::isFirst()
 bool Mosaic::placeTile(int row, Colour c, int number)
 {
     row -= 1;
+    
     if(c == FIRST_PLAYER)
     {
         this->containedFirst = true;
@@ -102,6 +103,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
     }
     
     bool valid = false;
+    
     for(int x = 0; x <BOARD_SIZE; x++)
     {
        if(this->pointBoard[row][x].getColour() == tolower(c))
@@ -151,7 +153,7 @@ bool Mosaic::placeTile(int row, Colour c, int number)
     
     else
     {   if(number != 0)
-    {
+        { 
         for(int x =0; x < number; x++)
         {
             if(brokenPts < BROKEN_LEN)
@@ -238,11 +240,8 @@ LinkedList* Mosaic::returnTile()
 {
     for(int x = 0; x < brokenPts; x++)
     {
-        if(this->broken[x]->getColour() != FIRST_PLAYER)
-        {
             this->remainder->addBack(broken[x]);
             this->broken[x] = new Tile(' ');
-        }
     }
     this->brokenPts = 0;
     return this->remainder;
@@ -251,6 +250,21 @@ LinkedList* Mosaic::returnTile()
 Player* Mosaic::getPlayer()
 {
     return this->player;
+}
+
+bool Mosaic::isTurn()
+{
+    return this->currentTurn;
+}
+
+void Mosaic::setTurn(bool turn)
+{
+    this->currentTurn = turn;
+}
+
+void Mosaic::setFirst(bool first)
+{
+    this->containedFirst = first;
 }
 
 void Mosaic::PrintMosaic()
@@ -506,10 +520,6 @@ void Mosaic::setBroken(Tile* broken[])
         if(broken[x] != nullptr)
         {
             brokenPts++;
-            if(broken[x]->getColour() == FIRST_PLAYER)
-            {
-                this->containedFirst = true;
-            }
         }
         
     }

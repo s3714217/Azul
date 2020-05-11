@@ -45,8 +45,7 @@ void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::sha
     }
 }
 
-
-void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed)
+void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round)
 {
 
     if(newgame == true)
@@ -69,7 +68,9 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
     std::cout<<std::endl;
         
         mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
+        mosaic_1->setTurn(true);
         mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
+        mosaic_2->setTurn(false);
         factories = std::shared_ptr<Factories>(new Factories(2, seed));
        
     }
@@ -80,26 +81,31 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
         
     }
     
-    
-    
-    bool p1turn = true;
-    bool nextp1turn = false;
-     int round = 1;
-    
     while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
         
         std::cout<<std::endl;
         std::cout<<"=== Start Round " <<round<<" ===";
         std::cout<<std::endl;
-        p1turn = nextp1turn;
+        
+       
+        if(mosaic_1->isFirst())
+        {
+            mosaic_1->setTurn(true);
+            mosaic_2->setTurn(false);
+        }
+        else if(mosaic_2->isFirst())
+        {
+            mosaic_2->setTurn(true);
+            mosaic_1->setTurn(false);
+        }
         std::string log = "";
         
         while(factories->isEmpty() != true)
         {
             
             factories->isEmpty();
-            if(p1turn == true)
+            if(mosaic_1->isTurn() == true)
             {
                 std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
                 std::cout<<"POINTS: "<<mosaic_1->getPlayer()->getPoint()<<std::endl;
@@ -118,6 +124,8 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
                 mosaic_2->PrintMosaic();
                 std::cout<<std::endl;
             }
+            
+            
             
             int fac = 0 , row =0 , n = 0;
             char c = ' ';
@@ -213,29 +221,29 @@ void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2
                
           }
             
-           if(p1turn == true)
+           if(mosaic_1->isTurn() == true)
            {
                if(takefirst == true)
                {
                  mosaic_1->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 nextp1turn = true;
                }
                mosaic_1->placeTile(row, c, n);
-               p1turn = false;
+               mosaic_2->setTurn(true);
+               mosaic_1->setTurn(false);
                log += mosaic_1->getPlayer()->getName() + " > " +command+ " ";
                
            }
-           else
+           else if(mosaic_2->isTurn() == true)
            {
               if(takefirst == true)
               {
                  mosaic_2->placeTile(row, FIRST_PLAYER , n);
                  factories->removeFirst();
-                 nextp1turn = false;
                }
                mosaic_2->placeTile(row, c, n);
-               p1turn = true;
+               mosaic_2->setTurn(false);
+               mosaic_1->setTurn(true);
                log += mosaic_2->getPlayer()->getName() + " > " +command+ " ";
            }
             
@@ -316,7 +324,7 @@ void Menu(int seed)
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame(mosaic_1, mosaic_2,factories,true,seed);
+       startGame(mosaic_1, mosaic_2,factories,true,seed,1);
    }
    else if(command == "2")
    {
@@ -371,15 +379,16 @@ void Menu(int seed)
 
 int main(int argc, char *argv[]) {
    
-     if(argc > 1)
+    if(argc > 1)
     {
         int seed = *argv[1] - 48;
-        //int seed = 10;
+ //       int seed = 10;
         Menu(seed);
     }
     else
     {
         std::cout<<"Missing game seed"<<std::endl;
     }
-  
+   
 }
+
