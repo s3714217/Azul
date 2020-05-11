@@ -511,18 +511,9 @@ void Mosaic::setRemainder(LinkedList *remainder)
 {
     this->remainder = remainder;
 }
-void Mosaic::setBroken(Tile* broken[])
+void Mosaic::setBroken(Tile* tile,int location)
 {
-    for(int x =0; x <  brokenPts; x++)
-    {
-        this->broken[x] = broken[x];
-        
-        if(broken[x] != nullptr)
-        {
-            brokenPts++;
-        }
-        
-    }
+    this->broken[location] = tile;
 }
 void Mosaic::setPointCalculator(char **pointCalculator)
 {

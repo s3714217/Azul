@@ -23,6 +23,7 @@ public:
     bool winCheck();
     void PrintMosaic();
     bool isFirst();
+    bool isTurn();
     LinkedList* returnTile();
     
     
@@ -37,9 +38,10 @@ public:
     void setPointBoard(Tile** pointBoard);
     void setTurnBoard(Tile** turnBoard);
     void setRemainder(LinkedList* remainder);
-    void setBroken(Tile* broken[]);
+    void setBroken(Tile* tile, int location);
     void setPointCalculator(char** pointCalculator);
-    
+    void setTurn(bool turn);
+    void setFirst(bool first);
     
 private:
     
@@ -53,6 +55,7 @@ private:
     char** pointCalculator;
     bool* colourCounting;
     
+    bool currentTurn = false;
     bool containedFirst = false;
     int brokenPts = 0;
 
