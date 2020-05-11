@@ -60,7 +60,7 @@ void Azul::loadGame(std::string filename)
                                   mos1->setTurn(true);
                                   mos2->setTurn(false);
                               }
-                              else
+                              else if(mos2->getPlayer()->getName() == input)
                               {
                                   mos2->setTurn(true);
                                   mos1->setTurn(false);
@@ -432,7 +432,8 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
         std::cout<<"=== Start Round " <<round<<" ===";
         std::cout<<std::endl;
         
-       
+       if(newgame == true)
+       {
         if(mosaic_1->isFirst())
         {
             mosaic_1->setTurn(true);
@@ -443,6 +444,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
             mosaic_2->setTurn(true);
             mosaic_1->setTurn(false);
         }
+       }
         std::string log = "";
         
         while(factories->isEmpty() != true)
