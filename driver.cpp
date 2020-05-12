@@ -39,7 +39,7 @@ void Azul::loadGame(std::string filename)
               {
                   std::string type;
                   std::string input;
-                  for(int x =0; x < line.length(); x++)
+                  for(int x =0; x < (int) line.length(); x++)
                   {
                       if(line[x] != ' ')
                        {
@@ -51,7 +51,7 @@ void Azul::loadGame(std::string filename)
                           input = "";
                           
                       }
-                      if(x == line.length()-1)
+                      if(x == (int)line.length()-1)
                       {
                           if(type == "active")
                           {
@@ -86,7 +86,7 @@ void Azul::loadGame(std::string filename)
                  
                   std::string type;
                   std::string input;
-                  for(int x =0; x < line.length(); x++)
+                  for(int x =0; x <(int) line.length(); x++)
                   {
                       if(line[x] != ' ')
                       {
@@ -98,7 +98,7 @@ void Azul::loadGame(std::string filename)
                          input = "";
                          
                      }
-                     if(x == line.length()-1)
+                     if(x == (int)line.length()-1)
                      {
                         
                          if(type == "name")
@@ -117,7 +117,7 @@ void Azul::loadGame(std::string filename)
                              int location =NUMBEROFTILE;
                              Tile** tempboard = new Tile*[BOARD_SIZE];
                              tempboard[0] = new Tile[BOARD_SIZE];
-                             for(int y = 0; y < input.length(); y++)
+                             for(int y = 0; y < (int) input.length(); y++)
                              {
                                  if(input[y] != '|' && input[y] != ',')
                                  {
@@ -136,10 +136,13 @@ void Azul::loadGame(std::string filename)
                                  {
                                      location = NUMBEROFTILE;
                                      line++;
-                                     tempboard[line] = new Tile[BOARD_SIZE];
+                                     if(line < BOARD_SIZE)
+                                     {
+                                        tempboard[line] = new Tile[BOARD_SIZE];
+                                     }
                                   
                                  }
-                                 if( y == input.length() -1)
+                                 if( y ==(int) input.length() -1)
                                  {
                                      for(int m = 0; m <= BOARD_SIZE-1; m++)
                                      {
@@ -173,7 +176,7 @@ void Azul::loadGame(std::string filename)
                               int currentline = 0;
                               tempboard[0] = new Tile[BOARD_SIZE];
                              
-                             for(int y = 0; y < input.length(); y++)
+                             for(int y = 0; y <(int) input.length(); y++)
                              {
                                  if(input[y] != ',')
                                  {
@@ -184,9 +187,12 @@ void Azul::loadGame(std::string filename)
                                  {
                                      nodecount = 0;
                                      currentline++;
-                                     tempboard[currentline] = new Tile[BOARD_SIZE];
+                                     if(currentline < BOARD_SIZE)
+                                     {
+                                        tempboard[currentline] = new Tile[BOARD_SIZE];
+                                     }
                                  }
-                                 if( y == input.length() -1)
+                                 if( y == (int)input.length() -1)
                                  {
                                     
                                      temp->setPointBoard(tempboard);
@@ -201,7 +207,7 @@ void Azul::loadGame(std::string filename)
                              int brokenPts = 0;
                              if(input != "E")
                              {
-                                 for(int y = 0; y < input.length(); y++)
+                                 for(int y = 0; y < (int)input.length(); y++)
                                  {
                                      if(input[y] != ',')
                                      {
@@ -224,7 +230,8 @@ void Azul::loadGame(std::string filename)
                              LinkedList* list = new LinkedList();
                              if(input != "E")
                              {
-                                 for(int y = 0; y < input.length(); y++)
+                                 
+                                 for(int y = 0; y <(int) input.length(); y++)
                                  {
                                      if(input[y] != ',')
                                      {
@@ -241,7 +248,7 @@ void Azul::loadGame(std::string filename)
                              int currentline = 0;
                              tempboard[0] = new char[BOARD_SIZE];
                             
-                            for(int y = 0; y < input.length(); y++)
+                            for(int y = 0; y <(int) input.length(); y++)
                             {
                                 if(input[y] != ',')
                                 {
@@ -252,9 +259,12 @@ void Azul::loadGame(std::string filename)
                                 {
                                     nodecount = 0;
                                     currentline++;
-                                    tempboard[currentline] = new char[BOARD_SIZE];
+                                    if(currentline < BOARD_SIZE)
+                                    {
+                                        tempboard[currentline] = new char[BOARD_SIZE];
+                                    }
                                 }
-                                if( y == input.length() -1)
+                                if( y ==(int) input.length() -1)
                                 {
                                     temp->setPointCalculator(tempboard);
                                 }
@@ -285,7 +295,7 @@ void Azul::loadGame(std::string filename)
                   std::string type;
                   std::string input;
                   
-                  for(int x =0; x < line.length(); x++)
+                  for(int x =0; x <(int) line.length(); x++)
                   {
                       if(line[x] != ' ')
                       {
@@ -296,7 +306,7 @@ void Azul::loadGame(std::string filename)
                          type = input;
                          input = "";
                      }
-                     if(x == line.length()-1)
+                     if(x ==(int) line.length()-1)
                      {
                          
                          if(type == "number")
@@ -310,7 +320,7 @@ void Azul::loadGame(std::string filename)
                              int currentCol = 0;
                              tempboard[0] = new Tile[MAX_REMAIN * fact->getNumberOfFactory()];
                             
-                             for(int y = 0; y < input.length(); y++)
+                             for(int y = 0; y <(int) input.length(); y++)
                              {
                                  if(input[y] != '|' && input[y] != ',' && input[y] != 'E')
                                  {
@@ -321,9 +331,12 @@ void Azul::loadGame(std::string filename)
                                  {
                                      currentCol = 0;
                                      currentLine++;
-                                     tempboard[currentLine] = new Tile[NUMBEROFTILE];
+                                     if(currentLine < NOFACTORY)
+                                     {
+                                        tempboard[currentLine] = new Tile[NUMBEROFTILE];
+                                     }
                                  }
-                                 if( y == input.length() -1)
+                                 if( y ==(int) input.length() -1)
                                  {
                                      fact->setFactories(tempboard);
                                  }
@@ -334,13 +347,13 @@ void Azul::loadGame(std::string filename)
                          {
 
                              LinkedList* list = new LinkedList();
-                             for(int y = 0; y < input.length(); y++)
+                             for(int y = 0; y < (int)input.length(); y++)
                              {
                                  if(input[y] != ',')
                                 {
                                     list->addBack(new Tile(input[y]));
                                 }
-                                 if(y == input.length() -1)
+                                 if(y == (int)input.length() -1)
                                  {
                                      if(list->size() > 1)
                                      {
