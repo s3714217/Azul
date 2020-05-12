@@ -232,6 +232,7 @@ void Factories::setFactories(Tile **factories)
     this->factories = factories;
     int size = 0;
     int left = 0;
+    
     for(int x =1; x < this->numberOfFactory; x++)
     {
         for(int y =0; y < NUMBEROFTILE; y++)
@@ -240,19 +241,23 @@ void Factories::setFactories(Tile **factories)
             {
                 size++;
             }
-            if(this->factories[0][y].getColour() == FIRST_PLAYER)
+        }
+    }
+   
+    for(int x = 0; x < MAX_REMAIN*this->numberOfFactory;x++)
+    {
+        if(this->factories[0][x].getColour() != ' ')
+        {
+            left++;
+            if(this->factories[0][x].getColour() ==FIRST_PLAYER)
             {
                 this->first = true;
-            }
-            else if(this->factories[0][y].getColour() != ' ')
-            {
-                left++;
             }
         }
     }
     
     
-    this->size = size;
+    this->size = size +left;
     this->leftover = left;
 }
 
