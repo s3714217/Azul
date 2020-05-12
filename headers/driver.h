@@ -26,8 +26,9 @@ public:
     
     void Menu(int seed);
     void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round);
-    void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename);
+    void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename, int round);
     void loadGame(std::string filename);
+    
     
 };
 

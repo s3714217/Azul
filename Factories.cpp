@@ -10,7 +10,7 @@
 
 Factories::Factories(int numberOfPlayer, int seed)
 {
-    if(numberOfPlayer == 2)
+    if(numberOfPlayer == NUMBEROFPLAYER)
     {
         this->numberOfFactory = NOFACTORY;
         
@@ -33,7 +33,7 @@ Factories::Factories(int numberOfPlayer, int seed)
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(YELLOW));
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(DARK_BLUE));
        for(int x =0; x != 20; x++)this->BoxLid->addBack(new Tile(LIGHT_BLUE));
-   if(seed == -1)
+   if(seed > -1)
    {
     this->setUp(seed);
    }

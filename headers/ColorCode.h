@@ -29,6 +29,7 @@
 #define BOARD_SIZE 5
 #define NUMBEROFCOLOUR 5
 #define NUMBEROFTILE 4
+#define NUMBEROFPLAYER 2
 typedef char Colour;
 
 #endif

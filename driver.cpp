@@ -375,19 +375,191 @@ void Azul::loadGame(std::string filename)
 }
 
 
-void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename)
+void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename, int round)
 {
     if(filename.size() > 0)
     {
+        std::string output;
+       
         filename += ".save";
         filename = "save/"+filename;
-        std::cout<<"Function unavailable"<<std::endl;
+        bool read1 = false;
+        bool read2 = false;
+        std::shared_ptr<Mosaic> readin = nullptr;
+        
+        while(read1 == false || read2 == false)
+        {
+            
+            if(read1 == false)
+            {
+                readin = mos1;
+                read1 = true;
+            }
+            else
+            {
+                readin = mos2;
+                read2 = true;
+            }
+            
+            output += "$\n";
+            output += "mosaic\n";
+            output += "name " + readin->getPlayer()->getName() + "\n";
+            output += "point " + std::to_string(readin->getPlayer()->getPoint()) + "\n";
+            bool containedTile = false;
+            std::string TBoard;
+            std::string PBoard;
+            std::string PMap;
+            for(int x = 0; x <BOARD_SIZE; x++)
+            {
+                for(int y = 0; y <BOARD_SIZE; y++)
+                {
+                    PBoard += readin->getPointBoard()[x][y].getColour();
+                    PMap += readin->getPointCalculator()[x][y];
+                    if(x < BOARD_SIZE -1 || y < BOARD_SIZE-1)
+                    {
+                        PMap += ",";
+                        PBoard += ",";
+                    }
+                    if(readin->getTurnBoard()[x][y].getColour() != ' '
+                       &&readin->getTurnBoard()[x][y].getColour() != '.')
+                    {
+                       
+                        if(containedTile == true)
+                        {
+                            TBoard += ",";
+                        }
+                        else
+                        {
+                            containedTile = true;
+                        }
+                         TBoard += readin->getTurnBoard()[x][y].getColour();
+                        
+                    }
+                }
+                if(containedTile == false)
+                {
+                    TBoard += "E";
+                }
+                containedTile = false;
+                if(x < BOARD_SIZE -1) TBoard +="|";
+            }
+    
+            output += "turnboard "+TBoard+"\n";
+            output += "pointboard "+PBoard+"\n";
+            output += "broken ";
+            for(int x =0; x <BROKEN_LEN; x++)
+            {
+                if(readin->getBroken(x) != nullptr)
+                {
+                    if(x > 0) output += ",";
+                    output += readin->getBroken(x)->getColour();
+                    
+                }
+                else
+                {
+                    if(x == 0)
+                    {
+                        output += "E";
+                    }
+                    x = BROKEN_LEN;
+                }
+            }
+            output += "\n";
+            output += "remainder ";
+          
+            if (readin->getRemainder()->size() ==0)
+            {
+                output += "E";
+            }
+            else
+            {
+                
+                for(int x =0; x < readin->getRemainder()->size(); x++)
+                {
+                    Tile* temp = readin->getRemainder()->getFirst();
+                    output += temp->getColour();
+                    readin->getRemainder()->addBack(temp);
+                    delete temp;
+                    if(x < readin->getRemainder()->size()-1)output += ",";
+                    
+                }
+            }
+           
+            output += "\n";
+            output += "pointmap "+PMap+"\n";
+            output += "#\n";
+        }
+        output += "$\n";
+        output += "factories\n";
+        output += "number " + std::to_string(NUMBEROFPLAYER) +"\n";
+        output += "factories ";
+        
+        for(int x = 0; x < MAX_REMAIN * fact->getNumberOfFactory(); x++)
+        {
+            if(fact->getFactories()[0][x].getColour() != ' ')
+            {
+             if(x > 0) output += ",";
+             output +=fact->getFactories()[0][x].getColour();
+            
+            }
+        }
+        output += "|";
+        for(int x = 1; x < fact->getNumberOfFactory(); x++)
+        {
+            for(int y = 0; y < NUMBEROFTILE; y++)
+            {
+                if(fact->getFactories()[x][y].getColour() != ' ')
+                {
+                    output +=fact->getFactories()[x][y].getColour();
+                    if(y < NUMBEROFTILE -1) output += ",";
+                }
+                else if(y == 0)
+                {
+                    output += "E";
+                }
+            }
+            if(x < fact->getNumberOfFactory() -1) output += "|";
+        }
+        output += "\n";
+        output += "boxlid ";
+       
+        for(int x =0 ; x < fact->getBoxLid()->size(); x++)
+        {
+            Tile* temp =fact->getBoxLid()->getFirst();
+            output += temp->getColour();
+            fact->getBoxLid()->addBack(temp);
+            if(x < fact->getBoxLid()->size()-1) output+=",";
+        }
+        output += "\n";
+        output += "#\n";
+        
+        output += "$\n";
+        output += "game\n";
+        if(mos1->isTurn() == true)
+        {
+            output += "active "+mos1 ->getPlayer()->getName() + "\n";
+        }
+        else
+        {
+            output += "active "+mos2 ->getPlayer()->getName() + "\n";
+        }
+        output += "turn " + std::to_string(round)+"\n";
+        output += "#";
+        
+        std::ofstream stream;
+        stream.open(filename);
+        stream << output;
+        stream.close();
+        
+        std::cout<<"INFO: Succesfully saved"<<std::endl;
     }
     else
     {
          std::cout<<"ERROR: Please enter a valid filename"<<std::endl;
     }
 }
+
+
 
 void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round)
 {
@@ -542,7 +714,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                }
                else if(command == "save")
                {
-                   saveGame(mosaic_1, mosaic_2, factories,filename);
+                   saveGame(mosaic_1, mosaic_2, factories,filename,round);
                    std::cout << "> ";
                }
                else if(command == "quit")
@@ -734,8 +906,8 @@ int main(int argc, char *argv[]) {
    
     if(argc > 1)
        {
-           int seed = *argv[1] - 48;
            Azul* azul = new Azul();
+           int seed = *argv[1] - 48;
            azul->Menu(seed);
        }
        else
