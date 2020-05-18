@@ -1,0 +1,31 @@
+$
+mosaic
+name P1
+point 7
+turnboard E|E|E|E|B,B
+pointboard b,y,r,U,L,l,B,y,r,u,u,l,b,Y,R,R,u,l,b,y,y,r,U,l,b
+broken  
+remainder E
+pointmap .,.,.,c,c,.,c,.,.,.,.,.,.,c,c,c,.,.,.,.,.,.,c,.,.
+#
+$
+mosaic
+name P2
+point 8
+turnboard E|E|E|B,B|U,U,U
+pointboard B,y,r,u,L,l,B,y,r,U,u,L,b,y,R,r,u,l,b,y,y,r,u,l,b
+broken  
+remainder E
+pointmap c,.,.,.,c,.,c,.,.,c,.,c,.,.,c,.,.,.,.,.,.,.,.,.,.
+#
+$
+factories
+number 2
+factories F|U,L,L,L|B,Y,R,Y|Y,B,Y,B|L,L,Y,L|L,R,Y,R
+boxlid Y,L,R,U,Y,L,B,R,B,L,Y,R,R,U,Y,B,B,U,U,Y,U,L,U,B,L,R,R,Y,L,Y,R,B,Y,B,U,Y,Y,U,Y,L,R,R,U,U,U,U,U,L,L,B,B,Y,Y,R,R,R,L,B,R,R
+#
+$
+game
+active P1
+turn 3
+#
