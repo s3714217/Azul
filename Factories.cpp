@@ -10,6 +10,7 @@
 
 Factories::Factories(int numberOfPlayer, int seed)
 {
+   
     if(numberOfPlayer == NUMBEROFPLAYER)
     {
         this->numberOfFactory = NOFACTORY;
@@ -18,13 +19,6 @@ Factories::Factories(int numberOfPlayer, int seed)
     
     TileBag = new LinkedList();
     BoxLid = new LinkedList();
-
-    Tile* red = new Tile(RED);
-    Tile* black = new Tile(BLACK);
-    Tile* yellow = new Tile(YELLOW);
-    Tile* darkBlue = new Tile(DARK_BLUE);
-    Tile* lightBlue = new Tile(LIGHT_BLUE);
-    
     factories = new Tile*[this->numberOfFactory];
     
     this->factories[0] = new Tile[this->numberOfFactory * MAX_REMAIN];
@@ -33,22 +27,23 @@ Factories::Factories(int numberOfPlayer, int seed)
     {
         this->factories[x] = new Tile[NUMBEROFTILE];
     }
-    
+        Tile* red = new Tile(RED);
+        Tile* black = new Tile(BLACK);
+        Tile* dark_b = new Tile(DARK_BLUE);
+        Tile* yellow = new Tile(YELLOW);
+        Tile* light_b = new Tile(LIGHT_BLUE);
+
        for(int x =0; x != 20; x++)this->BoxLid->addBack(red);
        for(int x =0; x != 20; x++)this->BoxLid->addBack(black);
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(dark_b);
        for(int x =0; x != 20; x++)this->BoxLid->addBack(yellow);
-       for(int x =0; x != 20; x++)this->BoxLid->addBack(darkBlue);
-       for(int x =0; x != 20; x++)this->BoxLid->addBack(lightBlue);
+       for(int x =0; x != 20; x++)this->BoxLid->addBack(light_b);
+
    if(seed > -1)
    {
-    this->setUp(seed);
+     this->setUp(seed);
    }
 
-   delete red;
-   delete black;
-   delete yellow;
-   delete darkBlue;
-   delete lightBlue;
 }
 
 Factories::~Factories()
@@ -174,7 +169,7 @@ void Factories::setUp(int seed)
     {
         this->factories[0][x] = ' ';
     }
-    this->factories[0][0] = FIRST_PLAYER;
+     this->factories[0][0] = FIRST_PLAYER;
    
     if(shuffled == false)
     {

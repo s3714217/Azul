@@ -88,10 +88,9 @@ void LinkedList::clear()
 
 void LinkedList::addFront(Tile* tile)
 {
-    Node* tempHead = new Node(tile, this->head);
-    this->head = tempHead;
+    this->head = new Node(tile, this->head);
     this->len++;
-    delete tempHead;
+  
 }
 
 void LinkedList::addBack(Tile* tile)
@@ -106,13 +105,11 @@ void LinkedList::addBack(Tile* tile)
       }
       temp->next = new Node(tile, nullptr);
       this->len++;
-      delete temp->next;
   }
   else
   {
          this->head =new Node(tile, nullptr);
          this->len++;
-         delete this->head;
    }
 }
 
