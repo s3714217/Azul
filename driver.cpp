@@ -371,9 +371,8 @@ void Azul::loadGame(std::string filename)
                       readingFactories = false;
                   }
               }
-              
-              
           }
+          
           stream.close();
       }
       else
@@ -809,11 +808,11 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
     std::cout<<std::endl;
     if(mosaic_1->getPlayer()->getPoint() > mosaic_2->getPlayer()->getPoint())
     {
-        std::cout<<"Player "<<mosaic_1->getPlayer()->getName()<<" win the game!"<<std::endl;
+        std::cout<<"Player "<<mosaic_1->getPlayer()->getName()<<" wins the game!"<<std::endl;
     }
     else if(mosaic_1->getPlayer()->getPoint() < mosaic_2->getPlayer()->getPoint())
     {
-        std::cout<<"Player "<<mosaic_2->getPlayer()->getName()<<" win the game!"<<std::endl;
+        std::cout<<"Player "<<mosaic_2->getPlayer()->getName()<<" wins the game!"<<std::endl;
     }
     else
     {
@@ -823,6 +822,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
     std::cout<<std::endl;
     std::cout<<"=== GAME OVER ===";
     std::cout<<std::endl;
+
     
 }
 
@@ -877,15 +877,15 @@ void Azul::Menu(int seed)
         std::cout<<std::endl;
        
        std::cout<<std::endl;
-       std::cout<<"StudentID: "<<std::endl;
-       std::cout<<"Name: "<<std::endl;
-       std::cout<<"Email: "<<std::endl;
+       std::cout<<"StudentID: S3786798"<<std::endl;
+       std::cout<<"Name: Rian Lenjik"<<std::endl;
+       std::cout<<"Email: s3786798@student.rmit.edu.au"<<std::endl;
        std::cout<<std::endl;
        
        std::cout<<std::endl;
-       std::cout<<"StudentID: "<<std::endl;
-       std::cout<<"Name: "<<std::endl;
-       std::cout<<"Email: "<<std::endl;
+       std::cout<<"StudentID: S3784231"<<std::endl;
+       std::cout<<"Name: An Dinh Uong"<<std::endl;
+       std::cout<<"Email: s3784231@student.rmit.edu.au"<<std::endl;
        std::cout<<std::endl;
    }
    else if(command == "4")
@@ -929,4 +929,3 @@ int main(int argc, char *argv[]) {
        }
    
 }
-
