@@ -105,12 +105,14 @@ void LinkedList::addBack(Tile* tile)
       }
       temp->next = new Node(tile, nullptr);
       this->len++;
+      temp = nullptr;
   }
   else
   {
          this->head =new Node(tile, nullptr);
          this->len++;
    }
+    
 }
 
 void LinkedList::shuffle(int seed)

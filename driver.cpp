@@ -732,10 +732,9 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                else if(command == "quit")
                {
                    std::cout<<std::endl;
-                   std::cout<<"=== GAME ENDED ===";
+                   std::cout<<"=== GAME ENDED ==="<<std::endl;
                    std::cout<<std::endl;
-                   return;
-                   
+                   this->Menu(seed);
                }
                else if(command.size() != 0)
                {
@@ -818,11 +817,12 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
     {
         std::cout<<"Draw!"<<std::endl;
     }
-    
+  
     std::cout<<std::endl;
     std::cout<<"=== GAME OVER ===";
     std::cout<<std::endl;
-
+    this->Menu(seed);
+   
     
 }
 
@@ -833,6 +833,7 @@ void Azul::Menu(int seed)
     std::cout<<" WELCOME TO AZUL!"<<std::endl;
     std::cout<<"------------------------"<<std::endl;
     bool exit = false;
+    
     while(exit != true)
     {
    
