@@ -8,17 +8,20 @@
 
 #include "headers/LinkedList.h"
 
+//Constructor
  LinkedList::LinkedList()
 {
     head = nullptr;
     len = 0;
 }
  
+ //Destructor
  LinkedList::~LinkedList()
 {
     this->clear();
 }
 
+//Returns the length of the list
 int LinkedList::size()
 {
     return this->len;
@@ -26,6 +29,9 @@ int LinkedList::size()
 
 Tile* LinkedList::getFirst()
 {
+    /*
+     * Gets the first element in the list
+     */
    if(this->head != nullptr)
    {
     Node* temp = this->head;
@@ -43,6 +49,9 @@ Tile* LinkedList::getFirst()
 
 bool LinkedList::remove(Tile *tile)
 {
+    /*
+     *Removes an element in the list
+     */
     Node* temp = this->head;
     if(this->head->tile->getColour() == tile->getColour())
     {
@@ -70,6 +79,9 @@ bool LinkedList::remove(Tile *tile)
 
 void LinkedList::clear()
 {
+    /*
+     * Deletes/clears the list
+    */
     if(head != nullptr)
     {
         Node* checkingNode = head;
@@ -88,6 +100,9 @@ void LinkedList::clear()
 
 void LinkedList::addFront(Tile* tile)
 {
+    /*
+     * Adds an element to the front of the list
+     */
     this->head = new Node(tile, this->head);
     this->len++;
   
@@ -95,6 +110,9 @@ void LinkedList::addFront(Tile* tile)
 
 void LinkedList::addBack(Tile* tile)
 {
+    /*
+     * Adds an element to the back of the list
+     */
     if(this->head != nullptr)
   {
       Node* temp = this->head;
@@ -117,6 +135,9 @@ void LinkedList::addBack(Tile* tile)
 
 void LinkedList::shuffle(int seed)
 {
+    /*
+     * Shuffles the list
+     */
     std::vector<Tile*> shuffling ;
     Node* node = this->head;
     while (node != nullptr) {
@@ -144,6 +165,9 @@ void LinkedList::shuffle(int seed)
 
 void LinkedList::printAll()
 {
+    /*
+     * Prints every element in the list
+     */
     std::string text = " ";
     Node* node = this->head;
     while (node != nullptr) {

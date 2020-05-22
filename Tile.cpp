@@ -8,26 +8,31 @@
 
 #include "headers/Tile.h"
 
+//Constructor
 Tile::Tile()
 {
     this->colour = ' ';
 }
 
+//Constructor for a tile with a given Colour
 Tile::Tile(Colour c)
 {
     this->colour = c;
 }
 
+//Sets a tile's colour
 void Tile::setColour(Colour c)
 {
     this->colour = c;
 }
 
+//Gets a tile's colour
 Colour Tile::getColour()
 {
     return this->colour;
 }
 
+//Checks the colour of 2 tiles
 bool Tile::isSameColour(Tile* tile)
 {
   if(tile->getColour() == this->colour)
