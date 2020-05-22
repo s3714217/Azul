@@ -32,6 +32,7 @@ public:
     void setBoxLid(LinkedList* BoxLid);
     void setNumberOfFactory(int numberOfFactory);
     void setFactories(Tile** factories);
+    void setShuffled(bool s);
     
     LinkedList* getTileBag();
     LinkedList* getBoxLid();

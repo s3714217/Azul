@@ -230,11 +230,11 @@ B > turn 0 U 5
 TURN FOR PLAYER: A   POINTS: 2
 Factories: 
 0: F 
-1: B U R Y 
-2: L Y Y U 
-3: L U R Y 
-4: R R U U 
-5: R U L Y 
+1: Y U U Y 
+2: U Y U U 
+3: R L R Y 
+4: R Y R Y 
+5: R B U B 
 
 
 Mosaic for A

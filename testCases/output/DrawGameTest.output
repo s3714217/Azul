@@ -962,8 +962,8 @@ Mosaic for A
 2:          .  .  ||  l  B  Y  R  U
 3:       .  R  R  ||  u  l  b  y  r
 4:    .  B  B  B  ||  r  u  l  b  y
-5: .  L  L  L  L  ||  y  r  u  l  b
-broken: L                    
+5: .  .  .  L  L  ||  y  r  u  l  b
+broken: L  L  L              
 
 > INFO: Turn Successful
 
@@ -1002,8 +1002,8 @@ Mosaic for A
 2:          L  L  ||  l  B  Y  R  U
 3:       .  R  R  ||  u  l  b  y  r
 4:    .  B  B  B  ||  r  u  l  b  y
-5: .  L  L  L  L  ||  y  r  u  l  b
-broken: L                    
+5: .  .  .  L  L  ||  y  r  u  l  b
+broken: L  L  L              
 
 > INFO: Turn Successful
 
@@ -1032,7 +1032,7 @@ A > turn 1 L 1
 B > turn 2 L 2
 A > turn 4 B 1
 B > turn 3 Y 1
-A > turn 5 L 5
+A > turn 5 L 4
 B > turn 0 Y 5
 A > turn 0 L 2
 B > turn 0 B 4
@@ -1040,7 +1040,7 @@ A > turn 0 U 4
 B > turn 0 R 2
 === End of Round ===
 
-Player A wins the game!
+Draw!
 
 === GAME OVER ===
  WELCOME TO AZUL!

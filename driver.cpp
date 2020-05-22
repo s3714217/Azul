@@ -358,6 +358,7 @@ void Azul::loadGame(std::string filename)
                                      if(list->size() > 1)
                                      {
                                          fact->setBoxLid(list);
+                                         fact->setShuffled(true);
                                      }
                                  }
                              }
@@ -616,25 +617,26 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
         std::cout<<"=== Start Round " <<round<<" ===";
         std::cout<<std::endl;
         
-       if(newgame == true)
-       {
+        std::string log = "";
+       
         if(mosaic_1->isFirst())
         {
             mosaic_1->setTurn(true);
             mosaic_2->setTurn(false);
+            mosaic_1->setFirst(false);
+          
         }
         else if(mosaic_2->isFirst())
         {
+            
             mosaic_2->setTurn(true);
             mosaic_1->setTurn(false);
-        }
-       }
-        std::string log = "";
+            mosaic_2->setFirst(false);
         
+        }
         while(factories->isEmpty() != true)
         {
             
-            factories->isEmpty();
             if(mosaic_1->isTurn() == true)
             {
                 std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
@@ -645,7 +647,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                 std::cout<<std::endl;
             }
     
-            else
+            else if(mosaic_2->isTurn() == true)
             {
                 std::cout<<"TURN FOR PLAYER: "<<mosaic_2->getPlayer()->getName()<<"   ";
                 std::cout<<"POINTS: "<<mosaic_2->getPlayer()->getPoint()<<std::endl;
@@ -755,7 +757,9 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                if(takefirst == true)
                {
                  mosaic_1->placeTile(row, FIRST_PLAYER , n);
+                 mosaic_1->setFirst(true);
                  factories->removeFirst();
+                   takefirst = false;
                }
                mosaic_1->placeTile(row, c, n);
                mosaic_2->setTurn(true);
@@ -765,10 +769,13 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
            }
            else if(mosaic_2->isTurn() == true)
            {
+              
               if(takefirst == true)
               {
-                 mosaic_2->placeTile(row, FIRST_PLAYER , n);
-                 factories->removeFirst();
+                mosaic_2->placeTile(row, FIRST_PLAYER , n);
+                mosaic_2->setFirst(true);
+                factories->removeFirst();
+                  takefirst = false;
                }
                mosaic_2->placeTile(row, c, n);
                mosaic_2->setTurn(false);

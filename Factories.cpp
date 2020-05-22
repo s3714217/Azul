@@ -222,6 +222,10 @@ bool Factories::isFirst()
     return this->first;
 }
 
+void Factories::setShuffled(bool s)
+{
+    this->shuffled = s;
+}
 
 void Factories::setTileBag(LinkedList* TileBag)
 {
