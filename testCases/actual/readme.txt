@@ -1,1 +1,1 @@
-Dir for actual output
+Directory for actual output
