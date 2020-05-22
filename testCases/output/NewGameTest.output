@@ -8,8 +8,14 @@ Menu
 3. Credits 
 4. Quit
 
->Enter loading filename: 
-CONTINUE THE GAME
+>
+START A NEW GAME
+
+ENTER NAME FOR PLAYER 1:
+>
+ENTER NAME FOR PLAYER 2:
+>
+Let's Play!
 
 
 === Start Round 1 ===
@@ -31,5 +37,4 @@ Mosaic for A
 5: .  .  .  .  .  ||  y  r  u  l  b
 broken: 
 
-> ERROR: Invalid Turn
 > Goodbye.
