@@ -83,6 +83,8 @@ Mosaic::~Mosaic()
         delete broken[x];
     }
     delete this->remainder;
+    delete this->broken[this->brokenPts];
+    delete remainder;
 }
 
 bool Mosaic::isFirst()
@@ -543,5 +545,3 @@ char** Mosaic::getPointCalculator()
 {
     return this->pointCalculator;
 }
-
-

@@ -1,0 +1,889 @@
+ WELCOME TO AZUL!
+------------------------
+
+Menu
+----------
+1. New Game
+2. Load Game
+3. Credits 
+4. Quit
+
+>Enter loading filename: 
+CONTINUE THE GAME
+
+
+=== Start Round 1 ===
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 
+0: F 
+1: R Y Y R 
+2: R U Y B 
+3: R R L B 
+4: B Y L L 
+5: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F Y Y 
+1:         
+2: R U Y B 
+3: R R L B 
+4: B Y L L 
+5: U Y L R 
+
+
+Mosaic for B
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 
+0: F Y Y R U Y 
+1:         
+2:         
+3: R R L B 
+4: B Y L L 
+5: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F Y Y R U Y L B 
+1:         
+2:         
+3:         
+4: B Y L L 
+5: U Y L R 
+
+
+Mosaic for B
+1:             B  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 
+0: F Y Y R U Y L B B Y 
+1:         
+2:         
+3:         
+4:         
+5: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  R  R  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F Y Y R U Y L B B Y U Y L 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             B  ||  b  y  r  u  l
+2:          L  L  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 
+0: R U L B B U L 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             R  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  R  R  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: U L B B U L 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             B  ||  b  y  r  u  l
+2:          L  L  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: F  Y  Y  Y  Y  Y  
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 
+0: U L U L 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             R  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       R  R  R  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: L L 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             B  ||  b  y  r  u  l
+2:          L  L  ||  l  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: F  Y  Y  Y  Y  Y  
+
+> INFO: Turn Successful
+
+LOG: All turns happened 
+A > turn 1 R 2
+B > turn 2 B 1
+A > turn 3 R 3
+B > turn 4 L 2
+A > turn 5 R 1
+B > turn 0 Y 2
+A > turn 0 R 3
+B > turn 0 B 3
+A > turn 0 U 1
+B > turn 0 L 2
+=== End of Round ===
+
+=== Start Round 2 ===
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 
+0: F 
+1: B B B B 
+2: R U L U 
+3: L U R Y 
+4: R R U U 
+5: U U L Y 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  l  b  y  R
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U U 
+1: B B B B 
+2: R U L U 
+3: L U R Y 
+4:         
+5: U U L Y 
+
+
+Mosaic for B
+1:             .  ||  B  y  r  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 
+0: F U U 
+1:         
+2: R U L U 
+3: L U R Y 
+4:         
+5: U U L Y 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  l  b  y  R
+4:    .  .  R  R  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U U U L U 
+1:         
+2:         
+3: L U R Y 
+4:         
+5: U U L Y 
+
+
+Mosaic for B
+1:             .  ||  B  y  r  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    B  B  B  B  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 
+0: F U U U L U U U L 
+1:         
+2:         
+3: L U R Y 
+4:         
+5:         
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  l  b  y  R
+4:    .  R  R  R  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U U U L U U U L L U Y 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             Y  ||  B  y  r  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    B  B  B  B  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 
+0: L L L Y 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  l  b  y  R
+4:    R  R  R  R  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: Y 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             Y  ||  B  y  r  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    B  B  B  B  ||  r  u  l  b  y
+5: U  U  U  U  U  ||  y  r  u  l  b
+broken: F  U  U              
+
+> INFO: Turn Successful
+
+LOG: All turns happened 
+A > turn 4 R 4
+B > turn 1 B 4
+A > turn 2 R 4
+B > turn 5 Y 1
+A > turn 3 R 4
+B > turn 0 U 5
+A > turn 0 L 3
+B > turn 0 Y 2
+=== End of Round ===
+
+=== Start Round 3 ===
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: F 
+1: Y Y B B 
+2: L B L R 
+3: L U U R 
+4: Y L U R 
+5: U B R Y 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U B Y 
+1: Y Y B B 
+2: L B L R 
+3: L U U R 
+4: Y L U R 
+5:         
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  u  l
+2:          .  Y  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: F U B Y Y U R 
+1: Y Y B B 
+2: L B L R 
+3: L U U R 
+4:         
+5:         
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  .  R  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U B Y Y U R L U U 
+1: Y Y B B 
+2: L B L R 
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  u  l
+2:          .  Y  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: L                    
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: F U B Y Y U R L U U L L R 
+1: Y Y B B 
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  R  R  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U B Y Y U R L U U L L R B B 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  u  l
+2:          .  Y  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: L  B                 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: B Y Y R L L L R B B 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          Y  Y  ||  l  b  y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  R  R  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: B Y Y L L L B B 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             U  ||  B  Y  r  u  l
+2:          .  Y  ||  L  b  y  r  u
+3:       .  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: L  B  F  U  U  U     
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: Y Y L L L 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          Y  Y  ||  l  b  y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  R  R  R  R  ||  y  r  u  l  b
+broken:       
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: Y Y 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             U  ||  B  Y  r  u  l
+2:          .  Y  ||  L  b  y  r  u
+3:       B  B  B  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: L  B  F  U  U  U  B  
+
+> INFO: Turn Successful
+
+LOG: All turns happened 
+A > turn 5 R 5
+B > turn 4 L 2
+A > turn 3 R 5
+B > turn 2 B 2
+A > turn 1 Y 2
+B > turn 0 U 1
+A > turn 0 R 5
+B > turn 0 B 3
+A > turn 0 L 3
+B > turn 0 Y 2
+=== End of Round ===
+
+=== Start Round 4 ===
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: F 
+1: U Y Y R 
+2: B L L L 
+3: Y Y Y Y 
+4: B Y L Y 
+5: L B L U 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  Y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  R  R  R  R  ||  y  r  u  l  b
+broken:          
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U Y Y 
+1:         
+2: B L L L 
+3: Y Y Y Y 
+4: B Y L Y 
+5: L B L U 
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  U  l
+2:          .  .  ||  L  b  Y  r  u
+3:       .  .  .  ||  u  l  B  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: F U Y Y B 
+1:         
+2:         
+3: Y Y Y Y 
+4: B Y L Y 
+5: L B L U 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  Y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  y
+5: R  R  R  R  R  ||  y  r  u  l  b
+broken:          
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: F U Y Y B 
+1:         
+2:         
+3:         
+4: B Y L Y 
+5: L B L U 
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  U  l
+2:          .  .  ||  L  b  Y  r  u
+3:       L  L  L  ||  u  l  B  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: F U Y Y B B L 
+1:         
+2:         
+3:         
+4:         
+5: L B L U 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  Y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    Y  Y  Y  Y  ||  R  u  l  b  y
+5: R  R  R  R  R  ||  y  r  u  l  b
+broken:          
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: U B B L 
+1:         
+2:         
+3:         
+4:         
+5: L B L U 
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  U  l
+2:          .  .  ||  L  b  Y  r  u
+3:       L  L  L  ||  u  l  B  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: Y  Y                 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: U L 
+1:         
+2:         
+3:         
+4:         
+5: L B L U 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  Y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    Y  Y  Y  Y  ||  R  u  l  b  y
+5: R  R  R  R  R  ||  y  r  u  l  b
+broken: F  Y  Y  
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: L 
+1:         
+2:         
+3:         
+4:         
+5: L B L U 
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  U  l
+2:          B  B  ||  L  b  Y  r  u
+3:       L  L  L  ||  u  l  B  y  r
+4:    .  .  .  .  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: Y  Y                 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: 
+1:         
+2:         
+3:         
+4:         
+5: L B L U 
+
+
+Mosaic for A
+1:             U  ||  b  y  R  u  l
+2:          .  .  ||  l  b  Y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    Y  Y  Y  Y  ||  R  u  l  b  y
+5: R  R  R  R  R  ||  y  r  u  l  b
+broken: F  Y  Y  
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 
+0: B U 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  U  l
+2:          B  B  ||  L  b  Y  r  u
+3:       L  L  L  ||  u  l  B  y  r
+4:    .  .  .  L  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken: Y  Y                 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 2
+Factories: 
+0: B 
+1:         
+2:         
+3:         
+4:         
+5:         
+
+
+Mosaic for A
+1:             U  ||  b  y  R  u  l
+2:          L  L  ||  l  b  Y  R  u
+3:       .  .  .  ||  u  L  b  y  R
+4:    Y  Y  Y  Y  ||  R  u  l  b  y
+5: R  R  R  R  R  ||  y  r  u  l  b
+broken: F  Y  Y  
+
+> INFO: Turn Successful
+
+LOG: All turns happened 
+A > turn 1 R 5
+B > turn 2 L 3
+A > turn 3 Y 4
+B > turn 4 Y 1
+A > turn 0 Y 2
+B > turn 0 B 2
+A > turn 0 U 1
+B > turn 0 L 4
+A > turn 5 L 2
+B > turn 0 U 1
+A > turn 0 B 3
+=== End of Round ===
+
+=== Start Round 5 ===
+TURN FOR PLAYER: B   POINTS: 4
+Factories: 
+0: F 
+1: B Y Y R 
+2: U L R L 
+3: Y R R L 
+4: U R U R 
+5: U B R Y 
+
+
+Mosaic for B
+1:             .  ||  B  Y  r  U  l
+2:          .  .  ||  L  B  Y  r  u
+3:       .  .  .  ||  u  L  B  y  r
+4:    .  .  .  L  ||  r  u  l  B  y
+5: .  .  .  .  .  ||  y  r  U  l  b
+broken:                      
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 16
+Factories: 
+0: F B R 
+1:         
+2: U L R L 
+3: Y R R L 
+4: U R U R 
+5: U B R Y 
+
+
+Mosaic for A
+1:             .  ||  b  y  R  U  l
+2:          .  .  ||  L  b  Y  R  u
+3:       .  .  B  ||  u  L  b  y  R
+4:    .  .  .  .  ||  R  u  l  b  Y
+5: .  .  .  .  .  ||  y  R  u  l  b
+broken:          
+
+> Goodbye.

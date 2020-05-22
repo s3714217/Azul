@@ -88,9 +88,9 @@ void LinkedList::clear()
 
 void LinkedList::addFront(Tile* tile)
 {
-    Node* tempHead = new Node(tile, this->head);
-    this->head = tempHead;
+    this->head = new Node(tile, this->head);
     this->len++;
+  
 }
 
 void LinkedList::addBack(Tile* tile)
@@ -105,12 +105,14 @@ void LinkedList::addBack(Tile* tile)
       }
       temp->next = new Node(tile, nullptr);
       this->len++;
+      temp = nullptr;
   }
   else
   {
          this->head =new Node(tile, nullptr);
          this->len++;
    }
+    
 }
 
 void LinkedList::shuffle(int seed)
@@ -152,4 +154,3 @@ void LinkedList::printAll()
     
     std::cout<< text<<std::endl;
 }
-
