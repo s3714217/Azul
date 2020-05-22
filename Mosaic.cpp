@@ -8,8 +8,14 @@
 
 #include "headers/Mosaic.h"
 
+//Constructor
 Mosaic::Mosaic(Player* player)
 {
+    /*
+    Initializing a pointBoard to display filled Tiles
+    Initializing a turnBoard to display current turn play board
+    Initializing a pointCalculator to calculate points after new Tiles is added
+    */
     this->player = player;
     this->pointBoard = new Tile*[BOARD_SIZE];
     this->turnBoard = new Tile*[BOARD_SIZE];
@@ -89,11 +95,13 @@ Mosaic::~Mosaic()
 
 bool Mosaic::isFirst()
 {
+    //return true if the Mosaic contain first player tile
     return this->containedFirst;
 }
 
 bool Mosaic::placeTile(int row, Colour c, int number)
 {
+    //Placing tile to a row
     row -= 1;
     
     if(c == FIRST_PLAYER)
@@ -173,7 +181,10 @@ bool Mosaic::placeTile(int row, Colour c, int number)
 
 void Mosaic::turnCheck()
 {
-    
+    /* 
+    Calculating point after each round
+    Add the remain tiles to box lid when round end
+    */
     for (int x = 0; x < BOARD_SIZE; x++)
     {
         bool fullrow = true;
@@ -216,6 +227,7 @@ void Mosaic::turnCheck()
 
 bool Mosaic::winCheck()
 {
+    //Checking if the player win and the game end
     for(int x =0; x < BOARD_SIZE; x++)
     {
         bool fullrow = true;
@@ -240,6 +252,7 @@ bool Mosaic::winCheck()
 
 LinkedList* Mosaic::returnTile()
 {
+    //place all unused tile in the remainder
     for(int x = 0; x < brokenPts; x++)
     {
             this->remainder->addBack(broken[x]);
@@ -307,6 +320,11 @@ void Mosaic::PrintMosaic()
 
 void Mosaic::pointCalculation()
 {
+    /*
+    Calculating point when a new tile is added
+    Add bonus point if the tile make a horizontal and vertical connection
+    Add bonus point if tile meeting full row/col and 5 colours bonus
+    */
     int point = this->player->getPoint();
     std::vector<int> checkX;
     std::vector<int> checkY;

@@ -11,6 +11,10 @@
 
 void Azul::loadGame(std::string filename)
 {
+    /*
+    load game function that read the save files and initailize all objects
+    start game with the read in object
+    */
     
     if(filename.size() > 0)
     {
@@ -378,11 +382,13 @@ void Azul::loadGame(std::string filename)
       }
       else
       {
+          //catch exception if no file can be found
           std::cout << "File can't be found"<<std::endl;
       }
     }
     else
     {
+      
       std::cout<<"Error: Please enter a valid filename!"<<std::endl;
     }
 }
@@ -390,6 +396,7 @@ void Azul::loadGame(std::string filename)
 
 void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename, int round)
 {
+    //write out all object to files
     if(filename.size() > 0)
     {
         std::string output;
@@ -577,8 +584,10 @@ void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,st
 void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round)
 {
 
+    //start the game
     if(newgame == true)
     {
+        //if the game is a new game then initialize
      std::cout<<"START A NEW GAME"<<std::endl;
      std::cout<<std::endl;
      
@@ -605,6 +614,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
     }
     else
     {
+        //continue if the game is loaded
         std::cout<<"CONTINUE THE GAME"<<std::endl;
         std::cout<<std::endl;
         
@@ -612,6 +622,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
     
     while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
     {
+        //The game run until one of 2 players win
         
         std::cout<<std::endl;
         std::cout<<"=== Start Round " <<round<<" ===";
@@ -636,7 +647,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
         }
         while(factories->isEmpty() != true)
         {
-            
+            //The turn runt until the factories is empty
             if(mosaic_1->isTurn() == true)
             {
                 std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
@@ -837,6 +848,7 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
 
 void Azul::Menu(int seed)
 {
+    //Print out general menu
     std::cout<<" WELCOME TO AZUL!"<<std::endl;
     std::cout<<"------------------------"<<std::endl;
     bool exit = false;
