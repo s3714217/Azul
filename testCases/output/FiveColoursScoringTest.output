@@ -55,19 +55,19 @@ broken:
 
 TURN FOR PLAYER: A   POINTS: 0
 Factories: 
-0: F Y Y R U Y 
+0: F Y Y U Y L 
 1:         
-2:         
+2: R U Y B 
 3: R R L B 
 4: B Y L L 
-5: U Y L R 
+5:         
 
 
 Mosaic for A
 1:             .  ||  b  y  r  u  l
-2:          R  R  ||  l  b  y  r  u
+2:          .  .  ||  l  b  y  r  u
 3:       .  .  .  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
+4:    .  .  R  R  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
 broken: 
 
@@ -75,16 +75,16 @@ broken:
 
 TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: F Y Y R U Y L B 
+0: F Y Y U Y L L B 
 1:         
-2:         
+2: R U Y B 
 3:         
 4: B Y L L 
-5: U Y L R 
+5:         
 
 
 Mosaic for B
-1:             B  ||  b  y  r  u  l
+1:             R  ||  b  y  r  u  l
 2:          .  .  ||  l  b  y  r  u
 3:       .  .  .  ||  u  l  b  y  r
 4:    .  .  .  .  ||  r  u  l  b  y
@@ -95,19 +95,19 @@ broken:
 
 TURN FOR PLAYER: A   POINTS: 0
 Factories: 
-0: F Y Y R U Y L B B Y 
+0: Y Y U Y B 
 1:         
-2:         
+2: R U Y B 
 3:         
-4:         
-5: U Y L R 
+4: B Y L L 
+5:         
 
 
 Mosaic for A
 1:             .  ||  b  y  r  u  l
-2:          R  R  ||  l  b  y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    R  R  R  R  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
 broken: 
 
@@ -115,27 +115,27 @@ broken:
 
 TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: F Y Y R U Y L B B Y U Y L 
+0: Y Y U Y B Y L L 
 1:         
-2:         
+2: R U Y B 
 3:         
 4:         
 5:         
 
 
 Mosaic for B
-1:             B  ||  b  y  r  u  l
+1:             R  ||  b  y  r  u  l
 2:          L  L  ||  l  b  y  r  u
 3:       .  .  .  ||  u  l  b  y  r
 4:    .  .  .  .  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
-broken: 
+broken: F  
 
 > INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
 Factories: 
-0: R U L B B U L 
+0: Y Y U Y B Y L L U Y B 
 1:         
 2:         
 3:         
@@ -144,10 +144,10 @@ Factories:
 
 
 Mosaic for A
-1:             R  ||  b  y  r  u  l
-2:          R  R  ||  l  b  y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
+1:             B  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    R  R  R  R  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
 broken: 
 
@@ -155,7 +155,7 @@ broken:
 
 TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: U L B B U L 
+0: Y Y U Y B Y U Y B 
 1:         
 2:         
 3:         
@@ -164,18 +164,18 @@ Factories:
 
 
 Mosaic for B
-1:             B  ||  b  y  r  u  l
+1:             R  ||  b  y  r  u  l
 2:          L  L  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
+3:       .  .  R  ||  u  l  b  y  r
 4:    .  .  .  .  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
-broken: F  Y  Y  Y  Y  Y  
+broken: F  
 
 > INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
 Factories: 
-0: U L U L 
+0: Y Y U Y Y U Y 
 1:         
 2:         
 3:         
@@ -184,10 +184,10 @@ Factories:
 
 
 Mosaic for A
-1:             R  ||  b  y  r  u  l
-2:          R  R  ||  l  b  y  r  u
-3:       R  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
+1:             B  ||  b  y  r  u  l
+2:          L  L  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    R  R  R  R  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
 broken: 
 
@@ -195,7 +195,7 @@ broken:
 
 TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: L L 
+0: U U 
 1:         
 2:         
 3:         
@@ -204,30 +204,30 @@ Factories:
 
 
 Mosaic for B
-1:             B  ||  b  y  r  u  l
+1:             R  ||  b  y  r  u  l
 2:          L  L  ||  l  b  y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
+3:       .  .  R  ||  u  l  b  y  r
+4:    .  .  B  B  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
-broken: F  Y  Y  Y  Y  Y  
+broken: F  
 
 > INFO: Turn Successful
 
 LOG: All turns happened 
-A > turn 1 R 2
-B > turn 2 B 1
-A > turn 3 R 3
-B > turn 4 L 2
-A > turn 5 R 1
-B > turn 0 Y 2
-A > turn 0 R 3
-B > turn 0 B 3
-A > turn 0 U 1
+A > turn 1 R 4
+B > turn 5 R 1
+A > turn 3 R 4
 B > turn 0 L 2
+A > turn 4 B 1
+B > turn 2 R 3
+A > turn 0 L 2
+B > turn 0 B 4
+A > turn 0 Y 5
+B > turn 0 U 3
 === End of Round ===
 
 === Start Round 2 ===
-TURN FOR PLAYER: A   POINTS: 1
+TURN FOR PLAYER: B   POINTS: 0
 Factories: 
 0: F 
 1: Y U U Y 
@@ -237,19 +237,19 @@ Factories:
 5: R B U B 
 
 
-Mosaic for A
+Mosaic for B
 1:             .  ||  b  y  R  u  l
-2:          .  .  ||  l  b  y  R  u
-3:       .  .  .  ||  u  l  b  y  R
-4:    .  .  .  .  ||  r  u  l  b  y
+2:          .  .  ||  L  b  y  r  u
+3:       .  .  R  ||  u  l  b  y  r
+4:    .  .  B  B  ||  r  u  l  b  y
 5: .  .  .  .  .  ||  y  r  u  l  b
-broken:       
+broken:          
 
 > INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 0
+TURN FOR PLAYER: A   POINTS: 6
 Factories: 
-0: F Y Y 
+0: F R R 
 1: Y U U Y 
 2: U Y U U 
 3: R L R Y 
@@ -257,19 +257,19 @@ Factories:
 5: R B U B 
 
 
-Mosaic for B
+Mosaic for A
 1:             .  ||  B  y  r  u  l
 2:          .  .  ||  L  b  y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:                      
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  .  .  ||  Y  r  u  l  b
+broken: 
 
 > INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 1
+TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: F Y Y U U 
+0: F R R Y Y 
 1:         
 2: U Y U U 
 3: R L R Y 
@@ -277,59 +277,79 @@ Factories:
 5: R B U B 
 
 
-Mosaic for A
+Mosaic for B
 1:             .  ||  b  y  R  u  l
-2:          .  .  ||  l  b  y  R  u
-3:       .  .  .  ||  u  l  b  y  R
-4:    .  .  R  R  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:       
+2:          .  .  ||  L  b  y  r  u
+3:       .  .  R  ||  u  l  b  y  r
+4:    .  .  B  B  ||  r  u  l  b  y
+5: .  .  .  Y  Y  ||  y  r  u  l  b
+broken:          
 
 > INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 0
+TURN FOR PLAYER: A   POINTS: 6
 Factories: 
-0: F Y Y U U L Y 
+0: F R R Y Y B U B 
 1:         
 2: U Y U U 
-3:         
+3: R L R Y 
 4:         
-5: R B U B 
+5:         
 
 
-Mosaic for B
+Mosaic for A
 1:             .  ||  B  y  r  u  l
-2:          Y  Y  ||  L  b  y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:                      
+2:          .  .  ||  L  b  y  r  u
+3:       .  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  .  .  ||  Y  r  u  l  b
+broken: 
 
 > INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 1
+TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: F Y Y U U L Y R U 
+0: R R Y Y B B 
 1:         
 2: U Y U U 
-3:         
+3: R L R Y 
+4:         
+5:         
+
+
+Mosaic for B
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       .  .  R  ||  u  l  b  y  r
+4:    .  .  B  B  ||  r  u  l  b  y
+5: .  .  .  Y  Y  ||  y  r  u  l  b
+broken: R        
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 6
+Factories: 
+0: R R Y Y B B Y 
+1:         
+2:         
+3: R L R Y 
 4:         
 5:         
 
 
 Mosaic for A
-1:             .  ||  b  y  R  u  l
-2:          .  .  ||  l  b  y  R  u
-3:       .  .  .  ||  u  l  b  y  R
-4:    R  R  R  R  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:       
+1:             .  ||  B  y  r  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       U  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  .  .  ||  Y  r  u  l  b
+broken: F  
 
 > INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: F Y Y U U L Y R U Y 
+0: R R Y Y B B Y R R Y 
 1:         
 2:         
 3:         
@@ -338,18 +358,18 @@ Factories:
 
 
 Mosaic for B
-1:             .  ||  B  y  r  u  l
-2:          Y  Y  ||  L  b  y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: B  B                 
+1:             U  ||  b  y  R  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       .  .  R  ||  u  l  b  y  r
+4:    .  .  B  B  ||  r  u  l  b  y
+5: .  .  .  Y  Y  ||  y  r  u  l  b
+broken: R  U  U  
 
 > INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 1
+TURN FOR PLAYER: A   POINTS: 6
 Factories: 
-0: U U L R U 
+0: Y Y B B Y Y 
 1:         
 2:         
 3:         
@@ -358,18 +378,18 @@ Factories:
 
 
 Mosaic for A
-1:             .  ||  b  y  R  u  l
-2:          .  .  ||  l  b  y  R  u
-3:       U  U  U  ||  u  l  b  y  R
-4:    R  R  R  R  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:       
+1:             L  ||  B  y  r  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       U  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  R  u  l  b  y
+5: .  .  .  .  .  ||  Y  r  u  l  b
+broken: F  
 
 > INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
 Factories: 
-0: U U L U 
+0: B B 
 1:         
 2:         
 3:         
@@ -378,49 +398,29 @@ Factories:
 
 
 Mosaic for B
-1:             .  ||  B  y  r  u  l
-2:          Y  Y  ||  L  b  y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: B  B  F  Y  Y  Y  Y  
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 1
-Factories: 
-0: L 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for A
-1:             .  ||  b  y  R  u  l
-2:          .  .  ||  l  b  y  R  u
-3:       U  U  U  ||  u  l  b  y  R
-4:    R  R  R  R  ||  r  u  l  b  y
-5: .  .  .  .  R  ||  y  r  u  l  b
-broken:       
+1:             U  ||  b  y  R  u  l
+2:          .  .  ||  L  b  y  r  u
+3:       R  R  R  ||  u  l  b  y  r
+4:    .  .  B  B  ||  r  u  l  b  y
+5: .  .  .  Y  Y  ||  y  r  u  l  b
+broken: R  U  U  R  R  
 
 > INFO: Turn Successful
 
 LOG: All turns happened 
-A > turn 4 R 4
-B > turn 1 Y 2
-A > turn 3 R 4
-B > turn 5 B 2
-A > turn 2 U 3
-B > turn 0 Y 3
-A > turn 0 R 5
-B > turn 0 U 4
-A > turn 0 L 1
+B > turn 4 Y 5
+A > turn 1 U 3
+B > turn 5 R 1
+A > turn 0 U 3
+B > turn 2 U 1
+A > turn 3 L 1
+B > turn 0 R 3
+A > turn 0 Y 4
+B > turn 0 B 2
 === End of Round ===
 
 === Start Round 3 ===
-TURN FOR PLAYER: B   POINTS: 0
+TURN FOR PLAYER: A   POINTS: 12
 Factories: 
 0: F 
 1: U R L U 
@@ -430,17 +430,17 @@ Factories:
 5: B U B U 
 
 
-Mosaic for B
-1:             .  ||  B  y  r  u  l
-2:          .  .  ||  L  b  Y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  U  U  U  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:                      
+Mosaic for A
+1:             .  ||  B  y  r  u  L
+2:          .  .  ||  L  b  y  r  u
+3:       .  .  .  ||  U  l  b  y  r
+4:    .  .  .  .  ||  R  u  l  b  Y
+5: .  .  .  .  .  ||  Y  r  u  l  b
+broken:    
 
 > INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 4
+TURN FOR PLAYER: B   POINTS: 0
 Factories: 
 0: F R L 
 1:         
@@ -450,399 +450,12 @@ Factories:
 5: B U B U 
 
 
-Mosaic for A
-1:             .  ||  b  y  R  u  L
-2:          .  .  ||  l  b  y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  .  .  .  ||  R  u  l  b  y
-5: .  .  .  .  R  ||  y  r  u  l  b
-broken:       
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F R L B U U 
-1:         
-2: B Y B L 
-3: U L Y Y 
-4:         
-5: B U B U 
-
-
 Mosaic for B
-1:             U  ||  B  y  r  u  l
-2:          .  .  ||  L  b  Y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  U  U  U  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: U                    
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 4
-Factories: 
-0: F R L B U U Y L 
-1:         
-2:         
-3: U L Y Y 
-4:         
-5: B U B U 
-
-
-Mosaic for A
-1:             .  ||  b  y  R  u  L
-2:          .  .  ||  l  b  y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  .  .  .  ||  R  u  l  b  y
-5: .  .  .  .  R  ||  y  r  u  l  b
-broken: R     
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F R L B U U Y L U L 
-1:         
-2:         
-3:         
-4:         
-5: B U B U 
-
-
-Mosaic for B
-1:             U  ||  B  y  r  u  l
-2:          B  B  ||  L  b  Y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    .  U  U  U  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: U                    
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 4
-Factories: 
-0: F R L B U U Y L U L B B 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for A
-1:             .  ||  b  y  R  u  L
-2:          Y  Y  ||  l  b  y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  .  .  .  ||  R  u  l  b  y
-5: .  .  .  .  R  ||  y  r  u  l  b
-broken: R     
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: L B U U Y L U L B B 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for B
-1:             U  ||  B  y  r  u  l
-2:          B  B  ||  L  b  Y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    U  U  U  U  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: U  U                 
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 4
-Factories: 
-0: B U U Y U B B 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for A
-1:             .  ||  b  y  R  u  L
-2:          Y  Y  ||  l  b  y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  .  .  .  ||  R  u  l  b  y
-5: .  .  .  R  R  ||  y  r  u  l  b
-broken: R  F  
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: B Y B B 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for B
-1:             U  ||  B  y  r  u  l
-2:          B  B  ||  L  b  Y  r  u
-3:       .  B  B  ||  u  l  b  y  r
-4:    U  U  U  U  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: U  U  L  L  L        
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 4
-Factories: 
-0: Y 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for A
-1:             .  ||  b  y  R  u  L
-2:          Y  Y  ||  l  b  y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  U  U  U  ||  R  u  l  b  y
-5: .  .  .  R  R  ||  y  r  u  l  b
-broken: R  F  
-
-> INFO: Turn Successful
-
-LOG: All turns happened 
-B > turn 1 U 1
-A > turn 4 R 1
-B > turn 2 B 2
-A > turn 3 Y 2
-B > turn 5 U 4
-A > turn 0 R 5
-B > turn 0 L 4
-A > turn 0 U 4
-B > turn 0 B 3
-A > turn 0 Y 1
-=== End of Round ===
-
-=== Start Round 4 ===
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F 
-1: Y L R R 
-2: B L U L 
-3: B U B R 
-4: L Y B B 
-5: R U U R 
-
-
-Mosaic for B
-1:             .  ||  B  y  r  U  l
-2:          .  .  ||  L  B  Y  r  u
-3:       .  .  .  ||  u  l  B  y  r
-4:    .  .  .  .  ||  r  U  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken:                      
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 8
-Factories: 
-0: F B U 
-1: Y L R R 
-2:         
-3: B U B R 
-4: L Y B B 
-5: R U U R 
-
-
-Mosaic for A
-1:             .  ||  b  Y  R  u  L
-2:          .  .  ||  l  b  Y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  U  U  U  ||  R  u  l  b  y
-5: .  .  .  R  R  ||  y  r  u  l  b
-broken:       
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F B U Y L 
-1:         
-2:         
-3: B U B R 
-4: L Y B B 
-5: R U U R 
-
-
-Mosaic for B
-1:             .  ||  B  y  r  U  l
-2:          .  .  ||  L  B  Y  r  u
-3:       .  .  .  ||  u  l  B  y  r
-4:    .  .  .  .  ||  r  U  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: L  L                 
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 8
-Factories: 
-0: F B U Y L L Y 
-1:         
-2:         
-3: B U B R 
-4:         
-5: R U U R 
-
-
-Mosaic for A
-1:             .  ||  b  Y  R  u  L
-2:          .  .  ||  l  b  Y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  U  U  U  ||  R  u  l  b  y
-5: .  R  R  R  R  ||  y  r  u  l  b
-broken:       
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F B U Y L L Y B U B 
-1:         
-2:         
-3:         
-4:         
-5: R U U R 
-
-
-Mosaic for B
-1:             .  ||  B  y  r  U  l
-2:          .  .  ||  L  B  Y  r  u
-3:       .  .  .  ||  u  l  B  y  r
-4:    .  .  .  .  ||  r  U  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: L  L  B  B           
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 8
-Factories: 
-0: F B U Y L L Y B U B U U 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for A
-1:             .  ||  b  Y  R  u  L
-2:          .  .  ||  l  b  Y  R  u
-3:       .  .  .  ||  U  l  b  y  R
-4:    .  U  U  U  ||  R  u  l  b  y
-5: R  R  R  R  R  ||  y  r  u  l  b
-broken:       
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: B U Y Y B U B U U 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for B
-1:             .  ||  B  y  r  U  l
-2:          R  R  ||  L  B  Y  r  u
-3:       .  .  .  ||  u  l  B  y  r
-4:    .  .  .  .  ||  r  U  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: L  L  B  B           
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 8
-Factories: 
-0: U Y Y U U U 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for A
-1:             .  ||  b  Y  R  u  L
-2:          .  .  ||  l  b  Y  R  u
-3:       .  L  L  ||  U  l  b  y  R
-4:    .  U  U  U  ||  R  u  l  b  y
-5: R  R  R  R  R  ||  y  r  u  l  b
-broken: F     
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: U U U U 
-1:         
-2:         
-3:         
-4:         
-5:         
-
-
-Mosaic for B
-1:             .  ||  B  y  r  U  l
-2:          R  R  ||  L  B  Y  r  u
-3:       .  .  .  ||  u  l  B  y  r
-4:    .  .  .  .  ||  r  U  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: L  L  B  B  B  B  B  
-
-> INFO: Turn Successful
-
-LOG: All turns happened 
-B > turn 2 L 2
-A > turn 1 R 5
-B > turn 4 B 2
-A > turn 3 R 5
-B > turn 5 R 2
-A > turn 0 L 3
-B > turn 0 B 3
-A > turn 0 Y 1
-B > turn 0 U 3
-=== End of Round ===
-
-=== Start Round 5 ===
-TURN FOR PLAYER: A   POINTS: 15
-Factories: 
-0: F 
-1: Y L B B 
-2: L L B L 
-3: R L Y R 
-4: L B Y Y 
-5: L U B L 
-
-
-Mosaic for A
-1:             .  ||  b  Y  R  u  L
-2:          .  .  ||  l  b  Y  R  u
-3:       .  L  L  ||  U  l  b  y  R
-4:    .  U  U  U  ||  R  u  l  b  y
-5: .  .  .  .  .  ||  y  R  u  l  b
-broken:          
+1:             .  ||  b  y  R  U  l
+2:          .  .  ||  L  B  y  r  u
+3:       .  .  .  ||  u  l  b  y  R
+4:    .  .  B  B  ||  r  u  l  b  y
+5: .  .  .  Y  Y  ||  y  r  u  l  b
+broken:                
 
 > Goodbye.

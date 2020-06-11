@@ -34,9 +34,9 @@ turn 3 B 3
 turn 4 B 2
 turn 5 R 2
 turn 0 R 2
-turn 0 L 5
+turn 0 L 1
 turn 0 U 4
-turn 0 B 4
+turn 0 B 1
 turn 0 Y 2
 turn 1 L 1
 turn 2 L 2
@@ -46,5 +46,5 @@ turn 5 L 4
 turn 0 Y 5
 turn 0 L 2
 turn 0 B 4
-turn 0 U 4
-turn 0 R 2
+turn 0 R 1
+turn 0 U 2

@@ -1,0 +1,52 @@
+$
+mosaic
+name A
+point 44
+turnboard E|E|E|E|E
+pointboard B,Y,r,u,L,L,B,Y,R,u,U,l,B,Y,R,R,u,l,B,y,Y,R,u,l,B
+broken E
+remainder E
+pointmap c,c,.,.,c,c,c,c,c,.,c,.,c,c,c,c,.,.,c,.,c,c,.,.,c
+#
+$
+mosaic
+name AI_2
+point 4
+turnboard E|E|Y,Y|E|E
+pointboard b,Y,R,u,L,l,B,Y,r,U,U,l,b,y,r,R,U,l,b,Y,y,r,u,l,b
+broken  
+remainder E
+pointmap .,c,c,.,c,.,c,c,.,c,c,.,.,.,.,c,c,.,.,c,.,.,.,.,.
+#
+$
+mosaic
+name AI_3
+point 0
+turnboard E|E|U,U|E|E
+pointboard B,Y,R,U,l,L,b,y,R,U,u,l,b,y,R,R,U,L,b,y,y,r,u,l,b
+broken  , , , , 
+remainder E
+pointmap c,c,c,c,.,c,.,.,c,c,.,.,.,.,c,c,c,c,.,.,.,.,.,.,.
+#
+$
+mosaic
+name AI_4
+point 0
+turnboard E|U,U|U,U|E|E
+pointboard B,Y,r,U,L,L,B,y,R,u,u,l,b,Y,r,r,u,L,b,y,y,r,u,l,b
+broken  , , 
+remainder E
+pointmap c,c,.,c,c,c,c,.,c,.,.,.,.,c,.,.,.,c,.,.,.,.,.,.,.
+#
+$
+factories
+number 4
+factories F,L,L|E|L,L,L,B|Y,Y,Y,Y|R,R,R,R|B,B,B,U|U,L,L,B|R,L,L,L|U,U,U,U|Y,R,R,Y
+secondcentral F
+boxlid L,R,B,B
+#
+$
+game
+active A
+turn 6
+#

@@ -18,7 +18,6 @@ void Azul::loadGame(std::string filename)
     
     if(filename.size() > 0)
     {
-        
        filename += ".save";
        filename = "save/"+filename;
        std::string line;
@@ -27,9 +26,15 @@ void Azul::loadGame(std::string filename)
         bool readingMosaic = false;
         bool readingFactories = false;
         Mosaic* temp = nullptr;
-        std::shared_ptr<Mosaic> mos1 = nullptr;
-        std::shared_ptr<Mosaic> mos2 = nullptr;
-        std::shared_ptr<Factories> fact = nullptr;
+        Mosaic* mos[MAX_PLAYER];
+        Factories* fac = nullptr;
+        
+        
+        for(int x = 0; x < MAX_PLAYER; x++)
+        {
+            mos[x] = nullptr;
+        }
+        
       if(stream.is_open())
       {
           while(getline(stream,line))
@@ -59,22 +64,29 @@ void Azul::loadGame(std::string filename)
                       {
                           if(type == "active")
                           {
-                              if(mos1->getPlayer()->getName() == input)
+                            
+                              for(int k = 0; k < MAX_PLAYER; k++)
                               {
-                                  mos1->setTurn(true);
-                                  mos2->setTurn(false);
+                                  if(mos[k] != nullptr && mos[k]->getPlayer()->getName()==input)
+                                  {
+                                     
+                                      mos[k]->setTurn(true);
+                                  }
+                                  else if(mos[k] != nullptr)
+                                  {
+                                      
+                                      mos[k]->setTurn(false);
+                                  }
+                                  
                               }
-                              else if(mos2->getPlayer()->getName() == input)
-                              {
-                                  mos2->setTurn(true);
-                                  mos1->setTurn(false);
-                              }
+                            
                           }
                           else if(type == "turn")
                           {
-                               int turn = std::stoi(input);
-                           
-                            this->startGame(mos1, mos2, fact, false, 0, turn);
+                            int turn = std::stoi(input);
+                            this->NUM_FAC = fac->getNumberOfFactory();
+                              
+                            this->startGame(mos, fac, false, 0, turn);
                           }
                       }
                   }
@@ -90,6 +102,7 @@ void Azul::loadGame(std::string filename)
                  
                   std::string type;
                   std::string input;
+                  
                   for(int x =0; x <(int) line.length(); x++)
                   {
                       if(line[x] != ' ')
@@ -108,6 +121,11 @@ void Azul::loadGame(std::string filename)
                          if(type == "name")
                          {
                              temp = new Mosaic(new Player(input));
+                             if(input[0] == 'A' && input[1] == 'I')
+                             {
+                                 temp->set_AI(true);
+                             }
+                             
                          }
                          else if(type == "point")
                          {
@@ -281,16 +299,16 @@ void Azul::loadGame(std::string filename)
                   }
                   if(line == "#")
                   {
-                      if(mos1 == nullptr)
+                      
+                      for(int k =0; k < MAX_PLAYER; k++)
                       {
-                          mos1 =  std::shared_ptr<Mosaic>(temp);
-                          
+                          if(mos[k] == nullptr)
+                          {
+                              mos[k] = temp;
+                              k = MAX_PLAYER;
+                          }
                       }
-                      else
-                      {
-                          mos2 = std::shared_ptr<Mosaic>(temp);
-                          
-                      }
+                      
                       readingMosaic = false;
                   }
               }
@@ -315,15 +333,16 @@ void Azul::loadGame(std::string filename)
                          
                          if(type == "number")
                          {
-                             fact = std::shared_ptr<Factories>(new Factories(std::stoi(input), -1));
+                             this->NUM_MOS =std::stoi(input);
+                             fac = new Factories(std::stoi(input), -1);
                          }
                          else if(type == "factories")
                          {
-                             Tile** tempboard = new Tile*[BOARD_SIZE];
+                             Tile** tempboard = new Tile*[fac->getNumberOfFactory()];
                              int currentLine = 0;
                              int currentCol = 0;
-                             tempboard[0] = new Tile[MAX_REMAIN * fact->getNumberOfFactory()];
-                            
+                             
+                             tempboard[0] = new Tile[MAX_REMAIN * fac->getNumberOfFactory()];
                              for(int y = 0; y <(int) input.length(); y++)
                              {
                                  if(input[y] != '|' && input[y] != ',' && input[y] != 'E')
@@ -335,17 +354,35 @@ void Azul::loadGame(std::string filename)
                                  {
                                      currentCol = 0;
                                      currentLine++;
-                                     if(currentLine < NOFACTORY)
+                                    
+                                     if(currentLine < fac->getNumberOfFactory())
                                      {
                                         tempboard[currentLine] = new Tile[NUMBEROFTILE];
                                      }
                                  }
                                  if( y ==(int) input.length() -1)
                                  {
-                                     fact->setFactories(tempboard);
+                                     fac->setFactories(tempboard);
                                  }
 
                              }
+                         }
+                         else if(type == "secondcentral")
+                         {
+                             Tile* temp = new Tile[MAX_REMAIN * fac->getNumberOfFactory()];
+                             int location = 0;
+                             for(int y = 0; y <(int) input.length(); y++)
+                             {
+                                 if(input[y] != ',' && input[y] != 'E')
+                                 {
+                                     temp[location] = input[y];
+                                     location++;
+                                 }
+                             }
+                             
+                             fac->addSecondCentral();
+                             fac->setSecondCentral(temp);
+                             
                          }
                          else if(type == "boxlid")
                          {
@@ -361,8 +398,8 @@ void Azul::loadGame(std::string filename)
                                  {
                                      if(list->size() > 1)
                                      {
-                                         fact->setBoxLid(list);
-                                         fact->setShuffled(true);
+                                         fac->setBoxLid(list);
+                                         fac->setShuffled(true);
                                      }
                                  }
                              }
@@ -394,7 +431,7 @@ void Azul::loadGame(std::string filename)
 }
 
 
-void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename, int round)
+void Azul::saveGame(Mosaic* all_mos[], Factories* all_fac,std::string filename, int round, int num)
 {
     //write out all object to files
     if(filename.size() > 0)
@@ -403,24 +440,10 @@ void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,st
        
         filename += ".save";
         filename = "save/"+filename;
-        bool read1 = false;
-        bool read2 = false;
-        std::shared_ptr<Mosaic> readin = nullptr;
         
-        while(read1 == false || read2 == false)
+        for(int k =0; k < this->NUM_MOS; k++)
         {
-            
-            if(read1 == false)
-            {
-                readin = mos1;
-                read1 = true;
-            }
-            else
-            {
-                readin = mos2;
-                read2 = true;
-            }
-            
+            Mosaic* readin = all_mos[k];
             output += "$\n";
             output += "mosaic\n";
             output += "name " + readin->getPlayer()->getName() + "\n";
@@ -511,26 +534,26 @@ void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,st
         }
         output += "$\n";
         output += "factories\n";
-        output += "number " + std::to_string(NUMBEROFPLAYER) +"\n";
+        output += "number " + std::to_string(this->NUM_MOS) +"\n";
         output += "factories ";
         
-        for(int x = 0; x < MAX_REMAIN * fact->getNumberOfFactory(); x++)
+        for(int x = 0; x < MAX_REMAIN * all_fac->getNumberOfFactory(); x++)
         {
-            if(fact->getFactories()[0][x].getColour() != ' ')
+            if(all_fac->getFactories()[0][x].getColour() != ' ')
             {
              if(x > 0) output += ",";
-             output +=fact->getFactories()[0][x].getColour();
+             output +=all_fac->getFactories()[0][x].getColour();
             
             }
         }
         output += "|";
-        for(int x = 1; x < fact->getNumberOfFactory(); x++)
+        for(int x = 1; x < all_fac->getNumberOfFactory(); x++)
         {
             for(int y = 0; y < NUMBEROFTILE; y++)
             {
-                if(fact->getFactories()[x][y].getColour() != ' ')
+                if(all_fac->getFactories()[x][y].getColour() != ' ')
                 {
-                    output +=fact->getFactories()[x][y].getColour();
+                    output +=all_fac->getFactories()[x][y].getColour();
                     if(y < NUMBEROFTILE -1) output += ",";
                 }
                 else if(y == 0)
@@ -538,31 +561,49 @@ void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,st
                     output += "E";
                 }
             }
-            if(x < fact->getNumberOfFactory() -1) output += "|";
+            if(x < all_fac->getNumberOfFactory() -1) output += "|";
         }
         output += "\n";
+        if(all_fac->getSecondCentral() != nullptr)
+        {
+            output += "secondcentral ";
+            for(int x = 0; x < MAX_REMAIN * all_fac->getNumberOfFactory(); x++)
+            {
+                if(all_fac->getSecondCentral()[x].getColour() != ' ')
+                {
+                    if(x > 0) output += ",";
+                    output +=all_fac->getSecondCentral()[x].getColour();
+                }
+                else if(x == 0)
+                {
+                    output += "E";
+                }
+            }
+            output += "\n";
+        }
         output += "boxlid ";
        
-        for(int x =0 ; x < fact->getBoxLid()->size(); x++)
+        for(int x =0 ; x < all_fac->getBoxLid()->size(); x++)
         {
-            Tile* temp =fact->getBoxLid()->getFirst();
+            Tile* temp =all_fac->getBoxLid()->getFirst();
             output += temp->getColour();
-            fact->getBoxLid()->addBack(temp);
-            if(x < fact->getBoxLid()->size()-1) output+=",";
+            all_fac->getBoxLid()->addBack(temp);
+            if(x < all_fac->getBoxLid()->size()-1) output+=",";
         }
         output += "\n";
         output += "#\n";
         
         output += "$\n";
         output += "game\n";
-        if(mos1->isTurn() == true)
+       
+        for(int k =0; k < this->NUM_MOS; k++)
         {
-            output += "active "+mos1 ->getPlayer()->getName() + "\n";
+            if(all_mos[k]->isTurn())
+            {
+                output += "active "+ all_mos[k]->getPlayer()->getName() + "\n";
+            }
         }
-        else
-        {
-            output += "active "+mos2 ->getPlayer()->getName() + "\n";
-        }
+      
         output += "turn " + std::to_string(round)+"\n";
         output += "#";
         
@@ -581,9 +622,10 @@ void Azul::saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,st
 
 
 
-void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round)
+void Azul::startGame(Mosaic* all_mos[], Factories* all_fac,bool newgame, int seed, int round)
 {
-
+    AI* ai = new AI(seed);
+    bool loadedGame = false;
     //start the game
     if(newgame == true)
     {
@@ -591,38 +633,175 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
      std::cout<<"START A NEW GAME"<<std::endl;
      std::cout<<std::endl;
      
-    std::cout<<"ENTER NAME FOR PLAYER 1:"<<std::endl<<">";
+    std::cout<<"ENTER NUMBER OF PLAYER:"<<std::endl<<C_CURSOR;
+    int num = 0;
     std::string temp;
-    std::cin>>temp;
-    Player* player1 = new Player(temp);
-    std::cout<<std::endl;
-    
-    std::cout<<"ENTER NAME FOR PLAYER 2:"<<std::endl<<">";
-    std::cin>>temp;
-    Player* player2 = new Player(temp);
-    std::cout<<std::endl;
-    
-    std::cout<<"Let's Play!"<<std::endl;
-    std::cout<<std::endl;
+        bool valid = false;
         
-        mosaic_1= std::shared_ptr<Mosaic>(new Mosaic(player1));
-        mosaic_1->setTurn(true);
-        mosaic_2= std::shared_ptr<Mosaic>(new Mosaic(player2));
-        mosaic_2->setTurn(false);
-        factories = std::shared_ptr<Factories>(new Factories(2, seed));
-       
+            while(valid == false)
+            {
+                bool wrongf = false;
+                try {
+                std::cin>>temp;
+                num = std::stoi(temp);
+                }
+                catch (const std::exception& e){
+                    wrongf = true;
+                    std::cout<<"ERROR: Invalid number format"<<std::endl<<">";
+                }
+                if(wrongf == false)
+                {
+                    if(num > 4 || num < 2)
+                    {
+                       std::cout <<"ERROR: Invalid number of player"<<std::endl<<">";
+                    }
+                    else if(num < 4 || num > 2)
+                    {
+                        this->NUM_MOS = num;
+                        valid = true;
+                        std::cout<<std::endl;
+                    }
+                }
+            }
+        
+        
+        Player* player1 = nullptr;
+        Player* player2 = nullptr;
+        Player* player3 = nullptr;
+        Player* player4 = nullptr;
+        bool ai_active2 = false;
+        bool ai_active3 = false;
+        bool ai_active4 = false;
+        
+        if(num >= 2)
+        {
+            
+           std::cout<<"ENTER NAME FOR PLAYER 1:"<<std::endl<<C_CURSOR;
+           std::cin>>temp;
+           player1 = new Player(temp);
+               temp = "";
+           std::cout<<std::endl;
+           
+            //Ask if player want to play with AI
+           std::cout<<"ENTER NAME FOR PLAYER 2 (Type 'AI' to make this player an AI):"<<std::endl<<C_CURSOR;
+           std::cin>>temp;
+            if(temp == "AI")
+            {
+                temp += "_2";
+                ai_active2 = true;
+                std::cout<<"AI activated!"<<std::endl;
+            }
+                player2 = new Player(temp);
+                temp = "";
+            
+           std::cout<<std::endl;
+           
+        }
+        if(num >= 3)
+        {
+            std::cout<<"ENTER NAME FOR PLAYER 3 (Type 'AI' to make this player an AI):"<<std::endl<<C_CURSOR;
+            std::cin>>temp;
+            if(temp == "AI")
+            {
+                temp += "_3";
+                ai_active3 = true;
+                std::cout<<"AI activated!"<<std::endl;
+            }
+            player3 = new Player(temp);
+                 temp = "";
+            std::cout<<std::endl;
+        }
+        if(num >= 4)
+        {
+            std::cout<<"ENTER NAME FOR PLAYER 4 (Type 'AI' to make this player an AI):"<<std::endl<<C_CURSOR;
+            std::cin>>temp;
+            if(temp == "AI")
+            {
+                temp += "_4";
+                ai_active4 = true;
+                std::cout<<"AI activated!"<<std::endl;
+            }
+            player4 = new Player(temp);
+                 temp = "";
+            std::cout<<std::endl;
+        }
+        all_fac = new Factories(num, seed);
+        valid = false;
+        std::cout<<"ADD SECOND CENTRAL FACTORY (Y/N): "<<std::endl<<C_CURSOR;
+        while(!valid)
+        {
+            std::cin>>temp;
+            if(temp == "Y")
+            {
+                all_fac->addSecondCentral();
+                valid = true;
+            }
+            else if(temp == "N")
+            {
+                valid = true;
+            }
+            else
+            {
+                std::cout<<"ERROR: Please enter Y or N"<<std::endl;
+                std::cout<<C_CURSOR;
+            }
+        }
+           
+            
+           std::cout<<"Let's Play!"<<std::endl;
+           std::cout<<std::endl;
+               
+        for(int k = 0; k < num; k++)
+        {
+            if(k == 1)
+            {
+                all_mos[k] = new Mosaic(player2);
+                 if(ai_active2)
+                 {
+                     
+                     all_mos[k]->set_AI(true);
+                 }
+            }
+            else if(k == 2 && player3 != nullptr)
+            {
+                all_mos[k] = new Mosaic(player3);
+                if(ai_active3)
+                {
+                    all_mos[k]->set_AI(true);
+                }
+            }
+            else if(k == 3 && player4 != nullptr)
+            {
+                all_mos[k] = new Mosaic(player4);
+                if(ai_active4)
+                {
+                    all_mos[k]->set_AI(true);
+                }
+            }
+            else if(k == 0)
+            {
+                all_mos[k] = new Mosaic(player1);
+                all_mos[k]->setTurn(true);
+            }
+            else
+            {
+                 all_mos[k]->setTurn(false);
+            }
+            
+        }
     }
     else
     {
         //continue if the game is loaded
         std::cout<<"CONTINUE THE GAME"<<std::endl;
         std::cout<<std::endl;
-        
+        loadedGame = true;
     }
     
-    while(mosaic_1->winCheck() != true  && mosaic_2->winCheck() != true)
+    while(!this->winGame(all_mos, this->NUM_MOS))
     {
-        //The game run until one of 2 players win
+        
+        //The game run until one of 4 players win
         
         std::cout<<std::endl;
         std::cout<<"=== Start Round " <<round<<" ===";
@@ -630,69 +809,87 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
         
         std::string log = "";
        
-        if(mosaic_1->isFirst())
+        if(loadedGame == false)
         {
-            mosaic_1->setTurn(true);
-            mosaic_2->setTurn(false);
-            mosaic_1->setFirst(false);
-          
-        }
-        else if(mosaic_2->isFirst())
-        {
-            
-            mosaic_2->setTurn(true);
-            mosaic_1->setTurn(false);
-            mosaic_2->setFirst(false);
-        
-        }
-        while(factories->isEmpty() != true)
-        {
-            //The turn runt until the factories is empty
-            if(mosaic_1->isTurn() == true)
+            if(round > 1)
             {
-                std::cout<<"TURN FOR PLAYER: "<<mosaic_1->getPlayer()->getName()<<"   ";
-                std::cout<<"POINTS: "<<mosaic_1->getPlayer()->getPoint()<<std::endl;
-                factories->PrintFactories();
-                std::cout<<std::endl;
-                mosaic_1->PrintMosaic();
-                std::cout<<std::endl;
+                for(int k =0; k < this->NUM_MOS; k++)
+                {
+                    if(all_mos[k]->isFirst())
+                    {
+                        all_mos[k]->setTurn(true);
+                        all_mos[k]->setFirst(false);
+                    }
+                    else
+                    {
+                        all_mos[k]->setTurn(false);
+                    }
+                }
             }
-    
-            else if(mosaic_2->isTurn() == true)
+        }
+        else
+        {
+            loadedGame = true;
+        }
+            
+        while(!this->endTurn(all_fac, this->NUM_FAC))
+        {
+            //The turn run until the factories is empty
+            for(int k =0; k < this->NUM_MOS; k++)
             {
-                std::cout<<"TURN FOR PLAYER: "<<mosaic_2->getPlayer()->getName()<<"   ";
-                std::cout<<"POINTS: "<<mosaic_2->getPlayer()->getPoint()<<std::endl;
-                factories->PrintFactories();
-                std::cout<<std::endl;
-                mosaic_2->PrintMosaic();
-                std::cout<<std::endl;
+                if(all_mos[k]->isTurn())
+                {
+                    std::cout<<"TURN FOR PLAYER: "<<all_mos[k]->getPlayer()->getName()<<"   ";
+                    std::cout<<"POINTS: "<<all_mos[k]->getPlayer()->getPoint()<<std::endl;
+                    all_fac->PrintFactories();
+                    std::cout<<std::endl;
+                    all_mos[k]->PrintMosaic();
+                    std::cout<<std::endl;
+                }
             }
-            
-            
-            
-            int fac = 0 , row =0 , n = 0;
+            int fac = 0 , row =0 , n = 0, central = -1;
             char c = ' ';
             std::string command;
             std::string filename;
             bool takefirst = false;
             
            bool validInput = false;
-           std::cout << "> ";
+           std::cout << C_CURSOR<<" ";
             
            while(validInput != true)
            {
                command = "";
-               fac = 99; row = 99; n=0;
-               c = ' ';
+               fac = 99; row = 99; n=0;c = ' ';central = 0;
+               
             
             
-            std::string input;
-            std::cin.ignore(0);
-            std::getline(std::cin, input);
-             
+            std::string input = "";
+  
+               for(int k = 0; k < this->NUM_MOS; k++)
+               {
+                   if(all_mos[k]->isTurn() && all_mos[k]->is_AI_active())
+                   {
+                       
+                       input = ai->generating_move(all_mos[k], all_fac);
+                       std::cout<<input<<std::endl;
+                   }
+               }
+               if(input == "")
+               {
+                   std::cin.ignore(0);
+                   std::getline(std::cin, input);
+               }
+               
             for(int x = 0; x < (signed)input.size(); x++)
             {
                 if(command =="save")
+                {
+                    if(input[x] != ' ')
+                    {
+                        filename.push_back(input[x]);
+                    }
+                }
+                else if(command == "view")
                 {
                     if(input[x] != ' ')
                     {
@@ -703,24 +900,36 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                else if(x == 5)fac = input[x]-48;
                else if(x == 7)c = toupper(input[x]);
                else if(x == 9)row = input[x]-48;
-              
+               else if(x == 11)central = input[x]-48;
             }
+               bool valid = true;
                if(command =="turn")
                {
-                   if(fac > 5|| 0 > fac ||0 >= row || row > 5 || c == FIRST_PLAYER)
+                   if(all_fac->getSecondCentral() != nullptr)
                    {
-                       std::cout<<"ERROR: Invalid Turn"<<std::endl;
-                       std::cout << "> ";
+                       if(central > 2 || central < 0)
+                       {
+                           std::cout<<"ERROR: Invalid central factory selected! Type 'help' to view all the command"<<std::endl;
+                           valid = false;
+                           std::cout <<C_CURSOR<<" ";
+                       }
+                   }
+                   if(0 > fac || fac >= all_fac->getNumberOfFactory()||0 >= row || row > 5 || c == FIRST_PLAYER)
+                   {
+                       std::cout<<"ERROR: Invalid Turn! Type 'help' to view all the command"<<std::endl;
+                       std::cout <<C_CURSOR<<" ";
                    }
                    else
                    {
                        
-                       if(fac ==0 && factories->isFirst() == true)
+                       
+                       if(fac ==0 && all_fac->isFirst() == true)
                        {
                            takefirst = true;
                        }
-                       n = factories->takeTile(c, fac);
-                    
+                      
+                       n = all_fac->takeTile(c, fac, central);
+                       
                        if(n != 0)
                        {
                            validInput = true;
@@ -728,10 +937,10 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                            std::cout<<std::endl;
                           
                        }
-                       else
+                       else if(valid == true)
                        {
                            std::cout<<"ERROR: This Factory does not contain this Colour"<<std::endl;
-                           std::cout << "> ";
+                           std::cout <<C_CURSOR<<" ";
                        }
                        
                    }
@@ -739,8 +948,41 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                }
                else if(command == "save")
                {
-                   saveGame(mosaic_1, mosaic_2, factories,filename,round);
-                   std::cout << "> ";
+                   saveGame(all_mos, all_fac,filename,round, NUM_MOS);
+                   std::cout <<C_CURSOR<<" ";
+               }
+               else if(command == "view")
+               {
+                   bool exist = false;
+                   for(int k = 0; k < this->NUM_MOS; k++)
+                   {
+                       if(all_mos[k]->getPlayer()->getName() == filename)
+                       {
+                           all_mos[k]->PrintMosaic();
+                           exist = true;
+                       }
+                   }
+                   if(filename == "factories")
+                   {
+                       all_fac->PrintFactories();
+                       exist = true;
+                   }
+                   if(exist == false)
+                   {
+                       std::cout<<"Cannot find the mosaic of this player"<<std::endl;
+                   }
+                   filename = "";
+                   std::cout <<C_CURSOR<<" ";
+               }
+               else if (command == "help")
+               {
+                   std::cout<<std::endl;
+                   std::cout<<"view <Player name> | View player mosaic"<<std::endl;
+                   std::cout<<"turn <Factory> <Colour> <Row> <Central>| Take tile from factories and place into the mosaic"<<std::endl;
+                   std::cout<<"save <filename> | Save game"<<std::endl;
+                   std::cout<<"quit | Quit to main menu"<<std::endl;
+                   std::cout<<std::endl;
+                   std::cout <<C_CURSOR<<" ";
                }
                else if(command == "quit")
                {
@@ -751,48 +993,45 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
                }
                else if(command.size() != 0)
                {
-                   std::cout<<"ERROR: Invalid Command"<<std::endl;
-                   std::cout << "> ";
+                   std::cout<<"ERROR: Invalid Command! Type 'help' to view all the command"<<std::endl;
+                   std::cout <<C_CURSOR<<" ";
                }
              
             if (std::cin.eof())
             {
-                std::cout << "Goodbye." <<std::endl;
+                std::cout << " Goodbye." <<std::endl;
                 std::exit(EXIT_SUCCESS);
             }
                
           }
             
-           if(mosaic_1->isTurn() == true)
-           {
-               if(takefirst == true)
-               {
-                 mosaic_1->placeTile(row, FIRST_PLAYER , n);
-                 mosaic_1->setFirst(true);
-                 factories->removeFirst();
-                   takefirst = false;
-               }
-               mosaic_1->placeTile(row, c, n);
-               mosaic_2->setTurn(true);
-               mosaic_1->setTurn(false);
-               log += mosaic_1->getPlayer()->getName() + " > " +command+ " ";
-               
-           }
-           else if(mosaic_2->isTurn() == true)
-           {
-              
-              if(takefirst == true)
-              {
-                mosaic_2->placeTile(row, FIRST_PLAYER , n);
-                mosaic_2->setFirst(true);
-                factories->removeFirst();
-                  takefirst = false;
-               }
-               mosaic_2->placeTile(row, c, n);
-               mosaic_2->setTurn(false);
-               mosaic_1->setTurn(true);
-               log += mosaic_2->getPlayer()->getName() + " > " +command+ " ";
-           }
+            for(int k = 0; k < this->NUM_MOS; k++)
+            {
+                if(all_mos[k]->isTurn())
+                {
+                    if(takefirst)
+                    {
+                        all_mos[k]->placeTile(row, FIRST_PLAYER , n);
+                        all_mos[k]->setFirst(true);
+                        all_fac->removeFirst();
+                        takefirst = false;
+                    }
+                    all_mos[k]->placeTile(row, c, n);
+                    all_mos[k]->setTurn(false);
+                    log += all_mos[k]->getPlayer()->getName() + " "+C_CURSOR+" " +command+ " ";
+                    if(k < this->NUM_MOS-1)
+                    {
+                        all_mos[k+1]->setTurn(true);
+                    }
+                    else
+                    {
+                        all_mos[0]->setTurn(true);
+                    }
+                    k = this->NUM_MOS;
+                }
+            }
+          
+         
             
             log += std::to_string(fac) + " ";
             log.push_back(c);
@@ -804,48 +1043,62 @@ void Azul::startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mo
         std::cout<<log;
         std::cout<<"=== End of Round ===";
         std::cout<<std::endl;
-        
-        mosaic_1->turnCheck();
-        mosaic_2->turnCheck();
-        
-        int len = mosaic_1->returnTile()->size();
-        for(int x =0; x <= len; x++)
+       
+        int len = 0;
+        for(int k =0; k < this->NUM_MOS; k++)
         {
-        factories->addRemain(mosaic_1->returnTile()->getFirst());
-        }
-        len = mosaic_2->returnTile()->size();
-        for(int x =0; x <= len; x++)
-        {
-        factories->addRemain(mosaic_2->returnTile()->getFirst());
+            all_mos[k]->turnCheck();
+            len = all_mos[k]->returnTile()->size();
+            for(int x =0; x <= len; x++)
+            {
+                all_fac->addRemain(all_mos[k]->returnTile()->getFirst());
+            }
         }
        
-        factories->setUp(seed);
+        all_fac->setUp(seed);
         round++;
+    
     }
     std::cout<<std::endl;
-    if(mosaic_1->getPlayer()->getPoint() > mosaic_2->getPlayer()->getPoint())
+    std::string winner = "";
+    int pts =0;
+    for(int k = 0; k < this->NUM_MOS; k++)
     {
-        std::cout<<"Player "<<mosaic_1->getPlayer()->getName()<<" wins the game!"<<std::endl;
+       if( all_mos[k]->getPlayer()->getPoint() > pts)
+       {
+           pts = all_mos[k]->getPlayer()->getPoint();
+           winner = all_mos[k]->getPlayer()->getName();
+       }
     }
-    else if(mosaic_1->getPlayer()->getPoint() < mosaic_2->getPlayer()->getPoint())
-    {
-        std::cout<<"Player "<<mosaic_2->getPlayer()->getName()<<" wins the game!"<<std::endl;
-    }
-    else
+    
+    if(winner == "")
     {
         std::cout<<"Draw!"<<std::endl;
     }
+    else
+    {
+        std::cout<<"Player "<<winner<<" wins the game!"<<std::endl;
+    }
+    
   
+    ai->~AI();
+    for(int k = 0; k < this->NUM_MOS; k++)
+    {
+        if(all_mos[k] != nullptr)
+        {
+            all_mos[k]->~Mosaic();
+        }
+    }
+    all_fac->~Factories();
+    
     std::cout<<std::endl;
     std::cout<<"=== GAME OVER ===";
     std::cout<<std::endl;
     this->Menu(seed);
-   
-    
 }
 
 
-
+//print UI menu
 void Azul::Menu(int seed)
 {
     //Print out general menu
@@ -864,18 +1117,18 @@ void Azul::Menu(int seed)
     std::cout<<"3. Credits "<<std::endl;
     std::cout<<"4. Quit"<<std::endl;
     std::cout<<std::endl;
-    std::cout<<">";
+    std::cout<<C_CURSOR;
     std::string command;
     std::cin>>command;
     
-    std::shared_ptr<Mosaic> mosaic_1;
-    std::shared_ptr<Mosaic> mosaic_2;
-    std::shared_ptr<Factories> factories;
+    Mosaic* all_mosaic[4];
+    Factories* all_factories = nullptr;
+       
            
    if(command == "1")
    {
        std::cout<<std::endl;
-       startGame(mosaic_1, mosaic_2,factories,true,seed,1);
+       startGame(all_mosaic, all_factories,true,seed,1);
    }
    else if(command == "2")
    {
@@ -910,12 +1163,12 @@ void Azul::Menu(int seed)
    }
    else if(command == "4")
    {
-        std::cout << "Goodbye"<<std::endl;;
+        std::cout << " Goodbye"<<std::endl;;
         std::exit(EXIT_SUCCESS);
    }
         
    else if (std::cin.eof()) {
-       std::cout << "Goodbye." <<std::endl;
+       std::cout << " Goodbye." <<std::endl;
        std::exit(EXIT_SUCCESS);
     }
    else
@@ -934,18 +1187,48 @@ Azul::~Azul(){
     
 }
 
+bool Azul::winGame(Mosaic* all_mos[], int num)
+{
+    //loop through the mos to see if players meet the win condition
+    for(int x =0; x < num;x++)
+    {
+        if(all_mos[x]->winCheck())
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+bool Azul::endTurn(Factories* all_fac, int num)
+{
+    //check if the factories are empty to end a turn
+        if(all_fac->isEmpty())
+        {
+            return true;
+        }
+        
+    
+    return false;
+}
+
 
 int main(int argc, char *argv[]) {
    
-    if(argc > 1)
+        if(argc > 1)
        {
            Azul* azul = new Azul();
            int seed = *argv[1] - 48;
            azul->Menu(seed);
+
+           delete azul;
+
+           return EXIT_SUCCESS;
        }
        else
        {
            std::cout<<"Missing game seed"<<std::endl;
        }
-   
+
+    
 }

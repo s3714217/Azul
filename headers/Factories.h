@@ -12,6 +12,7 @@
 #include "ColorCode.h"
 #include "LinkedList.h"
 #include <iostream>
+#include <cstdio>
 
 
 class Factories{
@@ -19,7 +20,7 @@ class Factories{
 public:
     Factories(int numberOfPlayer, int seed);
     ~Factories();
-    int takeTile(Colour c, int factory);
+    int takeTile(Colour c, int factory, int central);
     void addRemain(Tile* tile);
     void PrintFactories();
     bool ContainColour(Colour c, int factory);
@@ -27,17 +28,23 @@ public:
     void removeFirst();
     bool isFirst();
     void setUp(int seed);
+    void addSecondCentral();
     
     void setTileBag(LinkedList* TileBag);
     void setBoxLid(LinkedList* BoxLid);
     void setNumberOfFactory(int numberOfFactory);
     void setFactories(Tile** factories);
     void setShuffled(bool s);
+    void setSecondCentral(Tile* second);
     
+    std::string getConsoleColour(char c);
+    
+    Tile* getSecondCentral();
     LinkedList* getTileBag();
     LinkedList* getBoxLid();
     int getNumberOfFactory();
     Tile** getFactories();
+     int size = 0;
     
 private:
     
@@ -47,8 +54,11 @@ private:
     int numberOfFactory;
     Tile** factories;
     int leftover = 1;
+    int leftover_second = 1;
     bool first;
-    int size = 0;
+   
     bool shuffled = false;
+    Tile* secondCentral = nullptr;
+    
 };
 #endif /* Factories_hpp */

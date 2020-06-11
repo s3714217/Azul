@@ -25,11 +25,25 @@
 #define TOTAL_TILE 100
 #define MAX_REMAIN 3
 #define BROKEN_LEN 7
-#define NOFACTORY 6
 #define BOARD_SIZE 5
 #define NUMBEROFCOLOUR 5
 #define NUMBEROFTILE 4
-#define NUMBEROFPLAYER 2
+#define MAX_PLAYER 4
+
+//console colour
+#define C_BLACK "\x1b[30m"
+#define C_RED "\x1b[31m"
+#define C_YELLOW "\x1b[33m"
+#define C_DARK_BLUE "\x1b[34m"
+#define C_LIGHT_BLUE "\x1b[36m"
+#define NORMAL "\x1b[0m"
+#define C_FIRST_PLAYER "\u26C4"
+#define C_CURSOR "\u261E"
+
+#define TWO_P_FAC  6
+#define THREE_P_FAC 8
+#define FOUR_P_FAC  10
+
 typedef char Colour;
 
 #endif

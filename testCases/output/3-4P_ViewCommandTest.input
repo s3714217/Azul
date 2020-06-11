@@ -1,0 +1,67 @@
+ WELCOME TO AZUL!
+------------------------
+
+Menu
+----------
+1. New Game
+2. Load Game
+3. Credits 
+4. Quit
+
+>Enter loading filename: 
+CONTINUE THE GAME
+
+
+=== Start Round 1 ===
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 38 tiles left
+0(1): F 
+0(2): F 
+1: U Y U U 
+2: R L R Y 
+3: R Y R Y 
+4: R B U B 
+5: R Y Y R 
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+> Mosaic for B
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+> Mosaic for C
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+> Mosaic for D
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+> Goodbye.

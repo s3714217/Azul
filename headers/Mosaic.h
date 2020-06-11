@@ -33,7 +33,9 @@ public:
     LinkedList* getRemainder();
     Tile* getBroken(int index);
     char** getPointCalculator();
+    bool is_AI_active();
     
+    void set_AI(bool active);
     void setPlayer(Player* player);
     void setPointBoard(Tile** pointBoard);
     void setTurnBoard(Tile** turnBoard);
@@ -42,6 +44,8 @@ public:
     void setPointCalculator(char** pointCalculator);
     void setTurn(bool turn);
     void setFirst(bool first);
+    
+    std::string getConsoleColour(char c);
     
 private:
     
@@ -55,6 +59,7 @@ private:
     char** pointCalculator;
     bool* colourCounting;
     
+    bool AI_active = false;
     bool currentTurn = false;
     bool containedFirst = false;
     int brokenPts = 0;

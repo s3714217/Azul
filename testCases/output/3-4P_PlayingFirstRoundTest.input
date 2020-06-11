@@ -1,0 +1,407 @@
+ WELCOME TO AZUL!
+------------------------
+
+Menu
+----------
+1. New Game
+2. Load Game
+3. Credits 
+4. Quit
+
+>Enter loading filename: 
+CONTINUE THE GAME
+
+
+=== Start Round 1 ===
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 38 tiles left
+0(1): F 
+0(2): F 
+1: U Y U U 
+2: R L R Y 
+3: R Y R Y 
+4: R B U B 
+5: R Y Y R 
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 35 tiles left
+0(1): F Y 
+0(2): F 
+1:         
+2: R L R Y 
+3: R Y R Y 
+4: R B U B 
+5: R Y Y R 
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for B
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: C   POINTS: 0
+Factories: 33 tiles left
+0(1): F Y L Y 
+0(2): F 
+1:         
+2:         
+3: R Y R Y 
+4: R B U B 
+5: R Y Y R 
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for C
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: D   POINTS: 0
+Factories: 31 tiles left
+0(1): F Y L Y Y Y 
+0(2): F 
+1:         
+2:         
+3:         
+4: R B U B 
+5: R Y Y R 
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for D
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 29 tiles left
+0(1): F Y L Y Y Y R U 
+0(2): F 
+1:         
+2:         
+3:         
+4:         
+5: R Y Y R 
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       U  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 27 tiles left
+0(1): F Y L Y Y Y R U R R 
+0(2): F 
+1:         
+2:         
+3:         
+4:         
+5:         
+6: R U Y B 
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for B
+1:             .  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: C   POINTS: 0
+Factories: 26 tiles left
+0(1): F Y L Y Y Y R U R R U Y B 
+0(2): F 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7: R R L B 
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for C
+1:             .  ||  b  y  r  u  l
+2:          .  .  ||  l  b  y  r  u
+3:       .  R  R  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: D   POINTS: 0
+Factories: 24 tiles left
+0(1): F Y L Y Y Y R U R R U Y B L B 
+0(2): F 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8: B Y L L 
+9: U Y L R 
+
+
+Mosaic for D
+1:             .  ||  b  y  r  u  l
+2:          B  B  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 23 tiles left
+0(1): F Y L Y Y Y R U R R U Y B L B B L L 
+0(2): F 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8:         
+9: U Y L R 
+
+
+Mosaic for A
+1:             .  ||  b  y  r  u  l
+2:          Y  Y  ||  l  b  y  r  u
+3:       U  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 22 tiles left
+0(1): F Y L Y Y Y R U R R U Y B L B B L L Y L R 
+0(2): F 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8:         
+9:         
+
+
+Mosaic for B
+1:             R  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: C   POINTS: 0
+Factories: 14 tiles left
+0(1): L R U R R U B L B B L L L R 
+0(2): 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8:         
+9:         
+
+
+Mosaic for C
+1:             .  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  R  R  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: D   POINTS: 0
+Factories: 10 tiles left
+0(1): L U U B L B B L L L 
+0(2): 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8:         
+9:         
+
+
+Mosaic for D
+1:             Y  ||  b  y  r  u  l
+2:          B  B  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 5 tiles left
+0(1): U U B B B 
+0(2): 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8:         
+9:         
+
+
+Mosaic for A
+1:             U  ||  b  y  r  u  l
+2:          Y  Y  ||  l  b  y  r  u
+3:       U  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  y  r  u  l  b
+broken: 
+
+> INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 2 tiles left
+0(1): U U 
+0(2): 
+1:         
+2:         
+3:         
+4:         
+5:         
+6:         
+7:         
+8:         
+9:         
+
+
+Mosaic for B
+1:             R  ||  b  y  r  u  l
+2:          R  R  ||  l  b  y  r  u
+3:       .  .  .  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: Y  Y  Y  Y  Y  ||  y  r  u  l  b
+broken: F  Y  
+
+> INFO: Turn Successful
+
+LOG: All turns happened 
+A > turn 1 U 3
+B > turn 2 R 2
+C > turn 3 R 3
+D > turn 4 B 2
+A > turn 5 Y 2
+B > turn 6 R 1
+C > turn 7 R 2
+D > turn 8 Y 1
+A > turn 9 U 1
+B > turn 0 Y 5
+C > turn 0 R 4
+D > turn 0 L 5
+A > turn 0 B 4
+B > turn 0 U 3
+=== End of Round ===
+
+=== Start Round 2 ===
+TURN FOR PLAYER: B   POINTS: 1
+Factories: 38 tiles left
+0(1): F 
+0(2): F 
+1: B U B R 
+2: L Y B B 
+3: R U U R 
+4: U R L U 
+5: B Y B L 
+6: U L Y Y 
+7: B U R U 
+8: B U B U 
+9: Y U U Y 
+
+
+Mosaic for B
+1:             .  ||  b  y  R  u  l
+2:          .  .  ||  l  b  y  R  u
+3:       .  U  U  ||  u  l  b  y  r
+4:    .  .  .  .  ||  r  u  l  b  y
+5: .  .  .  .  .  ||  Y  r  u  l  b
+broken:       
+
+> Goodbye.

@@ -17,7 +17,7 @@
 #include "Factories.h"
 #include "ColorCode.h"
 #include "Mosaic.h"
-
+#include "AI.h"
 class Azul{
    
 public:
@@ -25,10 +25,15 @@ public:
     ~Azul();
     
     void Menu(int seed);
-    void startGame(std::shared_ptr<Mosaic> mosaic_1,std::shared_ptr<Mosaic> mosaic_2, std::shared_ptr<Factories> factories,bool newgame, int seed, int round);
-    void saveGame(std::shared_ptr<Mosaic> mos1,std::shared_ptr<Mosaic> mos2,std::shared_ptr<Factories> fact ,std::string filename, int round);
+    void startGame(Mosaic* all_mos[], Factories* all_fac,bool newgame, int seed, int round);
+    void saveGame(Mosaic* all_mos[], Factories* all_fac,std::string filename, int round, int num);
     void loadGame(std::string filename);
+    bool winGame(Mosaic* all_mos[], int num);
+    bool endTurn(Factories* all_fac, int num);
     
+private:
+    int NUM_MOS = 0;
+    int NUM_FAC = 0;
     
 };
 

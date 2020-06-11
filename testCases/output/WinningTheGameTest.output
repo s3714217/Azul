@@ -8,1039 +8,1039 @@ Menu
 3. Credits 
 4. Quit
 
->Enter loading filename: 
+☞Enter loading filename: 
 CONTINUE THE GAME
 
 
 === Start Round 1 ===
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F 
-1: R Y Y R 
-2: R U Y B 
-3: R R L B 
-4: B Y L L 
-5: U Y L R 
+Factories: 21 tiles left
+0(1): ⛄ 
+1: [31mR[0m [33mY[0m [33mY[0m [31mR[0m 
+2: [31mR[0m [30mU[0m [33mY[0m [34mB[0m 
+3: [31mR[0m [31mR[0m [36mL[0m [34mB[0m 
+4: [34mB[0m [33mY[0m [36mL[0m [36mL[0m 
+5: [30mU[0m [33mY[0m [36mL[0m [31mR[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  r  u  l
-2:          .  .  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F R R 
-1:         
-2: R U Y B 
-3: R R L B 
-4: B Y L L 
-5: U Y L R 
+Factories: 19 tiles left
+0(1): ⛄ [31mR[0m [31mR[0m 
+1:     
+2: [31mR[0m [30mU[0m [33mY[0m [34mB[0m 
+3: [31mR[0m [31mR[0m [36mL[0m [34mB[0m 
+4: [34mB[0m [33mY[0m [36mL[0m [36mL[0m 
+5: [30mU[0m [33mY[0m [36mL[0m [31mR[0m 
 
 
 Mosaic for B
-1:             .  ||  b  y  r  u  l
-2:          .  .  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F R R U Y B 
-1:         
-2:         
-3: R R L B 
-4: B Y L L 
-5: U Y L R 
+Factories: 18 tiles left
+0(1): ⛄ [31mR[0m [31mR[0m [30mU[0m [33mY[0m [34mB[0m 
+1:     
+2:     
+3: [31mR[0m [31mR[0m [36mL[0m [34mB[0m 
+4: [34mB[0m [33mY[0m [36mL[0m [36mL[0m 
+5: [30mU[0m [33mY[0m [36mL[0m [31mR[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  r  u  l
-2:          Y  Y  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [33mY[0m  [33mY[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F R R U Y B L B 
-1:         
-2:         
-3:         
-4: B Y L L 
-5: U Y L R 
+Factories: 16 tiles left
+0(1): ⛄ [31mR[0m [31mR[0m [30mU[0m [33mY[0m [34mB[0m [36mL[0m [34mB[0m 
+1:     
+2:     
+3:     
+4: [34mB[0m [33mY[0m [36mL[0m [36mL[0m 
+5: [30mU[0m [33mY[0m [36mL[0m [31mR[0m 
 
 
 Mosaic for B
-1:             R  ||  b  y  r  u  l
-2:          .  .  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F R R U Y B L B B Y 
-1:         
-2:         
-3:         
-4:         
-5: U Y L R 
+Factories: 14 tiles left
+0(1): ⛄ [31mR[0m [31mR[0m [30mU[0m [33mY[0m [34mB[0m [36mL[0m [34mB[0m [34mB[0m [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5: [30mU[0m [33mY[0m [36mL[0m [31mR[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  r  u  l
-2:          Y  Y  ||  l  b  y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [33mY[0m  [33mY[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F R R U Y B L B B Y Y L R 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 13 tiles left
+0(1): ⛄ [31mR[0m [31mR[0m [30mU[0m [33mY[0m [34mB[0m [36mL[0m [34mB[0m [34mB[0m [33mY[0m [33mY[0m [36mL[0m [31mR[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             R  ||  b  y  r  u  l
-2:          L  L  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [36mL[0m  [36mL[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: R R U B L B B L R 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 9 tiles left
+0(1): [31mR[0m [31mR[0m [30mU[0m [34mB[0m [36mL[0m [34mB[0m [34mB[0m [36mL[0m [31mR[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             U  ||  b  y  r  u  l
-2:          Y  Y  ||  l  b  y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             [30mU[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [33mY[0m  [33mY[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: R R U L L R 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 6 tiles left
+0(1): [31mR[0m [31mR[0m [30mU[0m [36mL[0m [36mL[0m [31mR[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             R  ||  b  y  r  u  l
-2:          L  L  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: F  
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [36mL[0m  [36mL[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: ⛄  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: U L L 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 3 tiles left
+0(1): [30mU[0m [36mL[0m [36mL[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             U  ||  b  y  r  u  l
-2:          Y  Y  ||  l  b  y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
+1:             [30mU[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [33mY[0m  [33mY[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: U 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 1 tiles left
+0(1): [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             R  ||  b  y  r  u  l
-2:          L  L  ||  l  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  .  ||  y  r  u  l  b
-broken: F  R  R  R  
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m
+2:          [36mL[0m  [36mL[0m  ||  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: ⛄  [31mR[0m  [31mR[0m  [31mR[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 LOG: All turns happened 
-A > turn 1 Y 2
-B > turn 2 R 1
-A > turn 3 R 3
-B > turn 4 L 2
-A > turn 5 U 1
-B > turn 0 Y 4
-A > turn 0 B 4
-B > turn 0 R 4
-A > turn 0 L 5
-B > turn 0 U 5
+A ☞ turn 1 Y 2
+B ☞ turn 2 R 1
+A ☞ turn 3 R 3
+B ☞ turn 4 L 2
+A ☞ turn 5 U 1
+B ☞ turn 0 Y 4
+A ☞ turn 0 B 4
+B ☞ turn 0 R 4
+A ☞ turn 0 L 5
+B ☞ turn 0 U 5
 === End of Round ===
 
 === Start Round 2 ===
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F 
-1: Y U U Y 
-2: U Y U U 
-3: R L R Y 
-4: R Y R Y 
-5: R B U B 
-
-
-Mosaic for B
-1:             .  ||  b  y  R  u  l
-2:          .  .  ||  L  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:             
-
-> INFO: Turn Successful
-
 TURN FOR PLAYER: A   POINTS: 2
-Factories: 
-0: F Y Y 
-1:         
-2: U Y U U 
-3: R L R Y 
-4: R Y R Y 
-5: R B U B 
+Factories: 21 tiles left
+0(1): ⛄ 
+1: [33mY[0m [30mU[0m [30mU[0m [33mY[0m 
+2: [30mU[0m [33mY[0m [30mU[0m [30mU[0m 
+3: [31mR[0m [36mL[0m [31mR[0m [33mY[0m 
+4: [31mR[0m [33mY[0m [31mR[0m [33mY[0m 
+5: [31mR[0m [34mB[0m [30mU[0m [34mB[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  r  U  l
-2:          .  .  ||  l  b  Y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30m.[0m
+3:       .  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
 broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F Y Y Y 
-1:         
-2:         
-3: R L R Y 
-4: R Y R Y 
-5: R B U B 
+Factories: 19 tiles left
+0(1): ⛄ [33mY[0m [33mY[0m 
+1:     
+2: [30mU[0m [33mY[0m [30mU[0m [30mU[0m 
+3: [31mR[0m [36mL[0m [31mR[0m [33mY[0m 
+4: [31mR[0m [33mY[0m [31mR[0m [33mY[0m 
+5: [31mR[0m [34mB[0m [30mU[0m [34mB[0m 
 
 
 Mosaic for B
-1:             .  ||  b  y  R  u  l
-2:          U  U  ||  L  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:             
+1:             .  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 2
-Factories: 
-0: F Y Y Y R R Y 
-1:         
-2:         
-3:         
-4: R Y R Y 
-5: R B U B 
+Factories: 16 tiles left
+0(1): ⛄ [33mY[0m [33mY[0m [33mY[0m 
+1:     
+2:     
+3: [31mR[0m [36mL[0m [31mR[0m [33mY[0m 
+4: [31mR[0m [33mY[0m [31mR[0m [33mY[0m 
+5: [31mR[0m [34mB[0m [30mU[0m [34mB[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  r  U  l
-2:          .  .  ||  l  b  Y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: U  U  U  
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m
+2:          [30mU[0m  [30mU[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30m.[0m
+3:       .  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F Y Y Y R R Y R B B 
-1:         
-2:         
-3:         
-4: R Y R Y 
-5:         
+Factories: 15 tiles left
+0(1): ⛄ [33mY[0m [33mY[0m [33mY[0m [31mR[0m [31mR[0m [33mY[0m 
+1:     
+2:     
+3:     
+4: [31mR[0m [33mY[0m [31mR[0m [33mY[0m 
+5: [31mR[0m [34mB[0m [30mU[0m [34mB[0m 
 
 
 Mosaic for B
-1:             L  ||  b  y  R  u  l
-2:          U  U  ||  L  b  y  r  u
-3:       .  .  .  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:             
+1:             .  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       [30mU[0m  [30mU[0m  [30mU[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 2
-Factories: 
-0: F Y Y Y R R Y R B B Y Y 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 14 tiles left
+0(1): ⛄ [33mY[0m [33mY[0m [33mY[0m [31mR[0m [31mR[0m [33mY[0m [31mR[0m [34mB[0m [34mB[0m 
+1:     
+2:     
+3:     
+4: [31mR[0m [33mY[0m [31mR[0m [33mY[0m 
+5:     
 
 
 Mosaic for A
-1:             .  ||  b  y  r  U  l
-2:          .  .  ||  l  b  Y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: U  U  U  U  
+1:             [36mL[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m
+2:          [30mU[0m  [30mU[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30m.[0m
+3:       .  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: Y Y Y Y B B Y Y 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 12 tiles left
+0(1): ⛄ [33mY[0m [33mY[0m [33mY[0m [31mR[0m [31mR[0m [33mY[0m [31mR[0m [34mB[0m [34mB[0m [33mY[0m [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             L  ||  b  y  R  u  l
-2:          U  U  ||  L  b  y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:             
+1:             [30mU[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       [30mU[0m  [30mU[0m  [30mU[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 2
-Factories: 
-0: B B 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 8 tiles left
+0(1): [33mY[0m [33mY[0m [33mY[0m [33mY[0m [34mB[0m [34mB[0m [33mY[0m [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             .  ||  b  y  r  U  l
-2:          R  R  ||  l  b  Y  r  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: U  U  U  U  F  R  
+1:             [36mL[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m
+2:          [30mU[0m  [30mU[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30m.[0m
+3:       [31mR[0m  [31mR[0m  [31mR[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [31mR[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 2 tiles left
+0(1): [34mB[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
+
+
+Mosaic for B
+1:             [30mU[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m  [36m.[0m
+2:          [31mR[0m  [31mR[0m  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31m.[0m  [30m.[0m
+3:       [30mU[0m  [30mU[0m  [30mU[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: ⛄  [31mR[0m  
+
+☞ INFO: Turn Successful
 
 LOG: All turns happened 
-B > turn 1 U 2
-A > turn 2 U 3
-B > turn 3 L 1
-A > turn 5 U 1
-B > turn 4 R 3
-A > turn 0 R 2
-B > turn 0 Y 5
-A > turn 0 B 5
+A ☞ turn 1 U 2
+B ☞ turn 2 U 3
+A ☞ turn 3 L 1
+B ☞ turn 5 U 1
+A ☞ turn 4 R 3
+B ☞ turn 0 R 2
+A ☞ turn 0 Y 5
+B ☞ turn 0 B 5
 === End of Round ===
 
 === Start Round 3 ===
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F 
-1: U R L U 
-2: B Y B L 
-3: U L Y Y 
-4: B U R U 
-5: B U B U 
+Factories: 21 tiles left
+0(1): ⛄ 
+1: [30mU[0m [31mR[0m [36mL[0m [30mU[0m 
+2: [34mB[0m [33mY[0m [34mB[0m [36mL[0m 
+3: [30mU[0m [36mL[0m [33mY[0m [33mY[0m 
+4: [34mB[0m [30mU[0m [31mR[0m [30mU[0m 
+5: [34mB[0m [30mU[0m [34mB[0m [30mU[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  r  U  l
-2:          .  .  ||  l  b  Y  R  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken:                      
+1:             .  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F U L U 
-1:         
-2: B Y B L 
-3: U L Y Y 
-4: B U R U 
-5: B U B U 
+Factories: 20 tiles left
+0(1): ⛄ [30mU[0m [36mL[0m [30mU[0m 
+1:     
+2: [34mB[0m [33mY[0m [34mB[0m [36mL[0m 
+3: [30mU[0m [36mL[0m [33mY[0m [33mY[0m 
+4: [34mB[0m [30mU[0m [31mR[0m [30mU[0m 
+5: [34mB[0m [30mU[0m [34mB[0m [30mU[0m 
 
 
 Mosaic for B
-1:             .  ||  b  y  R  u  L
-2:          .  .  ||  L  b  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:                   
+1:             .  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  .  .  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F U L U Y L 
-1:         
-2:         
-3: U L Y Y 
-4: B U R U 
-5: B U B U 
+Factories: 18 tiles left
+0(1): ⛄ [30mU[0m [36mL[0m [30mU[0m [33mY[0m [36mL[0m 
+1:     
+2:     
+3: [30mU[0m [36mL[0m [33mY[0m [33mY[0m 
+4: [34mB[0m [30mU[0m [31mR[0m [30mU[0m 
+5: [34mB[0m [30mU[0m [34mB[0m [30mU[0m 
 
 
 Mosaic for A
-1:             R  ||  b  y  r  U  l
-2:          .  .  ||  l  b  Y  R  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken:                      
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F U L U Y L U L 
-1:         
-2:         
-3:         
-4: B U R U 
-5: B U B U 
+Factories: 16 tiles left
+0(1): ⛄ [30mU[0m [36mL[0m [30mU[0m [33mY[0m [36mL[0m [30mU[0m [36mL[0m 
+1:     
+2:     
+3:     
+4: [34mB[0m [30mU[0m [31mR[0m [30mU[0m 
+5: [34mB[0m [30mU[0m [34mB[0m [30mU[0m 
 
 
 Mosaic for B
-1:             .  ||  b  y  R  u  L
-2:          B  B  ||  L  b  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:                   
+1:             .  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          [34mB[0m  [34mB[0m  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  .  .  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F U L U Y L U L U R U 
-1:         
-2:         
-3:         
-4:         
-5: B U B U 
+Factories: 15 tiles left
+0(1): ⛄ [30mU[0m [36mL[0m [30mU[0m [33mY[0m [36mL[0m [30mU[0m [36mL[0m [30mU[0m [31mR[0m [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5: [34mB[0m [30mU[0m [34mB[0m [30mU[0m 
 
 
 Mosaic for A
-1:             R  ||  b  y  r  U  l
-2:          .  .  ||  l  b  Y  R  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: Y  Y                 
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [33mY[0m  [33mY[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F U L U Y L U L U R U B B 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 13 tiles left
+0(1): ⛄ [30mU[0m [36mL[0m [30mU[0m [33mY[0m [36mL[0m [30mU[0m [36mL[0m [30mU[0m [31mR[0m [30mU[0m [34mB[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             B  ||  b  y  R  u  L
-2:          B  B  ||  L  b  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: .  .  .  .  U  ||  y  r  u  l  b
-broken:                   
+1:             [34mB[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          [34mB[0m  [34mB[0m  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  .  .  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  .  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: L Y L L R B B 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 7 tiles left
+0(1): [36mL[0m [33mY[0m [36mL[0m [36mL[0m [31mR[0m [34mB[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             R  ||  b  y  r  U  l
-2:          U  U  ||  l  b  Y  R  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: Y  Y                 
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  .  .  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [33mY[0m  [33mY[0m  [30mU[0m  [30mU[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: Y R B B 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 4 tiles left
+0(1): [33mY[0m [31mR[0m [34mB[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             B  ||  b  y  R  u  L
-2:          B  B  ||  L  b  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: U  U  U  U  U  ||  y  r  u  l  b
-broken: F  U              
+1:             [34mB[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          [34mB[0m  [34mB[0m  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  .  .  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: [30mU[0m  [30mU[0m  [30mU[0m  [30mU[0m  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: ⛄  [30mU[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: Y R 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 2 tiles left
+0(1): [33mY[0m [31mR[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             R  ||  b  y  r  U  l
-2:          U  U  ||  l  b  Y  R  u
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: Y  Y  L  L  L        
+1:             [31mR[0m  ||  [34m.[0m  [33m.[0m  [31m.[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       [36mL[0m  [36mL[0m  [36mL[0m  ||  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [33mY[0m  [33mY[0m  [30mU[0m  [30mU[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: Y 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 1 tiles left
+0(1): [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             B  ||  b  y  R  u  L
-2:          B  B  ||  L  b  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  Y  Y  Y  ||  r  u  l  b  y
-5: U  U  U  U  U  ||  y  r  u  l  b
-broken: F  U  B  B        
+1:             [34mB[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          [34mB[0m  [34mB[0m  ||  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: [30mU[0m  [30mU[0m  [30mU[0m  [30mU[0m  [30mU[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: ⛄  [30mU[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 LOG: All turns happened 
-A > turn 1 R 1
-B > turn 2 B 2
-A > turn 3 Y 2
-B > turn 4 B 1
-A > turn 5 U 2
-B > turn 0 U 5
-A > turn 0 L 3
-B > turn 0 B 3
-A > turn 0 R 2
-B > turn 0 Y 4
+A ☞ turn 1 R 1
+B ☞ turn 2 B 2
+A ☞ turn 3 Y 2
+B ☞ turn 4 B 1
+A ☞ turn 5 U 2
+B ☞ turn 0 U 5
+A ☞ turn 0 L 3
+B ☞ turn 0 B 3
+A ☞ turn 0 R 2
+B ☞ turn 0 Y 4
 === End of Round ===
 
 === Start Round 4 ===
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F 
-1: Y L R R 
-2: B L U L 
-3: B U B R 
-4: L Y B B 
-5: R U U R 
-
-
-Mosaic for B
-1:             .  ||  B  y  R  u  L
-2:          .  .  ||  L  B  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  Y
-5: .  .  .  .  .  ||  y  r  U  l  b
-broken:                   
-
-> INFO: Turn Successful
-
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F L R R 
-1:         
-2: B L U L 
-3: B U B R 
-4: L Y B B 
-5: R U U R 
+Factories: 21 tiles left
+0(1): ⛄ 
+1: [33mY[0m [36mL[0m [31mR[0m [31mR[0m 
+2: [34mB[0m [36mL[0m [30mU[0m [36mL[0m 
+3: [34mB[0m [30mU[0m [34mB[0m [31mR[0m 
+4: [36mL[0m [33mY[0m [34mB[0m [34mB[0m 
+5: [31mR[0m [30mU[0m [30mU[0m [31mR[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  R  U  l
-2:          .  .  ||  l  b  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken:                      
+1:             .  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [31mR[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  .  .  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F L R R B U 
-1:         
-2:         
-3: B U B R 
-4: L Y B B 
-5: R U U R 
-
-
-Mosaic for B
-1:             Y  ||  B  y  R  u  L
-2:          .  .  ||  L  B  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  Y
-5: .  .  .  .  .  ||  y  r  U  l  b
-broken:                   
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F L R R B U U R 
-1:         
-2:         
-3:         
-4: L Y B B 
-5: R U U R 
-
-
-Mosaic for A
-1:             L  ||  b  y  R  U  l
-2:          .  .  ||  l  b  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: L                    
-
-> INFO: Turn Successful
-
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: F L R R B U U R L Y 
-1:         
-2:         
-3:         
-4:         
-5: R U U R 
+TURN FOR PLAYER: B   POINTS: 3
+Factories: 20 tiles left
+0(1): ⛄ [36mL[0m [31mR[0m [31mR[0m 
+1:     
+2: [34mB[0m [36mL[0m [30mU[0m [36mL[0m 
+3: [34mB[0m [30mU[0m [34mB[0m [31mR[0m 
+4: [36mL[0m [33mY[0m [34mB[0m [34mB[0m 
+5: [31mR[0m [30mU[0m [30mU[0m [31mR[0m 
 
 
 Mosaic for B
-1:             Y  ||  B  y  R  u  L
-2:          .  .  ||  L  B  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  Y
-5: .  .  .  .  .  ||  y  r  U  l  b
-broken: B  B              
+1:             .  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F L R R B U U R L Y U U 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 18 tiles left
+0(1): ⛄ [36mL[0m [31mR[0m [31mR[0m [34mB[0m [30mU[0m 
+1:     
+2:     
+3: [34mB[0m [30mU[0m [34mB[0m [31mR[0m 
+4: [36mL[0m [33mY[0m [34mB[0m [34mB[0m 
+5: [31mR[0m [30mU[0m [30mU[0m [31mR[0m 
 
 
 Mosaic for A
-1:             L  ||  b  y  R  U  l
-2:          B  B  ||  l  b  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: L                    
+1:             [33mY[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [31mR[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  .  .  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: L B U U L Y U U 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: B   POINTS: 3
+Factories: 16 tiles left
+0(1): ⛄ [36mL[0m [31mR[0m [31mR[0m [34mB[0m [30mU[0m [30mU[0m [31mR[0m 
+1:     
+2:     
+3:     
+4: [36mL[0m [33mY[0m [34mB[0m [34mB[0m 
+5: [31mR[0m [30mU[0m [30mU[0m [31mR[0m 
 
 
 Mosaic for B
-1:             Y  ||  B  y  R  u  L
-2:          R  R  ||  L  B  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  Y
-5: .  .  .  .  .  ||  y  r  U  l  b
-broken: B  B              
+1:             [36mL[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: B U U Y U U 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 14 tiles left
+0(1): ⛄ [36mL[0m [31mR[0m [31mR[0m [34mB[0m [30mU[0m [30mU[0m [31mR[0m [36mL[0m [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5: [31mR[0m [30mU[0m [30mU[0m [31mR[0m 
 
 
 Mosaic for A
-1:             L  ||  b  y  R  U  l
-2:          B  B  ||  l  b  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: L  F  R  R  R        
+1:             [33mY[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [31mR[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 0
-Factories: 
-0: B Y 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: B   POINTS: 3
+Factories: 12 tiles left
+0(1): ⛄ [36mL[0m [31mR[0m [31mR[0m [34mB[0m [30mU[0m [30mU[0m [31mR[0m [36mL[0m [33mY[0m [30mU[0m [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             Y  ||  B  y  R  u  L
-2:          R  R  ||  L  B  y  r  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  .  ||  r  u  l  b  Y
-5: .  .  .  L  L  ||  y  r  U  l  b
-broken: B  B              
+1:             [36mL[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [34mB[0m  [34mB[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: Y 
-1:         
-2:         
-3:         
-4:         
-5:         
+Factories: 8 tiles left
+0(1): [36mL[0m [34mB[0m [30mU[0m [30mU[0m [36mL[0m [33mY[0m [30mU[0m [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             L  ||  b  y  R  U  l
-2:          B  B  ||  l  b  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: L  F  R  R  R  U  U  
+1:             [33mY[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          [31mR[0m  [31mR[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [31mR[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 3
+Factories: 6 tiles left
+0(1): [34mB[0m [30mU[0m [30mU[0m [33mY[0m [30mU[0m [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
+
+
+Mosaic for B
+1:             [36mL[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [34mB[0m  [34mB[0m  ⛄  [31mR[0m  [31mR[0m  [31mR[0m  
+
+☞ INFO: Turn Successful
+
+TURN FOR PLAYER: A   POINTS: 0
+Factories: 2 tiles left
+0(1): [34mB[0m [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
+
+
+Mosaic for A
+1:             [33mY[0m  ||  [34m.[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          [31mR[0m  [31mR[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31m.[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [31mR[0m  [36mL[0m  [36mL[0m  
+
+☞ INFO: Turn Successful
+
+TURN FOR PLAYER: B   POINTS: 3
+Factories: 1 tiles left
+0(1): [33mY[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
+
+
+Mosaic for B
+1:             [36mL[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36m.[0m
+2:          .  .  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    [30mU[0m  [30mU[0m  [30mU[0m  [30mU[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [34mB[0m  [34mB[0m  ⛄  [31mR[0m  [31mR[0m  [31mR[0m  
+
+☞ INFO: Turn Successful
 
 LOG: All turns happened 
-B > turn 1 Y 1
-A > turn 2 L 1
-B > turn 3 B 3
-A > turn 4 B 2
-B > turn 5 R 2
-A > turn 0 R 2
-B > turn 0 L 5
-A > turn 0 U 4
-B > turn 0 B 4
-A > turn 0 Y 2
+A ☞ turn 1 Y 1
+B ☞ turn 2 L 1
+A ☞ turn 3 B 3
+B ☞ turn 4 B 2
+A ☞ turn 5 R 2
+B ☞ turn 0 R 2
+A ☞ turn 0 L 1
+B ☞ turn 0 U 4
+A ☞ turn 0 B 1
+B ☞ turn 0 Y 2
 === End of Round ===
 
 === Start Round 5 ===
-TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F 
-1: Y L B B 
-2: L L B L 
-3: R L Y R 
-4: L B Y Y 
-5: L U B L 
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 21 tiles left
+0(1): ⛄ 
+1: [33mY[0m [36mL[0m [34mB[0m [34mB[0m 
+2: [36mL[0m [36mL[0m [34mB[0m [36mL[0m 
+3: [31mR[0m [36mL[0m [33mY[0m [31mR[0m 
+4: [36mL[0m [34mB[0m [33mY[0m [33mY[0m 
+5: [36mL[0m [30mU[0m [34mB[0m [36mL[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  R  U  L
-2:          .  .  ||  l  B  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken:                      
+1:             .  ||  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 3
-Factories: 
-0: F Y B B 
-1:         
-2: L L B L 
-3: R L Y R 
-4: L B Y Y 
-5: L U B L 
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 20 tiles left
+0(1): ⛄ [33mY[0m [34mB[0m [34mB[0m 
+1:     
+2: [36mL[0m [36mL[0m [34mB[0m [36mL[0m 
+3: [31mR[0m [36mL[0m [33mY[0m [31mR[0m 
+4: [36mL[0m [34mB[0m [33mY[0m [33mY[0m 
+5: [36mL[0m [30mU[0m [34mB[0m [36mL[0m 
 
 
 Mosaic for B
-1:             .  ||  B  Y  R  u  L
-2:          .  .  ||  L  B  y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  B  ||  r  u  l  b  Y
-5: .  .  .  L  L  ||  y  r  U  l  b
-broken:                   
+1:             .  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [33mY[0m  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: 
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F Y B B B 
-1:         
-2:         
-3: R L Y R 
-4: L B Y Y 
-5: L U B L 
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 17 tiles left
+0(1): ⛄ [33mY[0m [34mB[0m [34mB[0m [34mB[0m 
+1:     
+2:     
+3: [31mR[0m [36mL[0m [33mY[0m [31mR[0m 
+4: [36mL[0m [34mB[0m [33mY[0m [33mY[0m 
+5: [36mL[0m [30mU[0m [34mB[0m [36mL[0m 
 
 
 Mosaic for A
-1:             .  ||  b  y  R  U  L
-2:          .  .  ||  l  B  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: L                    
+1:             .  ||  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 3
-Factories: 
-0: F Y B B B L Y Y 
-1:         
-2:         
-3: R L Y R 
-4:         
-5: L U B L 
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 16 tiles left
+0(1): ⛄ [33mY[0m [34mB[0m [34mB[0m [34mB[0m [36mL[0m [33mY[0m [33mY[0m 
+1:     
+2:     
+3: [31mR[0m [36mL[0m [33mY[0m [31mR[0m 
+4:     
+5: [36mL[0m [30mU[0m [34mB[0m [36mL[0m 
 
 
 Mosaic for B
-1:             .  ||  B  Y  R  u  L
-2:          .  .  ||  L  B  y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  B  ||  r  u  l  b  Y
-5: .  .  .  L  L  ||  y  r  U  l  b
-broken: L  L  L           
+1:             .  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [33mY[0m  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [36mL[0m  [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: F Y B B B L Y Y R L R 
-1:         
-2:         
-3:         
-4:         
-5: L U B L 
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 15 tiles left
+0(1): ⛄ [33mY[0m [34mB[0m [34mB[0m [34mB[0m [36mL[0m [33mY[0m [33mY[0m [31mR[0m [36mL[0m [31mR[0m 
+1:     
+2:     
+3:     
+4:     
+5: [36mL[0m [30mU[0m [34mB[0m [36mL[0m 
 
 
 Mosaic for A
-1:             B  ||  b  y  R  U  L
-2:          .  .  ||  l  B  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  .  .  L  L  ||  y  r  u  l  b
-broken: L                    
+1:             [34mB[0m  ||  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 3
-Factories: 
-0: F Y B B B L Y Y R L R U B 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 13 tiles left
+0(1): ⛄ [33mY[0m [34mB[0m [34mB[0m [34mB[0m [36mL[0m [33mY[0m [33mY[0m [31mR[0m [36mL[0m [31mR[0m [30mU[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             .  ||  B  Y  R  u  L
-2:          .  .  ||  L  B  y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  B  ||  r  u  l  b  Y
-5: .  .  .  L  L  ||  y  r  U  l  b
-broken: L  L  L  Y        
+1:             [33mY[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [33mY[0m  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  .  .  .  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [36mL[0m  [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: B B B L R L R U B 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 9 tiles left
+0(1): [34mB[0m [34mB[0m [34mB[0m [36mL[0m [31mR[0m [36mL[0m [31mR[0m [30mU[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             B  ||  b  y  R  U  L
-2:          .  .  ||  l  B  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  L  L  L  L  ||  y  r  u  l  b
-broken: L                    
+1:             [34mB[0m  ||  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  .  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [36mL[0m  [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 3
-Factories: 
-0: B B B R R U B 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 7 tiles left
+0(1): [34mB[0m [34mB[0m [34mB[0m [31mR[0m [31mR[0m [30mU[0m [34mB[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             .  ||  B  Y  R  u  L
-2:          .  .  ||  L  B  y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  .  .  B  ||  r  u  l  b  Y
-5: .  .  .  L  L  ||  y  r  U  l  b
-broken: L  L  L  Y  F  Y  Y  
+1:             [33mY[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [33mY[0m  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    .  .  .  .  ||  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [36mL[0m  [36mL[0m  ⛄  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: A   POINTS: 0
-Factories: 
-0: R R U 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: A   POINTS: 1
+Factories: 3 tiles left
+0(1): [31mR[0m [31mR[0m [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for A
-1:             B  ||  b  y  R  U  L
-2:          L  L  ||  l  B  Y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    .  B  B  B  ||  r  u  l  b  y
-5: .  L  L  L  L  ||  y  r  u  l  b
-broken: L                    
+1:             [34mB[0m  ||  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          [36mL[0m  [36mL[0m  ||  [36m.[0m  [34m.[0m  [33mY[0m  [31mR[0m  [30mU[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30m.[0m  [36mL[0m  [34m.[0m  [33m.[0m  [31mR[0m
+4:    .  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m  [33m.[0m
+5: .  .  .  [36mL[0m  [36mL[0m  ||  [33m.[0m  [31m.[0m  [30m.[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [36mL[0m  [36mL[0m  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
-TURN FOR PLAYER: B   POINTS: 3
-Factories: 
-0: R R 
-1:         
-2:         
-3:         
-4:         
-5:         
+TURN FOR PLAYER: B   POINTS: 0
+Factories: 1 tiles left
+0(1): [30mU[0m 
+1:     
+2:     
+3:     
+4:     
+5:     
 
 
 Mosaic for B
-1:             .  ||  B  Y  R  u  L
-2:          .  .  ||  L  B  y  R  U
-3:       .  R  R  ||  u  l  b  y  r
-4:    B  B  B  B  ||  r  u  l  b  Y
-5: .  .  .  L  L  ||  y  r  U  l  b
-broken: L  L  L  Y  F  Y  Y  
+1:             [33mY[0m  ||  [34mB[0m  [33m.[0m  [31mR[0m  [30mU[0m  [36mL[0m
+2:          .  [33mY[0m  ||  [36mL[0m  [34mB[0m  [33m.[0m  [31mR[0m  [30m.[0m
+3:       .  [34mB[0m  [34mB[0m  ||  [30mU[0m  [36m.[0m  [34m.[0m  [33m.[0m  [31m.[0m
+4:    [34mB[0m  [34mB[0m  [34mB[0m  [34mB[0m  ||  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m  [33mY[0m
+5: .  .  [33mY[0m  [33mY[0m  [33mY[0m  ||  [33m.[0m  [31m.[0m  [30mU[0m  [36m.[0m  [34m.[0m
+broken: [36mL[0m  [36mL[0m  [36mL[0m  ⛄  
 
-> INFO: Turn Successful
+☞ INFO: Turn Successful
 
 LOG: All turns happened 
-A > turn 1 L 1
-B > turn 2 L 2
-A > turn 4 B 1
-B > turn 3 Y 1
-A > turn 5 L 5
-B > turn 0 Y 5
-A > turn 0 L 2
-B > turn 0 B 4
-A > turn 0 U 4
-B > turn 0 R 2
+A ☞ turn 1 L 1
+B ☞ turn 2 L 2
+A ☞ turn 4 B 1
+B ☞ turn 3 Y 1
+A ☞ turn 5 L 4
+B ☞ turn 0 Y 5
+A ☞ turn 0 L 2
+B ☞ turn 0 B 4
+A ☞ turn 0 R 1
+B ☞ turn 0 U 2
 === End of Round ===
 
-Player A wins the game!
+Draw!
 
 === GAME OVER ===
  WELCOME TO AZUL!
@@ -1053,4 +1053,4 @@ Menu
 3. Credits 
 4. Quit
 
->Goodbye.
+☞ Goodbye.
