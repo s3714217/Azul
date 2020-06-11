@@ -17,10 +17,17 @@ Factories::Factories(int numberOfPlayer, int seed)
     Adding 100 Tiles of different Colours (25 each) to the BoxLid   
     Set up the factories with input seed
    */
-    if(numberOfPlayer == NUMBEROFPLAYER)
+    if(numberOfPlayer == 2)
     {
-        this->numberOfFactory = NOFACTORY;
-        
+        this->numberOfFactory = TWO_P_FAC;
+    }
+    else if(numberOfPlayer == 3)
+    {
+         this->numberOfFactory = THREE_P_FAC;
+    }
+    else if(numberOfPlayer == 4)
+    {
+        this->numberOfFactory = FOUR_P_FAC;
     }
     
     TileBag = new LinkedList();
@@ -67,7 +74,13 @@ Factories::~Factories()
     delete this->factories;
 }
 
-int Factories::takeTile(Colour c, int factory)
+void Factories::addSecondCentral()
+{
+    this->secondCentral = new Tile[this->numberOfFactory * MAX_REMAIN];
+    this->secondCentral[0] = FIRST_PLAYER;
+}
+
+int Factories::takeTile(Colour c, int factory, int central)
 {
     /*
     Removing a Tile from the factories
@@ -75,6 +88,7 @@ int Factories::takeTile(Colour c, int factory)
     - return the number of tiles in that factories
     - return 0 if no tiles found
     */
+    
     int numberOfTile = 0;
     if(factory != 0)
     {
@@ -89,27 +103,48 @@ int Factories::takeTile(Colour c, int factory)
                 }
                 else
                 {
-                    this->factories[0][this->leftover] = this->factories[factory][x].getColour();
-                    this->factories[factory][x] = ' ';
-                    this->leftover++;
+                    if(this->secondCentral != nullptr && central == 2)
+                    {
+                        this->secondCentral[this->leftover_second] = this->factories[factory][x].getColour();
+                        this->factories[factory][x] = ' ';
+                        this->leftover_second++;
+                    }
+                    else
+                    {
+                        this->factories[0][this->leftover] = this->factories[factory][x].getColour();
+                        this->factories[factory][x] = ' ';
+                        this->leftover++;
+                    }
                 }
             }
         }
     }
     else
     {
-        
-        
-        if(this->ContainColour(c, factory) )
+        if(secondCentral != nullptr && central == 2)
         {
             for(int x =0; x < this->numberOfFactory * MAX_REMAIN; x++)
             {
-                if(this->factories[factory][x].getColour() == c)
+                if(this->secondCentral[x].getColour() == c)
                 {
                     numberOfTile++;
-                    this->factories[factory][x] = ' ';
+                    this->secondCentral[x] = ' ';
                 }
             }
+        }
+        else
+        {
+           if(this->ContainColour(c, factory) )
+           {
+              for(int x =0; x < this->numberOfFactory * MAX_REMAIN; x++)
+             {
+               if(this->factories[factory][x].getColour() == c)
+               {
+                 numberOfTile++;
+                 this->factories[factory][x] = ' ';
+               }
+             }
+           }
         }
     }
     size -= numberOfTile;
@@ -160,22 +195,35 @@ void Factories::PrintFactories()
     /*
         Print out the all factories
     */
-    std::cout <<"Factories: "<<std::endl;
-    std::cout << 0 <<": ";
+    std::cout <<"Factories: "<<this->size<<" tiles left"<<std::endl;
+    std::cout << 0 <<"(1): ";
     for(int y =0; y < this->numberOfFactory*MAX_REMAIN; y++)
     {
         if(this->factories[0][y].getColour() != ' ')
         {
-            std::cout <<this->factories[0][y].getColour()<<" ";
+            std::cout <<this->getConsoleColour(this->factories[0][y].getColour())<<" ";
         }
     }
     std::cout <<std::endl;
+    if(this->secondCentral != nullptr)
+    {
+        std::cout << 0 <<"(2): ";
+        for(int y =0; y < this->numberOfFactory*MAX_REMAIN; y++)
+        {
+            if(this->secondCentral[y].getColour() != ' ')
+            {
+                std::cout <<this->getConsoleColour(this->secondCentral[y].getColour())<<" ";
+            }
+        }
+        std::cout <<std::endl;
+    }
+    
     for(int x =1; x < this->numberOfFactory; x++)
     {
         std::cout << x <<": ";
         for(int y =0; y < NUMBEROFTILE; y++)
         {
-           std::cout <<this->factories[x][y].getColour()<<" ";
+           std::cout <<this->getConsoleColour(this->factories[x][y].getColour())<<" ";
         }
         std::cout <<std::endl;
     }
@@ -190,13 +238,17 @@ void Factories::setUp(int seed)
     TileBag distributing the tiles to all factories
     */
     this->leftover = 1;
-    
+    this->leftover_second = 1;
     for(int x = 1; x < this->numberOfFactory * MAX_REMAIN; x++)
     {
         this->factories[0][x] = ' ';
     }
      this->factories[0][0] = FIRST_PLAYER;
    
+    if(this->secondCentral != nullptr)
+    {
+        this->secondCentral[0] =FIRST_PLAYER;
+    }
     if(shuffled == false)
     {
         this->BoxLid->shuffle(seed);
@@ -212,17 +264,25 @@ void Factories::setUp(int seed)
         }
     }
     size = 1;
-    
-    for(int x = 1; x < this->numberOfFactory; x++)
+    if(secondCentral != nullptr)
     {
+        size += 1;
+    }
+        for(int x = 1; x < this->numberOfFactory; x++)
+        {
         for(int y = 0; y<4; y++)
         {
             size++;
-            this->factories[x][y] = TileBag->getFirst()->getColour();
+            Tile* temp = TileBag->getFirst();
+            if(temp != nullptr)
+            {
+                this->factories[x][y] = temp->getColour();
+            }
         }
-    }
-    this->first = true;
+        }
+        this->first = true;
     
+
 }
 
 
@@ -240,6 +300,11 @@ bool Factories::isEmpty()
 void Factories::removeFirst()
 {
     //Remove the first tile
+    if(secondCentral != nullptr)
+    {
+        secondCentral[0] = ' ';
+        this->size -= 1;
+    }
     factories[0][0] = ' ';
     this->first = false;
     this->size -=1;
@@ -267,6 +332,26 @@ void Factories::setBoxLid(LinkedList *BoxLid)
     //setter for BoxLid
     this->BoxLid = BoxLid;
 }
+void Factories::setSecondCentral(Tile* second)
+{
+    this->secondCentral = second;
+    this->leftover_second = 1;
+   
+    
+    for(int x = 0; x < MAX_REMAIN*this->numberOfFactory;x++)
+    {
+        if(this->secondCentral[x].getColour() != ' ' )
+        {
+            this->size++;
+            this->leftover_second++;
+            if(this->factories[0][x].getColour() == FIRST_PLAYER)
+            {
+                this->first = true;
+            }
+        }
+    }
+    
+}
 void Factories::setNumberOfFactory(int numberOfFactory)
 {
     //setter for Number of factories
@@ -275,6 +360,7 @@ void Factories::setNumberOfFactory(int numberOfFactory)
 void Factories::setFactories(Tile **factories)
 {
     //setter for factories
+    
     this->factories = factories;
     int size = 0;
     int left = 0;
@@ -295,7 +381,7 @@ void Factories::setFactories(Tile **factories)
         if(this->factories[0][x].getColour() != ' ')
         {
             left++;
-            if(this->factories[0][x].getColour() ==FIRST_PLAYER)
+            if(this->factories[0][x].getColour() == FIRST_PLAYER)
             {
                 this->first = true;
             }
@@ -324,3 +410,55 @@ Tile** Factories::getFactories()
 {
     return this->factories;
 }
+
+Tile* Factories::getSecondCentral()
+{
+    return this->secondCentral;
+}
+
+std::string Factories::getConsoleColour(char c)
+{
+    std::string s = "";
+    if(c == BLACK)
+    {
+        s = C_BLACK;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == RED)
+    {
+        s = C_RED;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == DARK_BLUE)
+    {
+        s = C_DARK_BLUE;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == LIGHT_BLUE)
+    {
+        s = C_LIGHT_BLUE;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == YELLOW)
+    {
+         s = C_YELLOW;
+         s.push_back(c);
+         s += NORMAL;
+         return s;
+    }
+    if(c == FIRST_PLAYER)
+    {
+        return C_FIRST_PLAYER;
+    }
+    return "";
+    
+}
+

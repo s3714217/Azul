@@ -144,13 +144,9 @@ void LinkedList::shuffle(int seed)
         shuffling.push_back(node->tile);
         node = node->next;
     }
-    
-   
     //feed in at the driver
    std::default_random_engine e(seed);
    std::shuffle (shuffling.begin(), shuffling.end(), e);
-  
-    
     node = this->head;
     for (int x=0; x < (signed)shuffling.size(); x++)
     {

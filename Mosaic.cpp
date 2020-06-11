@@ -89,8 +89,6 @@ Mosaic::~Mosaic()
         delete broken[x];
     }
     delete this->remainder;
-    delete this->broken[this->brokenPts];
-    delete remainder;
 }
 
 bool Mosaic::isFirst()
@@ -292,15 +290,14 @@ void Mosaic::PrintMosaic()
         
         for (int y =0; y < BOARD_SIZE ;y++ )
         {
-            std::cout <<this->turnBoard[x][y].getColour();
+            std::cout <<this->getConsoleColour(this->turnBoard[x][y].getColour());
             std::cout <<"  ";
         }
         std::cout <<"||";
         for (int y =0; y < BOARD_SIZE ;y++ )
         {
             std::cout <<"  ";
-            std::cout <<this->pointBoard[x][y].getColour();
-            
+            std::cout <<this->getConsoleColour(this->pointBoard[x][y].getColour());
         }
         
         std::cout <<std::endl;
@@ -309,9 +306,9 @@ void Mosaic::PrintMosaic()
     std::cout <<"broken: ";
     for(int x = 0; x < BROKEN_LEN; x++)
     {
-        if(broken[x] != nullptr)
+        if(broken[x] != nullptr && broken[x]->getColour() != ' ')
         {
-            std::cout<<broken[x]->getColour()<<" ";
+            std::cout<<this->getConsoleColour(broken[x]->getColour())<<" ";
             std::cout <<" ";
         }
     }
@@ -534,14 +531,16 @@ void Mosaic::setRemainder(LinkedList *remainder)
 void Mosaic::setBroken(Tile* tile,int location)
 {
     this->broken[location] = tile;
+    if(tile->getColour() == FIRST_PLAYER)
+    {
+        this->containedFirst = true;
+    }
+    this->brokenPts+=1;
 }
 void Mosaic::setPointCalculator(char **pointCalculator)
 {
     this->pointCalculator = pointCalculator;
-    
-    
 }
-
 
 Tile** Mosaic::getPointBoard()
 {
@@ -562,4 +561,97 @@ Tile* Mosaic::getBroken(int index)
 char** Mosaic::getPointCalculator()
 {
     return this->pointCalculator;
+}
+void Mosaic::set_AI(bool active)
+{
+    this->AI_active = active;
+}
+
+bool Mosaic::is_AI_active()
+{
+    return this->AI_active;
+}
+std::string Mosaic::getConsoleColour(char c)
+{
+    std::string s = "";
+    if(c == BLACK)
+    {
+        s = C_BLACK;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == RED)
+    {
+        s = C_RED;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == DARK_BLUE)
+    {
+        s = C_DARK_BLUE;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == LIGHT_BLUE)
+    {
+        s = C_LIGHT_BLUE;
+        s.push_back(c);
+        s += NORMAL;
+        return s;
+    }
+    if(c == YELLOW)
+    {
+         s = C_YELLOW;
+         s.push_back(c);
+         s += NORMAL;
+         return s;
+    }
+    if(c == EMPTY_RED)
+    {
+        s = C_RED;
+        s.push_back(EMPTY);
+        s+= NORMAL;
+        return s;
+    }
+    if(c == EMPTY_BLACK)
+    {
+        s = C_BLACK;
+        s.push_back(EMPTY);
+        s+= NORMAL;
+        return s;
+    }
+    if(c == EMPTY_YELLOW)
+    {
+        s = C_YELLOW;
+        s.push_back(EMPTY);
+        s+= NORMAL;
+        return s;
+    }
+    if(c == EMPTY_LIGHT_BLUE)
+    {
+        s = C_LIGHT_BLUE;
+        s.push_back(EMPTY);
+        s+= NORMAL;
+        return s;
+    }
+    if(c == EMPTY_DARK_BLUE)
+    {
+        s = C_DARK_BLUE;
+        s.push_back(EMPTY);
+        s+= NORMAL;
+        return s;
+    }
+    if(c == EMPTY)
+    {
+        return ".";
+    }
+    if(c == FIRST_PLAYER)
+    {
+        return C_FIRST_PLAYER;
+    }
+    return " ";
+    
 }
